@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class register extends AppCompatActivity {
 
     TextView AppName, RegisterInfo, login;
-    EditText FullName, Email, Password;
+    EditText FullName, Email, Password, MinBloodPressure, MaxBloodPressure;
     Button RegButton;
     FirebaseAuth fAuth;
 
@@ -36,11 +36,13 @@ public class register extends AppCompatActivity {
         Email = findViewById(R.id.emailAddress);
         Password = findViewById(R.id.pword);
         RegButton = findViewById(R.id.Registerbutton);
+        MaxBloodPressure = findViewById(R.id.maxbpressure);
+        MinBloodPressure = findViewById(R.id.minbpressure);
 
         fAuth = FirebaseAuth.getInstance();
 
         if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(), com.example.seniordesign.Login.class));
+            startActivity(new Intent(getApplicationContext(),  com.example.seniordesign.MainActivity.class));
             finish();
         }
 
@@ -64,6 +66,15 @@ public class register extends AppCompatActivity {
                     Password.setError("Password must be at least 7 characters long");
                     return;
                 }
+               /* if(MinBloodPressure<80){
+                    MinBloodPressure.setError("Minimum blood pressure should be more than 80.");
+                    return;
+                }
+                if(MaxBloodPressure>120){
+                    MaxBloodPressure.setError("Maximum blood pressure should be more than 80.");
+                    return;
+                }*/
+
 
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
