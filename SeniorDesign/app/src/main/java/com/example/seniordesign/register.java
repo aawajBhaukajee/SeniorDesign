@@ -52,16 +52,16 @@ public class register extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(email))
                 {
-                    Email.setError("Email must be put in.");
+                    Email.setError("Email is needed to register.");
                     return;
                 }
                 if(TextUtils.isEmpty(password)){
-                    Password.setError("Password is required.");
+                    Password.setError("Password is needed to register.");
                     return;
                 }
 
                 if(password.length() < 8){
-                    Password.setError("Password must be atleast 7 characters long");
+                    Password.setError("Password must be at least 7 characters long");
                     return;
                 }
 
