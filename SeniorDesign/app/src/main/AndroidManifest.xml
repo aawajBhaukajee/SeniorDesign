@@ -10,14 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeniorDesign">
         <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.SeniorDesign.NoActionBar"></activity>
-        <activity
-            android:name=".register"
-            android:label="@string/title_activity_register"
-            android:theme="@style/Theme.SeniorDesign.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.SeniorDesign.NoActionBar">
