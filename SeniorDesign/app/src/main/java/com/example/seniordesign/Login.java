@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,13 +21,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-public class Login extends AppCompatActivity {
+
+public class Login extends AppCompatActivity
+{
 
     TextView title, newAccount, forgPassword;
     EditText Email1, Password1;
     Button LoginButton;
     FirebaseAuth fAuth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,7 @@ public class Login extends AppCompatActivity {
         forgPassword = findViewById(R.id.fPassword);
         fAuth = FirebaseAuth.getInstance();
 
-        LoginButton.setOnClickListener(new View.OnClickListener() {
+        LoginButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email = Email1.getText().toString().trim();
@@ -61,7 +63,7 @@ public class Login extends AppCompatActivity {
                     return;
                 }
 
-                fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+                fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
@@ -77,15 +79,14 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        newAccount.setOnClickListener(new View.OnClickListener() {
+        newAccount.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 startActivity(new Intent(getApplicationContext(), register.class));
             }
         });
 
-        forgPassword.setOnClickListener(new View.OnClickListener() {
+        forgPassword.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText reset = new EditText(v.getContext());
@@ -96,7 +97,7 @@ public class Login extends AppCompatActivity {
 
                 passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface dialog, int diag) {
                         String mail = reset.getText().toString();
                         fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -113,10 +114,13 @@ public class Login extends AppCompatActivity {
                 });
                 passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface dialog, int diag) {
 
                     }
                 });
-
+                passwordResetDialog.create().show();
             }
-        }
+        });
+    }
+
+}

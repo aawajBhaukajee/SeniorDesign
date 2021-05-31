@@ -17,7 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class register extends AppCompatActivity {
+public class register extends AppCompatActivity
+{
 
     TextView AppName, RegisterInfo, login;
     EditText FullName, Email, Password, MinBloodPressure, MaxBloodPressure;
@@ -41,28 +42,27 @@ public class register extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
 
-        if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),  com.example.seniordesign.MainActivity.class));
+        if (fAuth.getCurrentUser() != null) {
+            startActivity(new Intent(getApplicationContext(), com.example.seniordesign.Login.class));
             finish();
         }
 
-        RegButton.setOnClickListener(new View.OnClickListener(){
+        RegButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 String email = Email.getText().toString().trim();
                 String password = Password.getText().toString().trim();
 
-                if(TextUtils.isEmpty(email))
-                {
+                if (TextUtils.isEmpty(email)) {
                     Email.setError("Email is needed to register.");
                     return;
                 }
-                if(TextUtils.isEmpty(password)){
+                if (TextUtils.isEmpty(password)) {
                     Password.setError("Password is needed to register.");
                     return;
                 }
 
-                if(password.length() < 8){
+                if (password.length() < 8) {
                     Password.setError("Password must be at least 7 characters long");
                     return;
                 }
@@ -75,8 +75,7 @@ public class register extends AppCompatActivity {
                     return;
                 }*/
 
-
-                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
@@ -85,7 +84,6 @@ public class register extends AppCompatActivity {
 
                         } else {
                             Toast.makeText(register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-
                         }
                     }
                 });
