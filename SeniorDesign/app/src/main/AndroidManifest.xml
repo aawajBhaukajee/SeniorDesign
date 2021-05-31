@@ -11,8 +11,8 @@
         android:theme="@style/Theme.SeniorDesign">
 
         <activity android:name=".MainActivity"/>
-        <activity android:name=".register"/>
-        <activity android:name=".Login">
+        <activity android:name=".Login"/>
+        <activity android:name=".register">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
