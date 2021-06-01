@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity
         title = findViewById(R.id.blood);
         Email1 = findViewById(R.id.eAddress);
         Password1 = findViewById(R.id.Pass);
-        LoginButton = findViewById(R.id.Loginbutton);
+        LoginButton = findViewById(R.id.loginButton);
         newAccount = findViewById(R.id.newAcc);
         forgetPassword = findViewById(R.id.fPassword);
         fAuth = FirebaseAuth.getInstance();
@@ -111,7 +111,7 @@ public class Login extends AppCompatActivity
                         fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>()
                         {
                             @Override
-                            public void onSuccess(Void unused) {
+                            public void onSuccess(Void aVoid) {
                                 Toast.makeText(Login.this, "Reset link is sent to your email", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
