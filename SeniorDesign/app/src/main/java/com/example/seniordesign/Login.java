@@ -23,8 +23,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity
 {
-    TextView title, newAccount, forgetPassword;
-    EditText Email1, Password1;
+    TextView ApplicationTitle, newUser, ForgetPassword;
+    EditText EmailAddress, Password2;
     Button LoginButton;
     FirebaseAuth fAuth;
 
@@ -34,12 +34,12 @@ public class Login extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        title = findViewById(R.id.blood);
-        Email1 = findViewById(R.id.eAddress);
-        Password1 = findViewById(R.id.Pass);
+        ApplicationTitle = findViewById(R.id.appTitle);
+        EmailAddress = findViewById(R.id.eAddress);
+        Password2 = findViewById(R.id.pWord);
         LoginButton = findViewById(R.id.loginButton);
-        newAccount = findViewById(R.id.newAcc);
-        forgetPassword = findViewById(R.id.fPassword);
+        newUser = findViewById(R.id.newAccount);
+        ForgetPassword = findViewById(R.id.forgotPassword);
         fAuth = FirebaseAuth.getInstance();
 
         LoginButton.setOnClickListener(new View.OnClickListener()
@@ -47,23 +47,23 @@ public class Login extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                String email = Email1.getText().toString().trim();
-                String password = Password1.getText().toString().trim();
+                String email = EmailAddress.getText().toString().trim();
+                String password = Password2.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email))
                 {
-                    Email1.setError("Email is required.");
+                    EmailAddress.setError("Email is required.");
                     return;
                 }
                 if (TextUtils.isEmpty(password))
                 {
-                    Password1.setError("Password is required.");
+                    Password2.setError("Password is required.");
                     return;
                 }
 
                 if (password.length() < 8)
                 {
-                    Password1.setError("Password must be at least 7 characters long");
+                    Password2.setError("Password must be at least 7 characters long");
                     return;
                 }
 
@@ -86,14 +86,14 @@ public class Login extends AppCompatActivity
             }
         });
 
-        newAccount.setOnClickListener(new View.OnClickListener() {
+        newUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),register.class));
             }
         });
 
-        forgetPassword.setOnClickListener(new View.OnClickListener()
+        ForgetPassword.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {

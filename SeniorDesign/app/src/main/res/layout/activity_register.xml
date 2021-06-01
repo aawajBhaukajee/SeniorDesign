@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/reg"
+        android:id="@+id/regTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register Account"
@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.55" />
 
     <EditText
-        android:id="@+id/pword"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -122,7 +122,7 @@
         app:layout_constraintVertical_bias="0.837" />
 
     <Button
-        android:id="@+id/Registerbutton"
+        android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
@@ -133,7 +133,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/noLogin"
+        android:id="@+id/hasAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
