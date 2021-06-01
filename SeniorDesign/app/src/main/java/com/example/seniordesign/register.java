@@ -19,7 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class register extends AppCompatActivity
 {
-
     TextView AppName, RegisterInfo, login;
     EditText FullName, Email, Password, MinBloodPressure, MaxBloodPressure;
     Button RegButton;
@@ -39,14 +38,12 @@ public class register extends AppCompatActivity
         RegButton = findViewById(R.id.Registerbutton);
         MaxBloodPressure = findViewById(R.id.maxbpressure);
         MinBloodPressure = findViewById(R.id.minbpressure);
-
         fAuth = FirebaseAuth.getInstance();
 
         if (fAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), com.example.seniordesign.Login.class));
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
         }
-
         RegButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,11 +71,10 @@ public class register extends AppCompatActivity
                     MaxBloodPressure.setError("Maximum blood pressure should be more than 80.");
                     return;
                 }*/
-
-                fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+                        if (task  .isSuccessful()) {
                             Toast.makeText(register.this, "New User Created. ", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
 

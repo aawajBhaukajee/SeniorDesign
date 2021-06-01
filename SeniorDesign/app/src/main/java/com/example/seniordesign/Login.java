@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,14 +23,14 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity
 {
-
-    TextView title, newAccount, forgPassword;
+    TextView title, newAccount, forgetPassword;
     EditText Email1, Password1;
     Button LoginButton;
     FirebaseAuth fAuth;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -40,53 +39,62 @@ public class Login extends AppCompatActivity
         Password1 = findViewById(R.id.Pass);
         LoginButton = findViewById(R.id.Loginbutton);
         newAccount = findViewById(R.id.newAcc);
-        forgPassword = findViewById(R.id.fPassword);
+        forgetPassword = findViewById(R.id.fPassword);
         fAuth = FirebaseAuth.getInstance();
 
-        LoginButton.setOnClickListener(new OnClickListener() {
+        LoginButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 String email = Email1.getText().toString().trim();
                 String password = Password1.getText().toString().trim();
 
-                if (TextUtils.isEmpty(email)) {
+                if (TextUtils.isEmpty(email))
+                {
                     Email1.setError("Email is required.");
                     return;
                 }
-                if (TextUtils.isEmpty(password)) {
+                if (TextUtils.isEmpty(password))
+                {
                     Password1.setError("Password is required.");
                     return;
                 }
 
-                if (password.length() < 8) {
+                if (password.length() < 8)
+                {
                     Password1.setError("Password must be at least 7 characters long");
                     return;
                 }
 
-                fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>()
+                {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+                    public void onComplete(@NonNull Task<AuthResult> task)
+                    {
+                        if (task.isSuccessful())
+                        {
                             Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        } else {
+                        }
+                        else
+                        {
                             Toast.makeText(Login.this, "Error !!! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-
-
             }
         });
 
-        newAccount.setOnClickListener(new OnClickListener() {
+        newAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), register.class));
+                startActivity(new Intent(getApplicationContext(),register.class));
             }
         });
 
-        forgPassword.setOnClickListener(new OnClickListener() {
+        forgetPassword.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 EditText reset = new EditText(v.getContext());
@@ -95,11 +103,13 @@ public class Login extends AppCompatActivity
                 passwordResetDialog.setMessage("Enter email to send reset link");
                 passwordResetDialog.setView(reset);
 
-                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
                     @Override
                     public void onClick(DialogInterface dialog, int diag) {
                         String mail = reset.getText().toString();
-                        fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>()
+                        {
                             @Override
                             public void onSuccess(Void unused) {
                                 Toast.makeText(Login.this, "Reset link is sent to your email", Toast.LENGTH_SHORT).show();
@@ -122,5 +132,4 @@ public class Login extends AppCompatActivity
             }
         });
     }
-
 }
