@@ -18,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView fullname,email,hbp,lbp,Welcome;
+    TextView fullname,email,hbp,lbp,Welcome,Profile;
     Button LogoutButton;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Profile = findViewById(R.id.profile);
         fullname = findViewById(R.id.mainName);
         email = findViewById(R.id.mainEmail);
         hbp = findViewById(R.id.mainHBP);
@@ -45,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
             fullname.setText(documentSnapshot.getString( "FullName"));
             email.setText(documentSnapshot.getString( "EmailAddress"));
-            hbp.setText(documentSnapshot.getString( "MaximumBloodPressure"));
-            lbp.setText(documentSnapshot.getString( "MinimumBloodPressure"));
+            hbp.setText(documentSnapshot.getString( "MaximumBP"));
+            lbp.setText(documentSnapshot.getString( "MinimumBP"));
 
             }
         });

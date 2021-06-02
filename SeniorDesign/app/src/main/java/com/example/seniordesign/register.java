@@ -31,7 +31,7 @@ public class register extends AppCompatActivity
     public static final String TAG = "TAG";
 
     TextView AppName, RegisterTitle, OldAccount;
-    EditText FullName, Email, Password, MinBloodPressure, MaxBloodPressure;
+    EditText FullName, Email, Password, MinimumBP, MaximumBP;
     Button RegisterButton;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -49,8 +49,8 @@ public class register extends AppCompatActivity
         Email = findViewById(R.id.emailAddress);
         Password = findViewById(R.id.password);
         RegisterButton = findViewById(R.id.registerButton);
-        MaxBloodPressure = findViewById(R.id.maxbpressure);
-        MinBloodPressure = findViewById(R.id.minbpressure);
+        MaximumBP = findViewById(R.id.maxbpressure);
+        MinimumBP = findViewById(R.id.minbpressure);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -67,8 +67,8 @@ public class register extends AppCompatActivity
                 final String fullname = FullName.getText().toString().trim();
                 final String email = Email.getText().toString().trim();
                 String password = Password.getText().toString().trim();
-                final String maxbpressure = MaxBloodPressure.getText().toString();
-                final String minbpressure = MinBloodPressure.getText().toString();
+                final String maxbpressure = MaximumBP.getText().toString();
+                final String minbpressure = MinimumBP.getText().toString();
 
                 if (TextUtils.isEmpty(email))
                 {
@@ -122,8 +122,8 @@ public class register extends AppCompatActivity
                             Map<String,Object> user = new HashMap<>();
                             user.put("FullName",fullname);
                             user.put("EmailAddress",email);
-                            user.put("MaximumBloodPressure",maxbpressure);
-                            user.put("MinimumBloodPressure",minbpressure);
+                            user.put("MaxumumBP",maxbpressure);
+                            user.put("MinimumBP",minbpressure);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused)
