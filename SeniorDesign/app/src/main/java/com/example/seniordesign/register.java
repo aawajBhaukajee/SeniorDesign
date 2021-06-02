@@ -59,7 +59,6 @@ public class register extends AppCompatActivity
             startActivity(new Intent(getApplicationContext(),com.example.seniordesign.register.class));
             finish();
         }
-
          */
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,9 +142,9 @@ public class register extends AppCompatActivity
 
                         }
                         else
-                            {
+                        {
                             Toast.makeText(register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            }
+                        }
                     }
                 });
             }
