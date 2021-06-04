@@ -31,7 +31,7 @@ public class register extends AppCompatActivity
     public static final String TAG = "TAG";
 
     TextView AppName, RegisterTitle, OldAccount;
-    EditText FullName, Email, Password, MinimumBP, MaximumBP;
+    EditText FullName, Email, Password;
     Button RegisterButton;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -49,8 +49,6 @@ public class register extends AppCompatActivity
         Email = findViewById(R.id.emailAddress);
         Password = findViewById(R.id.password);
         RegisterButton = findViewById(R.id.registerButton);
-        MaximumBP = findViewById(R.id.maxbpressure);
-        MinimumBP = findViewById(R.id.minbpressure);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -67,10 +65,6 @@ public class register extends AppCompatActivity
                 final String fullname = FullName.getText().toString().trim();
                 final String email = Email.getText().toString().trim();
                 String password = Password.getText().toString().trim();
-                final String maxbpressure = MaximumBP.getText().toString();
-                int intValue = Integer.parseInt(maxbpressure);
-                final String minbpressure = MinimumBP.getText().toString();
-                int intValue1 = Integer.parseInt(minbpressure);
 
                 if (TextUtils.isEmpty(email))
                 {
@@ -87,17 +81,9 @@ public class register extends AppCompatActivity
                     Password.setError("Password must be at least 7 characters long");
                     return;
                 }
-                if(intValue>120){
-                    MaximumBP.setError("Maximum blood pressure should be less than 120.");
-                    return;
-                }
-                if(intValue1<80) {
-                    MinimumBP.setError("Minimum blood pressure should be more than 80.");
-                    return;
-                }
 
-
-                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>()
+                {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task)
                     {
@@ -124,8 +110,8 @@ public class register extends AppCompatActivity
                             Map<String,Object> user = new HashMap<>();
                             user.put("FullName",fullname);
                             user.put("EmailAddress",email);
-                            user.put("MaxumumBP",maxbpressure);
-                            user.put("MinimumBP",minbpressure);
+
+
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused)
