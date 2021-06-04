@@ -68,7 +68,9 @@ public class register extends AppCompatActivity
                 final String email = Email.getText().toString().trim();
                 String password = Password.getText().toString().trim();
                 final String maxbpressure = MaximumBP.getText().toString();
+                int intValue = Integer.parseInt(maxbpressure);
                 final String minbpressure = MinimumBP.getText().toString();
+                int intValue1 = Integer.parseInt(minbpressure);
 
                 if (TextUtils.isEmpty(email))
                 {
@@ -85,15 +87,15 @@ public class register extends AppCompatActivity
                     Password.setError("Password must be at least 7 characters long");
                     return;
                 }
-               /* if(maxbpressure>120){
-                    MaxBloodPressure.setError("Maximum blood pressure should be less than 120.");
+                if(intValue>120){
+                    MaximumBP.setError("Maximum blood pressure should be less than 120.");
                     return;
                 }
-                if(minbpressure<80) {
-                    MinBloodPressure.setError("<Minimum> blood pressure should be more than 80.");
+                if(intValue1<80) {
+                    MinimumBP.setError("Minimum blood pressure should be more than 80.");
                     return;
                 }
-                */
+
 
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
