@@ -15,7 +15,6 @@
             android:name=".Hospital"
             android:label="@string/title_activity_hospital"
             android:theme="@style/Theme.SeniorDesign.NoActionBar"></activity>
-        <activity android:name=".register1" />
         <activity android:name=".MainActivity" />
         <activity android:name=".register" />
         <activity android:name=".Login">
