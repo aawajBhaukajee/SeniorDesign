@@ -31,7 +31,6 @@ public class register1 extends AppCompatActivity
     FirebaseFirestore fStore;
     String userID;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

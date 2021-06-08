@@ -13,4 +13,5 @@
     <string name="title_activity_login">Login</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_register1">register1</string>
+    <string name="title_activity_hospital">Hospital</string>
 </resources>

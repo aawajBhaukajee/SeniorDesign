@@ -49,7 +49,6 @@ public class register extends AppCompatActivity
         Email = findViewById(R.id.emailAddress);
         Password = findViewById(R.id.password);
         RegisterButton = findViewById(R.id.registerButton);
-
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
@@ -64,7 +63,7 @@ public class register extends AppCompatActivity
             {
                 final String fullname = FullName.getText().toString().trim();
                 final String email = Email.getText().toString().trim();
-                String password = Password.getText().toString().trim();
+                final String password = Password.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email))
                 {
@@ -110,7 +109,7 @@ public class register extends AppCompatActivity
                             Map<String,Object> user = new HashMap<>();
                             user.put("FullName",fullname);
                             user.put("EmailAddress",email);
-
+                            user.put("isUser","1");
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
@@ -127,6 +126,7 @@ public class register extends AppCompatActivity
                                 }
                             });
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            finish();
 
                         }
                         else

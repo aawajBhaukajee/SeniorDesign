@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Login extends AppCompatActivity
 {
@@ -27,6 +28,7 @@ public class Login extends AppCompatActivity
     EditText EmailAddress, Password2;
     Button LoginButton;
     FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -41,6 +43,7 @@ public class Login extends AppCompatActivity
         newUser = findViewById(R.id.newAccount);
         ForgetPassword = findViewById(R.id.forgotPassword);
         fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
 
         LoginButton.setOnClickListener(new View.OnClickListener()
         {
@@ -74,6 +77,7 @@ public class Login extends AppCompatActivity
                         if (task.isSuccessful())
                         {
                             Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                           //checkUserAccessLevel(task.getUser.)
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }
                         else
