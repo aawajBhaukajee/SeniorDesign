@@ -72,15 +72,6 @@ public class register extends AppCompatActivity
                 final String minbpressure = MinimumBP.getText().toString();
                 int intValue1 = Integer.parseInt(minbpressure);
 
-                if (intValue > 120) {
-                    MaximumBP.setError("Maximum blood pressure should be less than 120.");
-                    return;
-                }
-                if (intValue1 < 80) {
-                    MinimumBP.setError("Minimum blood pressure should be more than 80.");
-                    return;
-                }
-
                 if (TextUtils.isEmpty(email))
                 {
                     Email.setError("Email is needed to register.");
@@ -94,6 +85,15 @@ public class register extends AppCompatActivity
                 if (password.length() < 8)
                 {
                     Password.setError("Password must be at least 7 characters long");
+                    return;
+                }
+
+                if (intValue > 120) {
+                    MaximumBP.setError("Maximum blood pressure should be less than 120.");
+                    return;
+                }
+                if (intValue1 < 80 ) {
+                    MinimumBP.setError("Minimum blood pressure should be more than 80.");
                     return;
                 }
 

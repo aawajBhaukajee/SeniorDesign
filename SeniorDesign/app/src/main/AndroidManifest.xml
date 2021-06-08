@@ -11,13 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SeniorDesign">
-        <activity
-            android:name=".Hospital"
-            android:label="@string/title_activity_hospital"
-            android:theme="@style/Theme.SeniorDesign.NoActionBar"></activity>
+
+
         <activity android:name=".MainActivity" />
         <activity android:name=".register" />
-        <activity android:name=".Login">
+        <activity android:name=".Login"/>
+            <activity android:name=".Hospital" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
