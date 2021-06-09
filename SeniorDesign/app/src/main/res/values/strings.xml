@@ -14,4 +14,5 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_register1">register1</string>
     <string name="title_activity_hospital">Hospital</string>
+    <string name="title_activity_donation_center">DonationCenter</string>
 </resources>

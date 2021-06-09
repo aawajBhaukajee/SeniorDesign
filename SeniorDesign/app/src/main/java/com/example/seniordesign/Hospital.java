@@ -24,6 +24,7 @@ public class Hospital extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_hospital);
 
         Hello = findViewById(R.id.hello);
         LogoutButton2 = findViewById(R.id.logout2);
