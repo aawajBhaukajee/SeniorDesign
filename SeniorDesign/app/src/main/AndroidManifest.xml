@@ -15,9 +15,11 @@
 
         <activity android:name=".MainActivity" />
         <activity android:name=".register" />
-        <activity android:name=".Hospital" />
+
+        <activity android:name=".AllUsers" />
         <activity android:name=".Login" />
-        <activity android:name=".AllUsers" >
+        <activity android:name=".Hospital" >
+
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
