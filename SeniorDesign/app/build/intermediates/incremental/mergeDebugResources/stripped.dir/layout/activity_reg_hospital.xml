@@ -23,7 +23,7 @@
         android:id="@+id/regTitleH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register Account"
+        android:text="Register Account for Hospital"
         android:textColor="#F1E8E8"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/nameH"
@@ -38,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter Full name"
+        android:hint="Enter hospital name"
         android:inputType="text"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColorHint="#574E4E"
@@ -96,13 +96,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/hasAccountH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Already Registered? Login Here"
-        android:textColor="#F4EDED"
+        android:textColor="#880B0B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.572"

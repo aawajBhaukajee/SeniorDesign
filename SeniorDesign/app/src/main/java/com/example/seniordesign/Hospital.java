@@ -46,7 +46,7 @@ public class Hospital extends AppCompatActivity
         donorsList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), AllUsers.class));
+                startActivity(new Intent(getApplicationContext(), firstPage.class));
 
             }
         });
