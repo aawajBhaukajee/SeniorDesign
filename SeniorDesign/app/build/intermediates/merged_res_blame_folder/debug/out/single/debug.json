@@ -16,12 +16,12 @@
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph7.xml.flat",
@@ -76,6 +76,10 @@
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_all_hospitals.xml.flat",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_all_hospitals.xml"
+    },
+    {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph10.xml.flat",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\navigation\\nav_graph10.xml"
     },
@@ -90,6 +94,10 @@
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_sing_hospitals.xml.flat",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\list_sing_hospitals.xml"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_all_users.xml.flat",
@@ -198,6 +206,10 @@
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph15.xml.flat",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\navigation\\nav_graph15.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph21.xml.flat",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\navigation\\nav_graph21.xml"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",

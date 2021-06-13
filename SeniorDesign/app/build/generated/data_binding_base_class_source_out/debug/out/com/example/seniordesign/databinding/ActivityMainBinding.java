@@ -20,6 +20,9 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button hospList;
+
+  @NonNull
   public final Button logoutButton;
 
   @NonNull
@@ -40,10 +43,12 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView welcome;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button logoutButton,
-      @NonNull TextView mainEmail, @NonNull TextView mainHBP, @NonNull TextView mainLBP,
-      @NonNull TextView mainName, @NonNull TextView profile, @NonNull TextView welcome) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button hospList,
+      @NonNull Button logoutButton, @NonNull TextView mainEmail, @NonNull TextView mainHBP,
+      @NonNull TextView mainLBP, @NonNull TextView mainName, @NonNull TextView profile,
+      @NonNull TextView welcome) {
     this.rootView = rootView;
+    this.hospList = hospList;
     this.logoutButton = logoutButton;
     this.mainEmail = mainEmail;
     this.mainHBP = mainHBP;
@@ -80,6 +85,12 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.hospList;
+      Button hospList = rootView.findViewById(id);
+      if (hospList == null) {
+        break missingId;
+      }
+
       id = R.id.logoutButton;
       Button logoutButton = rootView.findViewById(id);
       if (logoutButton == null) {
@@ -122,8 +133,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, logoutButton, mainEmail, mainHBP,
-          mainLBP, mainName, profile, welcome);
+      return new ActivityMainBinding((ConstraintLayout) rootView, hospList, logoutButton, mainEmail,
+          mainHBP, mainLBP, mainName, profile, welcome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

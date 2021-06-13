@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 public class MainActivity extends AppCompatActivity {
 
     TextView fullname,email,hbp,lbp,Welcome,Profile;
-    Button LogoutButton;
+    Button LogoutButton, hosList;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.mainEmail);
         hbp = findViewById(R.id.mainHBP);
         lbp = findViewById(R.id.mainLBP);
+        hosList = findViewById(R.id.hospList);
         Welcome = findViewById(R.id.welcome);
         LogoutButton = findViewById(R.id.logoutButton);
         fAuth = FirebaseAuth.getInstance();
@@ -56,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),firstPage.class));
+            }
+        });
+
+        hosList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),AllHospitals.class));
             }
         });
 

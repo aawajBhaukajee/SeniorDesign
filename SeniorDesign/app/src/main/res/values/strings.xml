@@ -24,4 +24,5 @@
     <string name="title_activity_reg_hospital">regHospital</string>
     <string name="title_activity_log_hospital">logHospital</string>
     <string name="title_activity_hospital_profile">hospitalProfile</string>
+    <string name="title_activity_all_hospitals">AllHospitals</string>
 </resources>
