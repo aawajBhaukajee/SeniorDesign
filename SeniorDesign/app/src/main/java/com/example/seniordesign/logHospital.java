@@ -22,8 +22,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class logHospital extends AppCompatActivity {
 
-
-
     TextView ApplicationTitleH, newUserH, ForgetPasswordH;
     EditText EmailAddressH, Password2H;
     Button LoginButtonH;
@@ -71,7 +69,6 @@ public class logHospital extends AppCompatActivity {
                     @Override
                     public void onSuccess(AuthResult authResult)
                     {
-
                         Toast.makeText(logHospital.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         //checkAccessLevel(authResult.getUser().getUid());
                          startActivity(new Intent(getApplicationContext(), Hospital.class));
@@ -97,7 +94,6 @@ public class logHospital extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),regHospital.class));
             }
         });
-
 
         ForgetPasswordH.setOnClickListener(new View.OnClickListener()
         {

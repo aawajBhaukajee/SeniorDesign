@@ -16,8 +16,7 @@
         <activity android:name=".regHospital" />
         <activity android:name=".MainActivity" />
         <activity android:name=".register" />
-        <ac
-            tivity android:name=".AllUsers" />
+        <activity android:name=".AllUsers" />
         <activity android:name=".Login" />
         <activity android:name=".Hospital" />
         <activity android:name=".firstPage" >

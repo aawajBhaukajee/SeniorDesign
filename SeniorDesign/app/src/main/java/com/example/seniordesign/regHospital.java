@@ -35,7 +35,7 @@ public class regHospital extends AppCompatActivity {
     Button RegisterButtonH;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
-    String userID;
+    String hospitalID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,19 +105,19 @@ public class regHospital extends AppCompatActivity {
                             });
 
                             Toast.makeText(regHospital.this, "New Hospital Account is Created. ", Toast.LENGTH_SHORT).show();
-                            userID = fAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fStore.collection("hospitals").document(userID);
-                            Map<String,Object> user = new HashMap<>();
-                            user.put("FullName",fullname);
-                            user.put("EmailAddress",email);
+                            hospitalID = fAuth.getCurrentUser().getUid();
+                            DocumentReference documentReference = fStore.collection("hospitals").document(hospitalID);
+                            Map<String,Object> hospital = new HashMap<>();
+                            hospital.put("HospitalName",fullname);
+                            hospital.put("EmailAddress",email);
 
                            // user.put("isUser","1");
 
-                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            documentReference.set(hospital).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused)
                                 {
-                                    Log.d(TAG, "onSuccess: user profile is created for"+userID);
+                                    Log.d(TAG, "onSuccess: Hospital profile is created for"+hospitalID);
                                 }
                             }).addOnFailureListener(new OnFailureListener()
                             {

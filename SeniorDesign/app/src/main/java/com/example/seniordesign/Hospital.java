@@ -38,7 +38,7 @@ public class Hospital extends AppCompatActivity
         {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Login.class));
+                startActivity(new Intent(getApplicationContext(),firstPage.class));
 
             }
         });

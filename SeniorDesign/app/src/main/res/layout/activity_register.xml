@@ -24,7 +24,7 @@
         android:id="@+id/regTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register Account"
+        android:text="Register Account as Donor"
         android:textColor="#F1E8E8"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/name"
