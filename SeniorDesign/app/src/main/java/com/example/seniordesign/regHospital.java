@@ -109,7 +109,7 @@ public class regHospital extends AppCompatActivity {
                             DocumentReference documentReference = fStore.collection("hospitals").document(hospitalID);
                             Map<String,Object> hospital = new HashMap<>();
                             hospital.put("HospitalName",fullname);
-                            hospital.put("EmailAddress",email);
+                            hospital.put("HospitalEmail",email);
 
                            // user.put("isUser","1");
 

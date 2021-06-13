@@ -14,7 +14,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class Hospital extends AppCompatActivity
 {
     TextView Hello;
-    Button LogoutButton2, donorsList;
+    Button LogoutButton2, donorsList, hospitalList;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
@@ -29,6 +29,7 @@ public class Hospital extends AppCompatActivity
         Hello = findViewById(R.id.hello);
         LogoutButton2 = findViewById(R.id.logout2);
         donorsList = findViewById(R.id.seeUsers);
+        hospitalList = findViewById(R.id.seeProfile);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -46,9 +47,19 @@ public class Hospital extends AppCompatActivity
         donorsList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), firstPage.class));
+                startActivity(new Intent(getApplicationContext(), AllUsers.class));
 
             }
         });
+
+        hospitalList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), hospitalProfile.class));
+
+            }
+        });
+
+
     }
     }

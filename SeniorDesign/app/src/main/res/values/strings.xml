@@ -23,4 +23,5 @@
     <string name="title_activity_first_page">firstPage</string>
     <string name="title_activity_reg_hospital">regHospital</string>
     <string name="title_activity_log_hospital">logHospital</string>
+    <string name="title_activity_hospital_profile">hospitalProfile</string>
 </resources>

@@ -26,13 +26,17 @@ public final class ActivityHospitalBinding implements ViewBinding {
   public final Button logout2;
 
   @NonNull
+  public final Button seeProfile;
+
+  @NonNull
   public final Button seeUsers;
 
   private ActivityHospitalBinding(@NonNull ConstraintLayout rootView, @NonNull TextView hello,
-      @NonNull Button logout2, @NonNull Button seeUsers) {
+      @NonNull Button logout2, @NonNull Button seeProfile, @NonNull Button seeUsers) {
     this.rootView = rootView;
     this.hello = hello;
     this.logout2 = logout2;
+    this.seeProfile = seeProfile;
     this.seeUsers = seeUsers;
   }
 
@@ -75,13 +79,20 @@ public final class ActivityHospitalBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.seeProfile;
+      Button seeProfile = rootView.findViewById(id);
+      if (seeProfile == null) {
+        break missingId;
+      }
+
       id = R.id.seeUsers;
       Button seeUsers = rootView.findViewById(id);
       if (seeUsers == null) {
         break missingId;
       }
 
-      return new ActivityHospitalBinding((ConstraintLayout) rootView, hello, logout2, seeUsers);
+      return new ActivityHospitalBinding((ConstraintLayout) rootView, hello, logout2, seeProfile,
+          seeUsers);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

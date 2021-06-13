@@ -12,6 +12,10 @@
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\fragment_users.xml"
     },
     {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_hospital_profile.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_hospital_profile.xml"
+    },
+    {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_sing_users.xml",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\list_sing_users.xml"
     },

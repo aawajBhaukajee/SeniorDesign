@@ -1876,6 +1876,7 @@ int id auto 0x7f080066
 int id autoComplete 0x7f080067
 int id autoCompleteToEnd 0x7f080068
 int id autoCompleteToStart 0x7f080069
+int id backButton 0x7f08022c
 int id barrier 0x7f08006a
 int id baseline 0x7f08006b
 int id beginOnFirstDraw 0x7f08006c
@@ -2034,9 +2035,11 @@ int id loginButtonH 0x7f08021e
 int id logout2 0x7f0801f2
 int id logoutButton 0x7f0800f6
 int id mainEmail 0x7f0801e7
+int id mainEmailH 0x7f08022d
 int id mainHBP 0x7f0801e8
 int id mainLBP 0x7f0801e9
 int id mainName 0x7f0801ea
+int id mainNameH 0x7f08022e
 int id masked 0x7f0800f7
 int id material_clock_display 0x7f0800f8
 int id material_clock_face 0x7f0800f9
@@ -2109,6 +2112,7 @@ int id nav_graph17 0x7f080223
 int id nav_graph18 0x7f080224
 int id nav_graph19 0x7f080225
 int id nav_graph2 0x7f080132
+int id nav_graph20 0x7f08022f
 int id nav_graph3 0x7f080133
 int id nav_graph4 0x7f080134
 int id nav_graph5 0x7f080135
@@ -2150,6 +2154,7 @@ int id pin 0x7f080152
 int id position 0x7f080153
 int id postLayout 0x7f080154
 int id profile 0x7f0801ed
+int id profileH 0x7f080230
 int id progress_circular 0x7f080155
 int id progress_horizontal 0x7f080156
 int id radio 0x7f080158
@@ -2186,6 +2191,7 @@ int id search_mag_icon 0x7f080173
 int id search_plate 0x7f080174
 int id search_src_text 0x7f080175
 int id search_voice_btn 0x7f080176
+int id seeProfile 0x7f080231
 int id seeUsers 0x7f080216
 int id select_dialog_listview 0x7f080177
 int id selected 0x7f080178
@@ -2358,6 +2364,7 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_all_users 0x7f0b0088
 int layout activity_first_page 0x7f0b008a
 int layout activity_hospital 0x7f0b0074
+int layout activity_hospital_profile 0x7f0b008d
 int layout activity_log_hospital 0x7f0b008b
 int layout activity_login 0x7f0b001c
 int layout activity_main 0x7f0b001d
@@ -2471,6 +2478,7 @@ int navigation nav_graph17 0x7f0e0010
 int navigation nav_graph18 0x7f0e0011
 int navigation nav_graph19 0x7f0e0012
 int navigation nav_graph2 0x7f0e0001
+int navigation nav_graph20 0x7f0e0013
 int navigation nav_graph3 0x7f0e0002
 int navigation nav_graph4 0x7f0e0003
 int navigation nav_graph5 0x7f0e0004
@@ -2618,6 +2626,7 @@ int string title_activity_all_users 0x7f10008d
 int string title_activity_donation_center 0x7f10008b
 int string title_activity_first_page 0x7f10008e
 int string title_activity_hospital 0x7f10008a
+int string title_activity_hospital_profile 0x7f100093
 int string title_activity_log_hospital 0x7f10008f
 int string title_activity_login 0x7f100086
 int string title_activity_login_hospital 0x7f100090

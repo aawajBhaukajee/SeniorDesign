@@ -2,6 +2,8 @@ com/example/seniordesign/AllUsers.java
  com.example.seniordesign.AllUsers
  com.example.seniordesign.AllUsers$1
  com.example.seniordesign.AllUsers$UsersViewHolder
+com/example/seniordesign/databinding/ActivityHospitalProfileBinding.java
+ com.example.seniordesign.databinding.ActivityHospitalProfileBinding
 com/example/seniordesign/MainActivity.java
  com.example.seniordesign.MainActivity
  com.example.seniordesign.MainActivity$1
@@ -10,6 +12,7 @@ com/example/seniordesign/Hospital.java
  com.example.seniordesign.Hospital
  com.example.seniordesign.Hospital$1
  com.example.seniordesign.Hospital$2
+ com.example.seniordesign.Hospital$3
 com/example/seniordesign/BuildConfig.java
  com.example.seniordesign.BuildConfig
 com/example/seniordesign/logHospital.java
@@ -23,6 +26,10 @@ com/example/seniordesign/logHospital.java
  com.example.seniordesign.logHospital$3$1$1
  com.example.seniordesign.logHospital$3$1$2
  com.example.seniordesign.logHospital$3$2
+com/example/seniordesign/hospitalProfile.java
+ com.example.seniordesign.hospitalProfile
+ com.example.seniordesign.hospitalProfile$1
+ com.example.seniordesign.hospitalProfile$2
 com/example/seniordesign/Login.java
  com.example.seniordesign.Login
  com.example.seniordesign.Login$1

@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SeniorDesign">
-
+        <activity
+            android:name=".hospitalProfile"
+            android:label="@string/title_activity_hospital_profile"
+            android:theme="@style/Theme.SeniorDesign.NoActionBar"></activity>
         <activity android:name=".logHospital" />
         <activity android:name=".regHospital" />
         <activity android:name=".MainActivity" />
@@ -19,8 +22,7 @@
         <activity android:name=".AllUsers" />
         <activity android:name=".Login" />
         <activity android:name=".Hospital" />
-        <activity android:name=".firstPage" >
-
+        <activity android:name=".firstPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
