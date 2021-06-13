@@ -12,14 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeniorDesign">
 
-
+        <activity android:name=".logHospital" />
+        <activity android:name=".regHospital" />
         <activity android:name=".MainActivity" />
         <activity android:name=".register" />
-
-        <activity android:name=".AllUsers" />
+        <ac
+            tivity android:name=".AllUsers" />
         <activity android:name=".Login" />
-        <activity android:name=".Hospital" >
-
+        <activity android:name=".Hospital" />
+        <activity android:name=".firstPage" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

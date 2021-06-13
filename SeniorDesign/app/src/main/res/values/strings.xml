@@ -18,4 +18,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_all_users">AllUsers</string>
+    <string name="title_activity_register_hospital">registerHospital</string>
+    <string name="title_activity_login_hospital">loginHospital</string>
+    <string name="title_activity_first_page">firstPage</string>
+    <string name="title_activity_reg_hospital">regHospital</string>
+    <string name="title_activity_log_hospital">logHospital</string>
 </resources>

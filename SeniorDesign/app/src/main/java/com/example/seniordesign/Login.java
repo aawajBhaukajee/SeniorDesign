@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,8 +18,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Login extends AppCompatActivity
@@ -75,8 +72,8 @@ public class Login extends AppCompatActivity
                     {
 
                         Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        checkAccessLevel(authResult.getUser().getUid());
-                        // startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        //checkAccessLevel(authResult.getUser().getUid());
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         finish();
 
                     }
@@ -147,7 +144,7 @@ public class Login extends AppCompatActivity
         });
     }
 
-    private void checkAccessLevel(String uid) {
+   /* private void checkAccessLevel(String uid) {
         DocumentReference df = fStore.collection("users").document(uid);
         df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -165,5 +162,5 @@ public class Login extends AppCompatActivity
                 }
             }
         });
-    }
+    }*/
 }
