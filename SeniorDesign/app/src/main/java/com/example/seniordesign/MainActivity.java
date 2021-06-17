@@ -18,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView fullname,email,hbp,lbp,Welcome,Profile;
+    TextView fullname,email,hbp,lbp,btype,mainage,mainweight,Welcome,Profile;
     Button LogoutButton, hosList;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.mainEmail);
         hbp = findViewById(R.id.mainHBP);
         lbp = findViewById(R.id.mainLBP);
+        btype = findViewById(R.id.mainbloodType);
+        mainage = findViewById(R.id.mainAge);
+        mainweight = findViewById(R.id.mainWeight);
         hosList = findViewById(R.id.hospList);
         Welcome = findViewById(R.id.welcome);
         LogoutButton = findViewById(R.id.logoutButton);
@@ -49,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
                 email.setText(documentSnapshot.getString( "EmailAddress"));
                 hbp.setText(documentSnapshot.getString( "MaximumBP"));
                 lbp.setText(documentSnapshot.getString( "MinimumBP"));
+                btype.setText(documentSnapshot.getString( "BloodType"));
+                mainage.setText(documentSnapshot.getString( "Age"));
+                mainweight.setText(documentSnapshot.getString( "Weight"));
 
             }
         });

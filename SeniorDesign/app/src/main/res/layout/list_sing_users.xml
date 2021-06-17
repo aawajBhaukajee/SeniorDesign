@@ -37,7 +37,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="lowbp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listhighbp" />
+
+    <TextView
+        android:id="@+id/listage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listlowbp" />
+
+    <TextView
+        android:id="@+id/listweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listage" />
+
+    <TextView
+        android:id="@+id/listbloodtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bloodtype"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listweight" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

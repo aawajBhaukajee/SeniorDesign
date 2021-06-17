@@ -1861,6 +1861,7 @@ id activity_chooser_view_content
 id add
 id adjust_height
 id adjust_width
+id age
 id alertTitle
 id aligned
 id all
@@ -1883,6 +1884,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id blocking
+id bloodtype
 id bottom
 id bounce
 id browser_actions_header_text
@@ -2029,22 +2031,31 @@ id linear
 id listMode
 id list_item
 id list_sing_users
+id listage
+id listbloodtype
 id listemail
 id listemailH
 id listhighbp
+id listlocationH
 id listlowbp
 id listname
 id listnameH
+id listweight
+id locationH
 id loginButton
 id loginButtonH
 id logout2
 id logoutButton
+id mainAge
 id mainEmail
 id mainEmailH
 id mainHBP
 id mainLBP
+id mainLocationH
 id mainName
 id mainNameH
+id mainWeight
+id mainbloodType
 id masked
 id material_clock_display
 id material_clock_face
@@ -2119,6 +2130,7 @@ id nav_graph19
 id nav_graph2
 id nav_graph20
 id nav_graph21
+id nav_graph22
 id nav_graph3
 id nav_graph4
 id nav_graph5
@@ -2181,6 +2193,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id schedule
 id screen
 id scroll
 id scrollIndicatorDown
@@ -2298,6 +2311,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id weight
 id welcome
 id wide
 id withText
@@ -2377,6 +2391,7 @@ layout activity_login
 layout activity_main
 layout activity_reg_hospital
 layout activity_register
+layout activity_schedule
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -2488,6 +2503,7 @@ navigation nav_graph19
 navigation nav_graph2
 navigation nav_graph20
 navigation nav_graph21
+navigation nav_graph22
 navigation nav_graph3
 navigation nav_graph4
 navigation nav_graph5
@@ -2645,6 +2661,7 @@ string title_activity_reg_hospital
 string title_activity_register
 string title_activity_register1
 string title_activity_register_hospital
+string title_activity_schedule
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

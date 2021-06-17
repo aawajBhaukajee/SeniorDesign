@@ -1860,6 +1860,7 @@ int id activity_chooser_view_content 0x7f080057
 int id add 0x7f080058
 int id adjust_height 0x7f080059
 int id adjust_width 0x7f08005a
+int id age 0x7f080223
 int id alertTitle 0x7f08005b
 int id aligned 0x7f08005c
 int id all 0x7f08005d
@@ -1882,6 +1883,7 @@ int id baseline 0x7f08006d
 int id beginOnFirstDraw 0x7f08006e
 int id beginning 0x7f08006f
 int id blocking 0x7f080070
+int id bloodtype 0x7f080224
 int id bottom 0x7f080071
 int id bounce 0x7f080072
 int id browser_actions_header_text 0x7f080073
@@ -2028,22 +2030,31 @@ int id linear 0x7f0800ff
 int id listMode 0x7f080100
 int id list_item 0x7f080101
 int id list_sing_users 0x7f080102
+int id listage 0x7f080226
+int id listbloodtype 0x7f080227
 int id listemail 0x7f080103
 int id listemailH 0x7f080104
 int id listhighbp 0x7f080105
+int id listlocationH 0x7f080221
 int id listlowbp 0x7f080106
 int id listname 0x7f080107
 int id listnameH 0x7f080108
+int id listweight 0x7f080228
+int id locationH 0x7f080220
 int id loginButton 0x7f080109
 int id loginButtonH 0x7f08010a
 int id logout2 0x7f08010b
 int id logoutButton 0x7f08010c
+int id mainAge 0x7f080229
 int id mainEmail 0x7f08010d
 int id mainEmailH 0x7f08010e
 int id mainHBP 0x7f08010f
 int id mainLBP 0x7f080110
+int id mainLocationH 0x7f080222
 int id mainName 0x7f080111
 int id mainNameH 0x7f080112
+int id mainWeight 0x7f08022a
+int id mainbloodType 0x7f08022b
 int id masked 0x7f080113
 int id material_clock_display 0x7f080114
 int id material_clock_face 0x7f080115
@@ -2118,6 +2129,7 @@ int id nav_graph19 0x7f080159
 int id nav_graph2 0x7f08015a
 int id nav_graph20 0x7f08015b
 int id nav_graph21 0x7f08015c
+int id nav_graph22 0x7f08021a
 int id nav_graph3 0x7f08015d
 int id nav_graph4 0x7f08015e
 int id nav_graph5 0x7f08015f
@@ -2180,6 +2192,7 @@ int id save_non_transition_alpha 0x7f080197
 int id save_overlay_view 0x7f080198
 int id sawtooth 0x7f080199
 int id scale 0x7f08019a
+int id schedule 0x7f08021f
 int id screen 0x7f08019b
 int id scroll 0x7f08019c
 int id scrollIndicatorDown 0x7f08019d
@@ -2297,6 +2310,7 @@ int id view_tree_saved_state_registry_owner 0x7f08020c
 int id view_tree_view_model_store_owner 0x7f08020d
 int id visible 0x7f08020e
 int id visible_removing_fragment_view_tag 0x7f08020f
+int id weight 0x7f080225
 int id welcome 0x7f080210
 int id wide 0x7f080211
 int id withText 0x7f080212
@@ -2376,6 +2390,7 @@ int layout activity_login 0x7f0b0022
 int layout activity_main 0x7f0b0023
 int layout activity_reg_hospital 0x7f0b0024
 int layout activity_register 0x7f0b0025
+int layout activity_schedule 0x7f0b0085
 int layout browser_actions_context_menu_page 0x7f0b0026
 int layout browser_actions_context_menu_row 0x7f0b0027
 int layout custom_dialog 0x7f0b0028
@@ -2487,6 +2502,7 @@ int navigation nav_graph19 0x7f0d000a
 int navigation nav_graph2 0x7f0d000b
 int navigation nav_graph20 0x7f0d000c
 int navigation nav_graph21 0x7f0d000d
+int navigation nav_graph22 0x7f0d0015
 int navigation nav_graph3 0x7f0d000e
 int navigation nav_graph4 0x7f0d000f
 int navigation nav_graph5 0x7f0d0010
@@ -2644,6 +2660,7 @@ int string title_activity_reg_hospital 0x7f0f0091
 int string title_activity_register 0x7f0f0092
 int string title_activity_register1 0x7f0f0093
 int string title_activity_register_hospital 0x7f0f0094
+int string title_activity_schedule 0x7f0f0095
 int style AlertDialog_AppCompat 0x7f100000
 int style AlertDialog_AppCompat_Light 0x7f100001
 int style AndroidThemeColorAccentYellow 0x7f100002

@@ -21,7 +21,13 @@ public final class ActivityRegisterBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final EditText age;
+
+  @NonNull
   public final TextView appName;
+
+  @NonNull
+  public final EditText bloodtype;
 
   @NonNull
   public final EditText emailAddress;
@@ -47,12 +53,18 @@ public final class ActivityRegisterBinding implements ViewBinding {
   @NonNull
   public final Button registerButton;
 
-  private ActivityRegisterBinding(@NonNull ConstraintLayout rootView, @NonNull TextView appName,
-      @NonNull EditText emailAddress, @NonNull TextView hasAccount, @NonNull EditText maxbpressure,
-      @NonNull EditText minbpressure, @NonNull EditText name, @NonNull EditText password,
-      @NonNull TextView regTitle, @NonNull Button registerButton) {
+  @NonNull
+  public final EditText weight;
+
+  private ActivityRegisterBinding(@NonNull ConstraintLayout rootView, @NonNull EditText age,
+      @NonNull TextView appName, @NonNull EditText bloodtype, @NonNull EditText emailAddress,
+      @NonNull TextView hasAccount, @NonNull EditText maxbpressure, @NonNull EditText minbpressure,
+      @NonNull EditText name, @NonNull EditText password, @NonNull TextView regTitle,
+      @NonNull Button registerButton, @NonNull EditText weight) {
     this.rootView = rootView;
+    this.age = age;
     this.appName = appName;
+    this.bloodtype = bloodtype;
     this.emailAddress = emailAddress;
     this.hasAccount = hasAccount;
     this.maxbpressure = maxbpressure;
@@ -61,6 +73,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
     this.password = password;
     this.regTitle = regTitle;
     this.registerButton = registerButton;
+    this.weight = weight;
   }
 
   @Override
@@ -90,9 +103,21 @@ public final class ActivityRegisterBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.age;
+      EditText age = rootView.findViewById(id);
+      if (age == null) {
+        break missingId;
+      }
+
       id = R.id.appName;
       TextView appName = rootView.findViewById(id);
       if (appName == null) {
+        break missingId;
+      }
+
+      id = R.id.bloodtype;
+      EditText bloodtype = rootView.findViewById(id);
+      if (bloodtype == null) {
         break missingId;
       }
 
@@ -144,8 +169,15 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRegisterBinding((ConstraintLayout) rootView, appName, emailAddress,
-          hasAccount, maxbpressure, minbpressure, name, password, regTitle, registerButton);
+      id = R.id.weight;
+      EditText weight = rootView.findViewById(id);
+      if (weight == null) {
+        break missingId;
+      }
+
+      return new ActivityRegisterBinding((ConstraintLayout) rootView, age, appName, bloodtype,
+          emailAddress, hasAccount, maxbpressure, minbpressure, name, password, regTitle,
+          registerButton, weight);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

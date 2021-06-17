@@ -22,6 +22,12 @@ public final class ListSingUsersBinding implements ViewBinding {
   public final ConstraintLayout listSingUsers;
 
   @NonNull
+  public final TextView listage;
+
+  @NonNull
+  public final TextView listbloodtype;
+
+  @NonNull
   public final TextView listemail;
 
   @NonNull
@@ -33,15 +39,22 @@ public final class ListSingUsersBinding implements ViewBinding {
   @NonNull
   public final TextView listname;
 
+  @NonNull
+  public final TextView listweight;
+
   private ListSingUsersBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout listSingUsers, @NonNull TextView listemail,
-      @NonNull TextView listhighbp, @NonNull TextView listlowbp, @NonNull TextView listname) {
+      @NonNull ConstraintLayout listSingUsers, @NonNull TextView listage,
+      @NonNull TextView listbloodtype, @NonNull TextView listemail, @NonNull TextView listhighbp,
+      @NonNull TextView listlowbp, @NonNull TextView listname, @NonNull TextView listweight) {
     this.rootView = rootView;
     this.listSingUsers = listSingUsers;
+    this.listage = listage;
+    this.listbloodtype = listbloodtype;
     this.listemail = listemail;
     this.listhighbp = listhighbp;
     this.listlowbp = listlowbp;
     this.listname = listname;
+    this.listweight = listweight;
   }
 
   @Override
@@ -73,6 +86,18 @@ public final class ListSingUsersBinding implements ViewBinding {
     missingId: {
       ConstraintLayout listSingUsers = (ConstraintLayout) rootView;
 
+      id = R.id.listage;
+      TextView listage = rootView.findViewById(id);
+      if (listage == null) {
+        break missingId;
+      }
+
+      id = R.id.listbloodtype;
+      TextView listbloodtype = rootView.findViewById(id);
+      if (listbloodtype == null) {
+        break missingId;
+      }
+
       id = R.id.listemail;
       TextView listemail = rootView.findViewById(id);
       if (listemail == null) {
@@ -97,8 +122,14 @@ public final class ListSingUsersBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ListSingUsersBinding((ConstraintLayout) rootView, listSingUsers, listemail,
-          listhighbp, listlowbp, listname);
+      id = R.id.listweight;
+      TextView listweight = rootView.findViewById(id);
+      if (listweight == null) {
+        break missingId;
+      }
+
+      return new ListSingUsersBinding((ConstraintLayout) rootView, listSingUsers, listage,
+          listbloodtype, listemail, listhighbp, listlowbp, listname, listweight);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

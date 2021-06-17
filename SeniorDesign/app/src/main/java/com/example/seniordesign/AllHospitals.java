@@ -48,6 +48,7 @@ public class AllHospitals extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull AllHospitals.HospitalsViewHolder holderH, int position, @NonNull HospitalsModel model) {
                 holderH.listnameH.setText(model.getHospitalName());
                 holderH.listemailH.setText(model.getHospitalEmail());
+                holderH.listlocationH.setText(model.getHospitalLocation());
             }
         };
 
@@ -58,13 +59,14 @@ public class AllHospitals extends AppCompatActivity {
 
     private class HospitalsViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView listnameH, listemailH;
+        private TextView listnameH, listemailH, listlocationH;
 
         public HospitalsViewHolder(@NonNull View itemView) {
             super(itemView);
 
             listnameH = itemView.findViewById(R.id.listnameH);
             listemailH = itemView.findViewById(R.id.listemailH);
+            listlocationH = itemView.findViewById(R.id.listlocationH);
         }
     }
 

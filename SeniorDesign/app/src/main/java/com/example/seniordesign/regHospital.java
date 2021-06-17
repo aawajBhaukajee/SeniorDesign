@@ -31,7 +31,7 @@ public class regHospital extends AppCompatActivity {
     public static final String TAG = "TAG";
 
     TextView AppNameH, RegisterTitleH, OldAccountH;
-    EditText FullNameH, EmailH, PasswordH;
+    EditText FullNameH, EmailH, LocationH,PasswordH;
     Button RegisterButtonH;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -47,6 +47,7 @@ public class regHospital extends AppCompatActivity {
         OldAccountH = findViewById(R.id.hasAccountH);
         FullNameH = findViewById(R.id.nameH);
         EmailH = findViewById(R.id.emailAddressH);
+        LocationH = findViewById(R.id.locationH);
         PasswordH = findViewById(R.id.passwordH);
         RegisterButtonH = findViewById(R.id.registerButtonH);
         fAuth = FirebaseAuth.getInstance();
@@ -63,7 +64,8 @@ public class regHospital extends AppCompatActivity {
             public void onClick(View v)
             {
                 final String fullname = FullNameH.getText().toString().trim();
-                final String email = EmailH.getText().toString().trim();
+                final String email = EmailH.getText().toString();
+                final String location = LocationH.getText().toString().trim();
                 final String password = PasswordH.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email))
@@ -79,6 +81,11 @@ public class regHospital extends AppCompatActivity {
                 if (password.length() < 8)
                 {
                     PasswordH.setError("Password must be at least 7 characters long");
+                    return;
+                }
+                if (TextUtils.isEmpty(location))
+                {
+                    EmailH.setError("Location is needed to register.");
                     return;
                 }
 
@@ -110,6 +117,7 @@ public class regHospital extends AppCompatActivity {
                             Map<String,Object> hospital = new HashMap<>();
                             hospital.put("HospitalName",fullname);
                             hospital.put("HospitalEmail",email);
+                            hospital.put("HospitalLocation",location);
 
                            // user.put("isUser","1");
 

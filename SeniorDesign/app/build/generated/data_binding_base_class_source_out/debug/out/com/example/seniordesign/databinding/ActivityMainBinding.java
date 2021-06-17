@@ -26,6 +26,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button logoutButton;
 
   @NonNull
+  public final TextView mainAge;
+
+  @NonNull
   public final TextView mainEmail;
 
   @NonNull
@@ -38,22 +41,32 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView mainName;
 
   @NonNull
+  public final TextView mainWeight;
+
+  @NonNull
+  public final TextView mainbloodType;
+
+  @NonNull
   public final TextView profile;
 
   @NonNull
   public final TextView welcome;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button hospList,
-      @NonNull Button logoutButton, @NonNull TextView mainEmail, @NonNull TextView mainHBP,
-      @NonNull TextView mainLBP, @NonNull TextView mainName, @NonNull TextView profile,
+      @NonNull Button logoutButton, @NonNull TextView mainAge, @NonNull TextView mainEmail,
+      @NonNull TextView mainHBP, @NonNull TextView mainLBP, @NonNull TextView mainName,
+      @NonNull TextView mainWeight, @NonNull TextView mainbloodType, @NonNull TextView profile,
       @NonNull TextView welcome) {
     this.rootView = rootView;
     this.hospList = hospList;
     this.logoutButton = logoutButton;
+    this.mainAge = mainAge;
     this.mainEmail = mainEmail;
     this.mainHBP = mainHBP;
     this.mainLBP = mainLBP;
     this.mainName = mainName;
+    this.mainWeight = mainWeight;
+    this.mainbloodType = mainbloodType;
     this.profile = profile;
     this.welcome = welcome;
   }
@@ -97,6 +110,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.mainAge;
+      TextView mainAge = rootView.findViewById(id);
+      if (mainAge == null) {
+        break missingId;
+      }
+
       id = R.id.mainEmail;
       TextView mainEmail = rootView.findViewById(id);
       if (mainEmail == null) {
@@ -121,6 +140,18 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.mainWeight;
+      TextView mainWeight = rootView.findViewById(id);
+      if (mainWeight == null) {
+        break missingId;
+      }
+
+      id = R.id.mainbloodType;
+      TextView mainbloodType = rootView.findViewById(id);
+      if (mainbloodType == null) {
+        break missingId;
+      }
+
       id = R.id.profile;
       TextView profile = rootView.findViewById(id);
       if (profile == null) {
@@ -133,8 +164,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, hospList, logoutButton, mainEmail,
-          mainHBP, mainLBP, mainName, profile, welcome);
+      return new ActivityMainBinding((ConstraintLayout) rootView, hospList, logoutButton, mainAge,
+          mainEmail, mainHBP, mainLBP, mainName, mainWeight, mainbloodType, profile, welcome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

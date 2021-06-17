@@ -31,7 +31,7 @@ public class register extends AppCompatActivity
     public static final String TAG = "TAG";
 
     TextView AppName, RegisterTitle, OldAccount;
-    EditText FullName, Email, Password, MinimumBP, MaximumBP;
+    EditText FullName, Email, Password, MinimumBP, MaximumBP, Age, Weight, BloodType;
     Button RegisterButton;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -49,6 +49,9 @@ public class register extends AppCompatActivity
         Email = findViewById(R.id.emailAddress);
         Password = findViewById(R.id.password);
         RegisterButton = findViewById(R.id.registerButton);
+        Age = findViewById(R.id.age);
+        Weight = findViewById(R.id.weight);
+        BloodType = findViewById(R.id.bloodtype);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
@@ -64,17 +67,30 @@ public class register extends AppCompatActivity
             public void onClick(View v)
             {
                 final String fullname = FullName.getText().toString().trim();
-                final String email = Email.getText().toString().trim();
+                final String email = Email.getText().toString();
                 final String password = Password.getText().toString().trim();
+                final String btype = BloodType.getText().toString().trim();
 
                 final String maxbpressure = MaximumBP.getText().toString();
                 int intValue = Integer.parseInt(maxbpressure);
+
                 final String minbpressure = MinimumBP.getText().toString();
                 int intValue1 = Integer.parseInt(minbpressure);
+
+                final String donorage = Age.getText().toString();
+                int intValue2 = Integer.parseInt(donorage);
+
+                final String donorweight = Weight.getText().toString();
+                int intValue3 = Integer.parseInt(donorweight);
 
                 if (TextUtils.isEmpty(email))
                 {
                     Email.setError("Email is needed to register.");
+                    return;
+                }
+                if (TextUtils.isEmpty(btype))
+                {
+                    Email.setError("Blood type is needed to register.");
                     return;
                 }
                 if (TextUtils.isEmpty(password))
@@ -94,6 +110,16 @@ public class register extends AppCompatActivity
                 }
                 if (intValue1 < 80 ) {
                     MinimumBP.setError("Minimum blood pressure should be more than 80.");
+                    return;
+                }
+
+                if (intValue2 >60 || intValue2 < 18) {
+                    Age.setError("Your age must be between 18 to 60.");
+                    return;
+                }
+
+                if (intValue3 < 110 ) {
+                    Weight.setError("Your weight must be more than 110 pounds.");
                     return;
                 }
 
@@ -123,12 +149,15 @@ public class register extends AppCompatActivity
                             userID = fAuth.getCurrentUser().getUid();
                             DocumentReference documentReference = fStore.collection("users").document(userID);
                             Map<String,Object> user = new HashMap<>();
+
                             user.put("FullName",fullname);
                             user.put("EmailAddress",email);
-
                             user.put("MaximumBP", maxbpressure);
                             user.put("MinimumBP", minbpressure);
-                            user.put("isUser","1");
+                            user.put("BloodType", btype);
+                            user.put("Age", donorage);
+                            user.put("Weight", donorweight);
+                           // user.put("isUser","1");
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override

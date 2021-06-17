@@ -18,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class hospitalProfile extends AppCompatActivity {
 
-    TextView hosName,hosEmail,hosProfile;
+    TextView hosName,hosEmail,hosLocation,hosProfile;
     Button bButton;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -32,6 +32,7 @@ public class hospitalProfile extends AppCompatActivity {
         hosProfile = findViewById(R.id.profileH);
         hosName = findViewById(R.id.mainNameH);
         hosEmail = findViewById(R.id.mainEmailH);
+        hosLocation = findViewById(R.id.mainLocationH);
         bButton = findViewById(R.id.backButton);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -43,6 +44,7 @@ public class hospitalProfile extends AppCompatActivity {
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
                 hosName.setText(documentSnapshot.getString( "HospitalName"));
                 hosEmail.setText(documentSnapshot.getString( "HospitalEmail"));
+                hosLocation.setText(documentSnapshot.getString("HospitalLocation"));
             }
         });
 

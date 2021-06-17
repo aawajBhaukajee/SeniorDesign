@@ -4,12 +4,14 @@ public class HospitalsModel {
 
     private String HospitalEmail;
     private String HospitalName;
+    private String HospitalLocation;
 
     private HospitalsModel(){}
 
-    private HospitalsModel(String HospitalEmail, String HospitalName){
+    private HospitalsModel(String HospitalEmail, String HospitalName, String HospitalLocation){
         this.HospitalEmail=HospitalEmail;
         this.HospitalName=HospitalName;
+        this.HospitalLocation=HospitalLocation;
 
     }
 
@@ -27,6 +29,14 @@ public class HospitalsModel {
 
     public void setHospitalName(String hospitalName) {
         this.HospitalName = hospitalName;
+    }
+
+    public String getHospitalLocation() {
+        return HospitalLocation;
+    }
+
+    public void setHospitalLocation(String hospitalLocation) {
+        this.HospitalLocation = hospitalLocation;
     }
 }
 

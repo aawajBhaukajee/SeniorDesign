@@ -12,8 +12,16 @@
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_hospital_profile.xml"
     },
     {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_schedule.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\content_schedule.xml"
+    },
+    {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_sing_users.xml",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\list_sing_users.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_schedule.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_schedule.xml"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
@@ -34,6 +42,14 @@
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_sing_hospitals.xml",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\list_sing_hospitals.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_first.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\fragment_first.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_second.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\fragment_second.xml"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_all_hospitals.xml",
