@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
-                fullname.setText(documentSnapshot.getString( "FullName"));
-                email.setText(documentSnapshot.getString( "EmailAddress"));
+               fullname.setText(documentSnapshot.getString( "FullName"));
+               email.setText(documentSnapshot.getString( "EmailAddress"));
                 hbp.setText(documentSnapshot.getString( "MaximumBP"));
                 lbp.setText(documentSnapshot.getString( "MinimumBP"));
                 btype.setText(documentSnapshot.getString( "BloodType"));

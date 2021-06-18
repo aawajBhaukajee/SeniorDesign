@@ -19,6 +19,12 @@ public final class ListSingUsersBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView five;
+
+  @NonNull
+  public final TextView four;
+
+  @NonNull
   public final ConstraintLayout listSingUsers;
 
   @NonNull
@@ -42,11 +48,30 @@ public final class ListSingUsersBinding implements ViewBinding {
   @NonNull
   public final TextView listweight;
 
-  private ListSingUsersBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout listSingUsers, @NonNull TextView listage,
+  @NonNull
+  public final TextView one;
+
+  @NonNull
+  public final TextView seven;
+
+  @NonNull
+  public final TextView textView8;
+
+  @NonNull
+  public final TextView three;
+
+  @NonNull
+  public final TextView two;
+
+  private ListSingUsersBinding(@NonNull ConstraintLayout rootView, @NonNull TextView five,
+      @NonNull TextView four, @NonNull ConstraintLayout listSingUsers, @NonNull TextView listage,
       @NonNull TextView listbloodtype, @NonNull TextView listemail, @NonNull TextView listhighbp,
-      @NonNull TextView listlowbp, @NonNull TextView listname, @NonNull TextView listweight) {
+      @NonNull TextView listlowbp, @NonNull TextView listname, @NonNull TextView listweight,
+      @NonNull TextView one, @NonNull TextView seven, @NonNull TextView textView8,
+      @NonNull TextView three, @NonNull TextView two) {
     this.rootView = rootView;
+    this.five = five;
+    this.four = four;
     this.listSingUsers = listSingUsers;
     this.listage = listage;
     this.listbloodtype = listbloodtype;
@@ -55,6 +80,11 @@ public final class ListSingUsersBinding implements ViewBinding {
     this.listlowbp = listlowbp;
     this.listname = listname;
     this.listweight = listweight;
+    this.one = one;
+    this.seven = seven;
+    this.textView8 = textView8;
+    this.three = three;
+    this.two = two;
   }
 
   @Override
@@ -84,6 +114,18 @@ public final class ListSingUsersBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.five;
+      TextView five = rootView.findViewById(id);
+      if (five == null) {
+        break missingId;
+      }
+
+      id = R.id.four;
+      TextView four = rootView.findViewById(id);
+      if (four == null) {
+        break missingId;
+      }
+
       ConstraintLayout listSingUsers = (ConstraintLayout) rootView;
 
       id = R.id.listage;
@@ -128,8 +170,39 @@ public final class ListSingUsersBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ListSingUsersBinding((ConstraintLayout) rootView, listSingUsers, listage,
-          listbloodtype, listemail, listhighbp, listlowbp, listname, listweight);
+      id = R.id.one;
+      TextView one = rootView.findViewById(id);
+      if (one == null) {
+        break missingId;
+      }
+
+      id = R.id.seven;
+      TextView seven = rootView.findViewById(id);
+      if (seven == null) {
+        break missingId;
+      }
+
+      id = R.id.textView8;
+      TextView textView8 = rootView.findViewById(id);
+      if (textView8 == null) {
+        break missingId;
+      }
+
+      id = R.id.three;
+      TextView three = rootView.findViewById(id);
+      if (three == null) {
+        break missingId;
+      }
+
+      id = R.id.two;
+      TextView two = rootView.findViewById(id);
+      if (two == null) {
+        break missingId;
+      }
+
+      return new ListSingUsersBinding((ConstraintLayout) rootView, five, four, listSingUsers,
+          listage, listbloodtype, listemail, listhighbp, listlowbp, listname, listweight, one,
+          seven, textView8, three, two);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

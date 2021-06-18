@@ -34,15 +34,28 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
   @NonNull
   public final TextView profileH;
 
+  @NonNull
+  public final TextView textView12;
+
+  @NonNull
+  public final TextView textView13;
+
+  @NonNull
+  public final TextView textView14;
+
   private ActivityHospitalProfileBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button backButton, @NonNull TextView mainEmailH, @NonNull TextView mainLocationH,
-      @NonNull TextView mainNameH, @NonNull TextView profileH) {
+      @NonNull TextView mainNameH, @NonNull TextView profileH, @NonNull TextView textView12,
+      @NonNull TextView textView13, @NonNull TextView textView14) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.mainEmailH = mainEmailH;
     this.mainLocationH = mainLocationH;
     this.mainNameH = mainNameH;
     this.profileH = profileH;
+    this.textView12 = textView12;
+    this.textView13 = textView13;
+    this.textView14 = textView14;
   }
 
   @Override
@@ -102,8 +115,26 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView12;
+      TextView textView12 = rootView.findViewById(id);
+      if (textView12 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView13;
+      TextView textView13 = rootView.findViewById(id);
+      if (textView13 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView14;
+      TextView textView14 = rootView.findViewById(id);
+      if (textView14 == null) {
+        break missingId;
+      }
+
       return new ActivityHospitalProfileBinding((ConstraintLayout) rootView, backButton, mainEmailH,
-          mainLocationH, mainNameH, profileH);
+          mainLocationH, mainNameH, profileH, textView12, textView13, textView14);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

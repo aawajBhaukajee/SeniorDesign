@@ -27,12 +27,25 @@ public final class ListSingHospitalsBinding implements ViewBinding {
   @NonNull
   public final TextView listnameH;
 
+  @NonNull
+  public final TextView textView10;
+
+  @NonNull
+  public final TextView textView11;
+
+  @NonNull
+  public final TextView textView9;
+
   private ListSingHospitalsBinding(@NonNull ConstraintLayout rootView, @NonNull TextView listemailH,
-      @NonNull TextView listlocationH, @NonNull TextView listnameH) {
+      @NonNull TextView listlocationH, @NonNull TextView listnameH, @NonNull TextView textView10,
+      @NonNull TextView textView11, @NonNull TextView textView9) {
     this.rootView = rootView;
     this.listemailH = listemailH;
     this.listlocationH = listlocationH;
     this.listnameH = listnameH;
+    this.textView10 = textView10;
+    this.textView11 = textView11;
+    this.textView9 = textView9;
   }
 
   @Override
@@ -80,8 +93,26 @@ public final class ListSingHospitalsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView10;
+      TextView textView10 = rootView.findViewById(id);
+      if (textView10 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView11;
+      TextView textView11 = rootView.findViewById(id);
+      if (textView11 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView9;
+      TextView textView9 = rootView.findViewById(id);
+      if (textView9 == null) {
+        break missingId;
+      }
+
       return new ListSingHospitalsBinding((ConstraintLayout) rootView, listemailH, listlocationH,
-          listnameH);
+          listnameH, textView10, textView11, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
