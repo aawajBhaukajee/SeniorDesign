@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
@@ -16,20 +16,24 @@ import java.lang.String;
 
 public final class ActivityAllHospitalsBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final DrawerLayout rootView;
+
+  @NonNull
+  public final DrawerLayout drawerLayout;
 
   @NonNull
   public final RecyclerView firestoreListHospital;
 
-  private ActivityAllHospitalsBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView firestoreListHospital) {
+  private ActivityAllHospitalsBinding(@NonNull DrawerLayout rootView,
+      @NonNull DrawerLayout drawerLayout, @NonNull RecyclerView firestoreListHospital) {
     this.rootView = rootView;
+    this.drawerLayout = drawerLayout;
     this.firestoreListHospital = firestoreListHospital;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +58,16 @@ public final class ActivityAllHospitalsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      DrawerLayout drawerLayout = (DrawerLayout) rootView;
+
       id = R.id.firestore_listHospital;
       RecyclerView firestoreListHospital = rootView.findViewById(id);
       if (firestoreListHospital == null) {
         break missingId;
       }
 
-      return new ActivityAllHospitalsBinding((ConstraintLayout) rootView, firestoreListHospital);
+      return new ActivityAllHospitalsBinding((DrawerLayout) rootView, drawerLayout,
+          firestoreListHospital);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

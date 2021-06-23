@@ -1,13 +1,12 @@
 package com.example.seniordesign;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -18,8 +17,9 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView fullname,email,hbp,lbp,btype,mainage,mainweight,Welcome,Profile;
-    Button LogoutButton, hosList;
+    DrawerLayout drawerLayout;
+
+    TextView fullname,email,hbp,lbp,btype,mainage,mainweight,Profile;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        drawerLayout=findViewById(R.id.drawerLayout);
         Profile = findViewById(R.id.profile);
         fullname = findViewById(R.id.mainName);
         email = findViewById(R.id.mainEmail);
@@ -37,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
         btype = findViewById(R.id.mainbloodType);
         mainage = findViewById(R.id.mainAge);
         mainweight = findViewById(R.id.mainWeight);
-        hosList = findViewById(R.id.hospList);
-        Welcome = findViewById(R.id.welcome);
-        LogoutButton = findViewById(R.id.logoutButton);
+       // hosList = findViewById(R.id.hospList);
+        //Welcome = findViewById(R.id.welcome);
+        //LogoutButton = findViewById(R.id.logoutButton);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         userId = fAuth.getCurrentUser().getUid();
@@ -59,19 +60,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LogoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),firstPage.class));
-            }
-        });
+    }
+    public void ClickMenu(View view){
+        navigation.openDrawer(drawerLayout);
+    }
 
-        hosList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),AllHospitals.class));
-            }
-        });
+    public void ClickLogo(View view){
+        navigation.closeDrawer(drawerLayout);
+    }
 
+    public void ClickHome(View view){
+        navigation.redirectActivity(this,navigation.class);
+    }
+
+    public void ClickProfile(View view){
+        recreate();
+    }
+
+    public void ClickListHospital(View view){
+        navigation.redirectActivity(this,AllHospitals.class);
+    }
+
+    public void ClickLogout(View view){
+        navigation.redirectActivity(this, firstPage.class);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        navigation.closeDrawer(drawerLayout);
     }
 }

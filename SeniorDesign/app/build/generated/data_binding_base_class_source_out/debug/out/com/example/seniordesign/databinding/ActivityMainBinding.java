@@ -4,11 +4,10 @@ package com.example.seniordesign.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
 import java.lang.NullPointerException;
@@ -17,13 +16,10 @@ import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final DrawerLayout rootView;
 
   @NonNull
-  public final Button hospList;
-
-  @NonNull
-  public final Button logoutButton;
+  public final DrawerLayout drawerLayout;
 
   @NonNull
   public final TextView mainAge;
@@ -70,19 +66,14 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView textView7;
 
-  @NonNull
-  public final TextView welcome;
-
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button hospList,
-      @NonNull Button logoutButton, @NonNull TextView mainAge, @NonNull TextView mainEmail,
-      @NonNull TextView mainHBP, @NonNull TextView mainLBP, @NonNull TextView mainName,
-      @NonNull TextView mainWeight, @NonNull TextView mainbloodType, @NonNull TextView profile,
-      @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3,
-      @NonNull TextView textView4, @NonNull TextView textView5, @NonNull TextView textView6,
-      @NonNull TextView textView7, @NonNull TextView welcome) {
+  private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawerLayout,
+      @NonNull TextView mainAge, @NonNull TextView mainEmail, @NonNull TextView mainHBP,
+      @NonNull TextView mainLBP, @NonNull TextView mainName, @NonNull TextView mainWeight,
+      @NonNull TextView mainbloodType, @NonNull TextView profile, @NonNull TextView textView,
+      @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4,
+      @NonNull TextView textView5, @NonNull TextView textView6, @NonNull TextView textView7) {
     this.rootView = rootView;
-    this.hospList = hospList;
-    this.logoutButton = logoutButton;
+    this.drawerLayout = drawerLayout;
     this.mainAge = mainAge;
     this.mainEmail = mainEmail;
     this.mainHBP = mainHBP;
@@ -98,12 +89,11 @@ public final class ActivityMainBinding implements ViewBinding {
     this.textView5 = textView5;
     this.textView6 = textView6;
     this.textView7 = textView7;
-    this.welcome = welcome;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -128,17 +118,7 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.hospList;
-      Button hospList = rootView.findViewById(id);
-      if (hospList == null) {
-        break missingId;
-      }
-
-      id = R.id.logoutButton;
-      Button logoutButton = rootView.findViewById(id);
-      if (logoutButton == null) {
-        break missingId;
-      }
+      DrawerLayout drawerLayout = (DrawerLayout) rootView;
 
       id = R.id.mainAge;
       TextView mainAge = rootView.findViewById(id);
@@ -230,15 +210,9 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.welcome;
-      TextView welcome = rootView.findViewById(id);
-      if (welcome == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((ConstraintLayout) rootView, hospList, logoutButton, mainAge,
-          mainEmail, mainHBP, mainLBP, mainName, mainWeight, mainbloodType, profile, textView,
-          textView2, textView3, textView4, textView5, textView6, textView7, welcome);
+      return new ActivityMainBinding((DrawerLayout) rootView, drawerLayout, mainAge, mainEmail,
+          mainHBP, mainLBP, mainName, mainWeight, mainbloodType, profile, textView, textView2,
+          textView3, textView4, textView5, textView6, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

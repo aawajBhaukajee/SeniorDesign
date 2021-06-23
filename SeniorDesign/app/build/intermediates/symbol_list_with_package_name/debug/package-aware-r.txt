@@ -1728,9 +1728,12 @@ drawable donors
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_clock_black_24dp
+drawable ic_home
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_menu
+drawable ic_more
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1952,6 +1955,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawerLayout
 id dropdown_menu
 id eAddress
 id eAddressH
@@ -2005,7 +2009,6 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
-id hospList
 id icon
 id icon_group
 id icon_only
@@ -2047,7 +2050,6 @@ id locationH
 id loginButton
 id loginButtonH
 id logout2
-id logoutButton
 id mainAge
 id mainEmail
 id mainEmailH
@@ -2133,6 +2135,7 @@ id nav_graph2
 id nav_graph20
 id nav_graph21
 id nav_graph22
+id nav_graph23
 id nav_graph3
 id nav_graph4
 id nav_graph5
@@ -2332,7 +2335,6 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id weight
-id welcome
 id wide
 id withText
 id withinBounds
@@ -2409,6 +2411,7 @@ layout activity_hospital_profile
 layout activity_log_hospital
 layout activity_login
 layout activity_main
+layout activity_navigation
 layout activity_reg_hospital
 layout activity_register
 layout activity_schedule
@@ -2432,6 +2435,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout list_sing_hospitals
 layout list_sing_users
+layout main_toolbar
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2474,6 +2478,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout nav_drawer
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -2507,6 +2512,9 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+mipmap baseline_list_black_24dp
+mipmap baseline_logout_black_24dp
+mipmap baseline_person_black_24dp
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
@@ -2524,6 +2532,7 @@ navigation nav_graph2
 navigation nav_graph20
 navigation nav_graph21
 navigation nav_graph22
+navigation nav_graph23
 navigation nav_graph3
 navigation nav_graph4
 navigation nav_graph5
@@ -2569,6 +2578,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string close
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -2657,6 +2667,7 @@ string mtrl_picker_toggle_to_year_selection
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string next
+string open
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2677,6 +2688,7 @@ string title_activity_log_hospital
 string title_activity_login
 string title_activity_login_hospital
 string title_activity_main
+string title_activity_navigation
 string title_activity_reg_hospital
 string title_activity_register
 string title_activity_register1
