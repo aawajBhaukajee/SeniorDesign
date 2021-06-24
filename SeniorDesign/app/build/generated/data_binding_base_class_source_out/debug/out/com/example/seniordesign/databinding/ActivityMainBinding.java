@@ -4,6 +4,7 @@ package com.example.seniordesign.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +21,9 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public final DrawerLayout drawerLayout;
+
+  @NonNull
+  public final MainToolbarBinding include;
 
   @NonNull
   public final TextView mainAge;
@@ -46,6 +50,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView profile;
 
   @NonNull
+  public final Button profileEdit;
+
+  @NonNull
   public final TextView textView;
 
   @NonNull
@@ -67,13 +74,15 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView textView7;
 
   private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawerLayout,
-      @NonNull TextView mainAge, @NonNull TextView mainEmail, @NonNull TextView mainHBP,
-      @NonNull TextView mainLBP, @NonNull TextView mainName, @NonNull TextView mainWeight,
-      @NonNull TextView mainbloodType, @NonNull TextView profile, @NonNull TextView textView,
-      @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4,
-      @NonNull TextView textView5, @NonNull TextView textView6, @NonNull TextView textView7) {
+      @NonNull MainToolbarBinding include, @NonNull TextView mainAge, @NonNull TextView mainEmail,
+      @NonNull TextView mainHBP, @NonNull TextView mainLBP, @NonNull TextView mainName,
+      @NonNull TextView mainWeight, @NonNull TextView mainbloodType, @NonNull TextView profile,
+      @NonNull Button profileEdit, @NonNull TextView textView, @NonNull TextView textView2,
+      @NonNull TextView textView3, @NonNull TextView textView4, @NonNull TextView textView5,
+      @NonNull TextView textView6, @NonNull TextView textView7) {
     this.rootView = rootView;
     this.drawerLayout = drawerLayout;
+    this.include = include;
     this.mainAge = mainAge;
     this.mainEmail = mainEmail;
     this.mainHBP = mainHBP;
@@ -82,6 +91,7 @@ public final class ActivityMainBinding implements ViewBinding {
     this.mainWeight = mainWeight;
     this.mainbloodType = mainbloodType;
     this.profile = profile;
+    this.profileEdit = profileEdit;
     this.textView = textView;
     this.textView2 = textView2;
     this.textView3 = textView3;
@@ -119,6 +129,13 @@ public final class ActivityMainBinding implements ViewBinding {
     int id;
     missingId: {
       DrawerLayout drawerLayout = (DrawerLayout) rootView;
+
+      id = R.id.include;
+      View include = rootView.findViewById(id);
+      if (include == null) {
+        break missingId;
+      }
+      MainToolbarBinding binding_include = MainToolbarBinding.bind(include);
 
       id = R.id.mainAge;
       TextView mainAge = rootView.findViewById(id);
@@ -168,6 +185,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.profileEdit;
+      Button profileEdit = rootView.findViewById(id);
+      if (profileEdit == null) {
+        break missingId;
+      }
+
       id = R.id.textView;
       TextView textView = rootView.findViewById(id);
       if (textView == null) {
@@ -210,9 +233,9 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((DrawerLayout) rootView, drawerLayout, mainAge, mainEmail,
-          mainHBP, mainLBP, mainName, mainWeight, mainbloodType, profile, textView, textView2,
-          textView3, textView4, textView5, textView6, textView7);
+      return new ActivityMainBinding((DrawerLayout) rootView, drawerLayout, binding_include,
+          mainAge, mainEmail, mainHBP, mainLBP, mainName, mainWeight, mainbloodType, profile,
+          profileEdit, textView, textView2, textView3, textView4, textView5, textView6, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

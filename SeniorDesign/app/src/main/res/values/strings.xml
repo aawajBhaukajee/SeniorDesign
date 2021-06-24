@@ -3,8 +3,8 @@
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
 
-    <string name = "open">Open</string>
-    <string name = "close">Close</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -30,4 +30,5 @@
     <string name="title_activity_all_hospitals">AllHospitals</string>
     <string name="title_activity_schedule">schedule</string>
     <string name="title_activity_navigation">navigation</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
 </resources>

@@ -1,7 +1,9 @@
 package com.example.seniordesign;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
 
     TextView fullname,email,hbp,lbp,btype,mainage,mainweight,Profile;
+    Button EditProfile;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -30,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         drawerLayout=findViewById(R.id.drawerLayout);
+
+        EditProfile=findViewById(R.id.profileEdit);
         Profile = findViewById(R.id.profile);
         fullname = findViewById(R.id.mainName);
         email = findViewById(R.id.mainEmail);
@@ -56,6 +61,22 @@ public class MainActivity extends AppCompatActivity {
                 btype.setText(documentSnapshot.getString( "BloodType"));
                 mainage.setText(documentSnapshot.getString( "Age"));
                 mainweight.setText(documentSnapshot.getString( "Weight"));
+
+            }
+        });
+
+        EditProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent start = new Intent(v.getContext(), EditProfile.class);
+                start.putExtra("FullName",fullname.getText().toString());
+                start.putExtra("EmailAddress",email.getText().toString());
+                start.putExtra("MaximumBP",hbp.getText().toString());
+                start.putExtra("MinimumBP",lbp.getText().toString());
+                start.putExtra("BloodType",btype.getText().toString());
+                start.putExtra("Age",mainage.getText().toString());
+                start.putExtra("Weight",mainweight.getText().toString());
+                startActivity(start);
 
             }
         });

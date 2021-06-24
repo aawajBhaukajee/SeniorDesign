@@ -1727,6 +1727,7 @@ int drawable donors 0x7f070079
 int drawable googleg_disabled_color_18 0x7f07007a
 int drawable googleg_standard_color_18 0x7f07007b
 int drawable ic_clock_black_24dp 0x7f07007c
+int drawable ic_edirprofile 0x7f0700aa
 int drawable ic_home 0x7f0700a7
 int drawable ic_keyboard_black_24dp 0x7f07007d
 int drawable ic_launcher_background 0x7f07007e
@@ -1961,6 +1962,14 @@ int id eAddressH 0x7f0800b8
 int id easeIn 0x7f0800b9
 int id easeInOut 0x7f0800ba
 int id easeOut 0x7f0800bb
+int id editAge 0x7f08023f
+int id editBloodType 0x7f080240
+int id editEmail 0x7f080241
+int id editHBP 0x7f080242
+int id editLBP 0x7f080243
+int id editName 0x7f080244
+int id editProfile 0x7f080246
+int id editWeight 0x7f080247
 int id edit_query 0x7f0800bc
 int id elastic 0x7f0800bd
 int id emailAddress 0x7f0800be
@@ -2011,10 +2020,12 @@ int id honorRequest 0x7f0800ea
 int id icon 0x7f0800ec
 int id icon_group 0x7f0800ed
 int id icon_only 0x7f0800ee
+int id id_welcome 0x7f08024a
 int id ifRoom 0x7f0800ef
 int id ignore 0x7f0800f0
 int id ignoreRequest 0x7f0800f1
 int id image 0x7f0800f2
+int id include 0x7f08024b
 int id info 0x7f0800f3
 int id invisible 0x7f0800f4
 int id inward 0x7f0800f5
@@ -2135,6 +2146,7 @@ int id nav_graph20 0x7f080168
 int id nav_graph21 0x7f080169
 int id nav_graph22 0x7f08016a
 int id nav_graph23 0x7f08016b
+int id nav_graph24 0x7f080248
 int id nav_graph3 0x7f08016c
 int id nav_graph4 0x7f08016d
 int id nav_graph5 0x7f08016e
@@ -2177,6 +2189,7 @@ int id pin 0x7f080195
 int id position 0x7f080196
 int id postLayout 0x7f080197
 int id profile 0x7f080198
+int id profileEdit 0x7f08024c
 int id profileH 0x7f080199
 int id progress_circular 0x7f08019a
 int id progress_horizontal 0x7f08019b
@@ -2194,6 +2207,7 @@ int id right_icon 0x7f0801a6
 int id right_side 0x7f0801a7
 int id rounded 0x7f0801a8
 int id row_index_key 0x7f0801a9
+int id save_button 0x7f080249
 int id save_non_transition_alpha 0x7f0801aa
 int id save_overlay_view 0x7f0801ab
 int id sawtooth 0x7f0801ac
@@ -2404,6 +2418,7 @@ int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_all_hospitals 0x7f0b001c
 int layout activity_all_users 0x7f0b001d
+int layout activity_edit_profile 0x7f0b008a
 int layout activity_first_page 0x7f0b001e
 int layout activity_hospital 0x7f0b001f
 int layout activity_hospital_profile 0x7f0b0020
@@ -2532,6 +2547,7 @@ int navigation nav_graph20 0x7f0e000c
 int navigation nav_graph21 0x7f0e000d
 int navigation nav_graph22 0x7f0e000e
 int navigation nav_graph23 0x7f0e000f
+int navigation nav_graph24 0x7f0e0017
 int navigation nav_graph3 0x7f0e0010
 int navigation nav_graph4 0x7f0e0011
 int navigation nav_graph5 0x7f0e0012
@@ -2680,6 +2696,7 @@ int string status_bar_notification_info_overflow 0x7f100086
 int string title_activity_all_hospitals 0x7f100087
 int string title_activity_all_users 0x7f100088
 int string title_activity_donation_center 0x7f100089
+int string title_activity_edit_profile 0x7f100099
 int string title_activity_first_page 0x7f10008a
 int string title_activity_hospital 0x7f10008b
 int string title_activity_hospital_profile 0x7f10008c

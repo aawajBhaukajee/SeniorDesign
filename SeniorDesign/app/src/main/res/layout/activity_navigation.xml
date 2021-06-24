@@ -18,11 +18,12 @@
             layout = "@layout/main_toolbar"/>
 
         <TextView
+            android:id="@+id/id_welcome"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Home"
-            android:textSize="50sp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="WELCOME TO MAIN PAGE"
+            android:textSize="50sp" />
 
     </LinearLayout>
 
@@ -36,6 +37,5 @@
             layout = "@layout/nav_drawer"/>
 
     </RelativeLayout>
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

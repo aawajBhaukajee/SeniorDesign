@@ -25,6 +25,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.SeniorDesign" >
+        <activity
+            android:name="com.example.seniordesign.EditProfile"
+            android:label="@string/title_activity_edit_profile"
+            android:theme="@style/Theme.SeniorDesign.NoActionBar" />
         <activity android:name="com.example.seniordesign.schedule" />
         <activity android:name="com.example.seniordesign.AllHospitals" />
         <activity android:name="com.example.seniordesign.hospitalProfile" />

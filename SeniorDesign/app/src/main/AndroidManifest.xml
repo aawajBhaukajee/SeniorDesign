@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeniorDesign">
 
+        <activity android:name=".EditProfile" />
         <activity android:name=".schedule" />
         <activity android:name=".AllHospitals" />
         <activity android:name=".hospitalProfile" />
@@ -23,7 +24,7 @@
         <activity android:name=".Login" />
         <activity android:name=".Hospital" />
         <activity android:name=".navigation" />
-        <activity android:name=".firstPage" >
+        <activity android:name=".firstPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

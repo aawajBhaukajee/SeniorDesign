@@ -20,7 +20,7 @@ public class navigation extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerLayout);
     }
 
-    public void ClickMenu(View view){
+    public void ClickMenu(View view) {
 
         openDrawer(drawerLayout);
     }
@@ -30,36 +30,37 @@ public class navigation extends AppCompatActivity {
 
     }
 
-    public void ClickLogo(View view){
+    public void ClickLogo(View view) {
         closeDrawer(drawerLayout);
     }
 
     public static void closeDrawer(DrawerLayout drawerLayout) {
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
 
             drawerLayout.closeDrawer(GravityCompat.START);
         }
 
     }
 
-    public void ClickHome(View view){
+    public void ClickHome(View view) {
         recreate();
     }
-    public  void ClickProfile(View view){
-        redirectActivity(this,AllHospitals.class);
 
-    }
-    public void ClickListHospital(View view){
-        redirectActivity(this,AllHospitals.class);
+    public void ClickProfile(View view) {
+        redirectActivity(this, MainActivity.class);
     }
 
-    public void ClickLogout(View view){
-        redirectActivity(this,firstPage.class);
+    public void ClickListHospital(View view) {
+        redirectActivity(this, AllHospitals.class);
     }
 
-    public static void redirectActivity(Activity activity, Class aClass) {
+    public void ClickLogout(View view) {
+        redirectActivity(this, firstPage.class);
+    }
 
-        Intent intent = new Intent(activity,aClass);
+    public static void redirectActivity(Activity activity, Class nav) {
+
+        Intent intent = new Intent(activity, nav);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         activity.startActivity(intent);
     }

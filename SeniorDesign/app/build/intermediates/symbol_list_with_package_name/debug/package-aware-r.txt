@@ -1728,6 +1728,7 @@ drawable donors
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_clock_black_24dp
+drawable ic_edirprofile
 drawable ic_home
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1962,6 +1963,14 @@ id eAddressH
 id easeIn
 id easeInOut
 id easeOut
+id editAge
+id editBloodType
+id editEmail
+id editHBP
+id editLBP
+id editName
+id editProfile
+id editWeight
 id edit_query
 id elastic
 id emailAddress
@@ -2012,10 +2021,12 @@ id honorRequest
 id icon
 id icon_group
 id icon_only
+id id_welcome
 id ifRoom
 id ignore
 id ignoreRequest
 id image
+id include
 id info
 id invisible
 id inward
@@ -2136,6 +2147,7 @@ id nav_graph20
 id nav_graph21
 id nav_graph22
 id nav_graph23
+id nav_graph24
 id nav_graph3
 id nav_graph4
 id nav_graph5
@@ -2178,6 +2190,7 @@ id pin
 id position
 id postLayout
 id profile
+id profileEdit
 id profileH
 id progress_circular
 id progress_horizontal
@@ -2195,6 +2208,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id save_button
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2405,6 +2419,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_all_hospitals
 layout activity_all_users
+layout activity_edit_profile
 layout activity_first_page
 layout activity_hospital
 layout activity_hospital_profile
@@ -2533,6 +2548,7 @@ navigation nav_graph20
 navigation nav_graph21
 navigation nav_graph22
 navigation nav_graph23
+navigation nav_graph24
 navigation nav_graph3
 navigation nav_graph4
 navigation nav_graph5
@@ -2681,6 +2697,7 @@ string status_bar_notification_info_overflow
 string title_activity_all_hospitals
 string title_activity_all_users
 string title_activity_donation_center
+string title_activity_edit_profile
 string title_activity_first_page
 string title_activity_hospital
 string title_activity_hospital_profile
