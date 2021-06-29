@@ -11,9 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SeniorDesign">
-
+        <activity android:name=".timeSchedule"></activity>
+        <activity
+            android:name=".navigationHospital"
+            android:label="@string/title_activity_navigation_hospital"
+            android:theme="@style/Theme.SeniorDesign.NoActionBar" />
         <activity android:name=".EditProfile" />
-        <activity android:name=".schedule" />
         <activity android:name=".AllHospitals" />
         <activity android:name=".hospitalProfile" />
         <activity android:name=".logHospital" />
@@ -22,7 +25,6 @@
         <activity android:name=".register" />
         <activity android:name=".AllUsers" />
         <activity android:name=".Login" />
-        <activity android:name=".Hospital" />
         <activity android:name=".navigation" />
         <activity android:name=".firstPage">
             <intent-filter>

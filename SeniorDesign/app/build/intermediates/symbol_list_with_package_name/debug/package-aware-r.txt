@@ -1727,6 +1727,7 @@ drawable design_snackbar_background
 drawable donors
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_search_24
 drawable ic_clock_black_24dp
 drawable ic_edirprofile
 drawable ic_home
@@ -1859,6 +1860,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_search
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1882,7 +1884,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id backButton
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1957,6 +1958,7 @@ id dragRight
 id dragStart
 id dragUp
 id drawerLayout
+id drawerLayout1
 id dropdown_menu
 id eAddress
 id eAddressH
@@ -2148,6 +2150,7 @@ id nav_graph21
 id nav_graph22
 id nav_graph23
 id nav_graph24
+id nav_graph25
 id nav_graph3
 id nav_graph4
 id nav_graph5
@@ -2301,6 +2304,7 @@ id textView11
 id textView12
 id textView13
 id textView14
+id textView17
 id textView2
 id textView3
 id textView4
@@ -2427,9 +2431,11 @@ layout activity_log_hospital
 layout activity_login
 layout activity_main
 layout activity_navigation
+layout activity_navigation_hospital
 layout activity_reg_hospital
 layout activity_register
 layout activity_schedule
+layout activity_time_schedule
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -2451,6 +2457,7 @@ layout design_text_input_start_icon
 layout list_sing_hospitals
 layout list_sing_users
 layout main_toolbar
+layout main_toolbar1
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2494,6 +2501,7 @@ layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout nav_drawer
+layout nav_drawer1
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -2527,6 +2535,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu main_menu
 mipmap baseline_list_black_24dp
 mipmap baseline_logout_black_24dp
 mipmap baseline_person_black_24dp
@@ -2549,6 +2558,7 @@ navigation nav_graph21
 navigation nav_graph22
 navigation nav_graph23
 navigation nav_graph24
+navigation nav_graph25
 navigation nav_graph3
 navigation nav_graph4
 navigation nav_graph5
@@ -2706,6 +2716,7 @@ string title_activity_login
 string title_activity_login_hospital
 string title_activity_main
 string title_activity_navigation
+string title_activity_navigation_hospital
 string title_activity_reg_hospital
 string title_activity_register
 string title_activity_register1

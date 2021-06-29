@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
 import java.lang.NullPointerException;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class ActivityRegisterBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final EditText age;
@@ -56,7 +56,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
   @NonNull
   public final EditText weight;
 
-  private ActivityRegisterBinding(@NonNull ConstraintLayout rootView, @NonNull EditText age,
+  private ActivityRegisterBinding(@NonNull LinearLayout rootView, @NonNull EditText age,
       @NonNull TextView appName, @NonNull EditText bloodtype, @NonNull EditText emailAddress,
       @NonNull TextView hasAccount, @NonNull EditText maxbpressure, @NonNull EditText minbpressure,
       @NonNull EditText name, @NonNull EditText password, @NonNull TextView regTitle,
@@ -78,7 +78,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -175,7 +175,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRegisterBinding((ConstraintLayout) rootView, age, appName, bloodtype,
+      return new ActivityRegisterBinding((LinearLayout) rootView, age, appName, bloodtype,
           emailAddress, hasAccount, maxbpressure, minbpressure, name, password, regTitle,
           registerButton, weight);
     }

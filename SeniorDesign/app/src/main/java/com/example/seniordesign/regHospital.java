@@ -135,7 +135,7 @@ public class regHospital extends AppCompatActivity {
                                     Log.d(TAG, "onFailure: " + e.toString());
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(), Hospital.class));
+                            startActivity(new Intent(getApplicationContext(), navigationHospital.class));
                             finish();
 
                         }

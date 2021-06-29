@@ -71,7 +71,7 @@ public class logHospital extends AppCompatActivity {
                     {
                         Toast.makeText(logHospital.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         //checkAccessLevel(authResult.getUser().getUid());
-                         startActivity(new Intent(getApplicationContext(), Hospital.class));
+                         startActivity(new Intent(getApplicationContext(), navigationHospital.class));
                         finish();
 
                     }

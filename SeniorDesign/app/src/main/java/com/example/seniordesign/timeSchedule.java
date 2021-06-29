@@ -5,16 +5,17 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class schedule extends AppCompatActivity {
+public class timeSchedule extends AppCompatActivity {
 
-    TextView sche;
+    TextView n;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView((R.layout.activity_schedule));
+        setContentView(R.layout.activity_time_schedule);
 
-        sche = findViewById(R.id.schedule);
+        n=(TextView)findViewById(R.id.textView17);
 
+        n.setText(getIntent().getStringExtra("uname".toString()));
     }
 }

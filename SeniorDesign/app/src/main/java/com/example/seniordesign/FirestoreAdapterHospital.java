@@ -1,5 +1,6 @@
 package com.example.seniordesign;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,56 +9,59 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
-import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import java.util.ArrayList;
 
-public class FirestoreAdapterHospital extends FirestoreRecyclerAdapter<HospitalsModel, FirestoreAdapterHospital.HospitalsViewHolder>{
+public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdapterHospital.HospitalsViewHolder>{
 
-    private OnListItemClick onListItemClick;
+    ArrayList<HospitalsModel> hospitalList;
 
-    public FirestoreAdapterHospital(@NonNull FirestoreRecyclerOptions<HospitalsModel> optionsH,OnListItemClick onListItemClick) {
-        super(optionsH);
-        this.onListItemClick = onListItemClick;
-
-    }
-
-    @Override
-    protected void onBindViewHolder(@NonNull FirestoreAdapterHospital.HospitalsViewHolder holderH, int position, @NonNull HospitalsModel model) {
-        holderH.listnameH.setText(model.getHospitalName());
-        holderH.listemailH.setText(model.getHospitalEmail());
-        holderH.listlocationH.setText(model.getHospitalLocation());
+    public FirestoreAdapterHospital(ArrayList<HospitalsModel> hospitalList) {
+        this.hospitalList = hospitalList;
     }
 
     @NonNull
-
     @Override
     public HospitalsViewHolder onCreateViewHolder(@NonNull ViewGroup parentH, int viewType) {
         View view = LayoutInflater.from(parentH.getContext()).inflate(R.layout.list_sing_hospitals, parentH, false);
         return new HospitalsViewHolder(view);
     }
 
-    public class HospitalsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    @Override
+    public void onBindViewHolder(@NonNull FirestoreAdapterHospital.HospitalsViewHolder holderH, int position) {
+        holderH.listnameH.setText(hospitalList.get(position).getHospitalName());
+        holderH.listemailH.setText(hospitalList.get(position).getHospitalEmail());
+        holderH.listlocationH.setText(hospitalList.get(position).getHospitalLocation());
 
-        private TextView listnameH, listemailH, listlocationH;
+        holderH.listnameH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holderH.listnameH.getContext(),timeSchedule.class);
+                intent.putExtra("uname",hospitalList.get(position).getHospitalName());
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                holderH.listnameH.getContext().startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return hospitalList.size();
+    }
+
+    class HospitalsViewHolder extends RecyclerView.ViewHolder {
+
+        TextView listnameH, listemailH, listlocationH;
 
         public HospitalsViewHolder(@NonNull View itemView) {
             super(itemView);
-
             listnameH = itemView.findViewById(R.id.listnameH);
             listemailH = itemView.findViewById(R.id.listemailH);
             listlocationH = itemView.findViewById(R.id.listlocationH);
 
-            itemView.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View v) {
-            onListItemClick.onItemClick();
-
         }
     }
 
-    public interface OnListItemClick{
-        void onItemClick();
-    }
 }
+
+

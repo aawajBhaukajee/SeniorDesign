@@ -2,13 +2,13 @@ package com.example.seniordesign;
 
 public class HospitalsModel {
 
-    private String HospitalEmail;
-    private String HospitalName;
-    private String HospitalLocation;
+     String HospitalEmail;
+     String HospitalName;
+    String HospitalLocation;
 
-    private HospitalsModel(){}
+    public HospitalsModel(){}
 
-    private HospitalsModel(String HospitalEmail, String HospitalName, String HospitalLocation){
+    public HospitalsModel(String HospitalEmail, String HospitalName, String HospitalLocation){
         this.HospitalEmail=HospitalEmail;
         this.HospitalName=HospitalName;
         this.HospitalLocation=HospitalLocation;

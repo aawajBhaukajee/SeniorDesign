@@ -4,29 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F35757"
     tools:context=".firstPage">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="347dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/donors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
+
+    </ImageView>
 
     <Button
         android:id="@+id/uRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="178dp"
+        android:layout_height="56dp"
         android:layout_marginBottom="44dp"
+        android:background="#DC0202"
         android:text="Register as USER"
+        android:textColor="#19E3BB"
+        android:textColorHighlight="#9F1B1B"
+        android:textSize="16sp"
+        app:backgroundTint="#951010"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintHorizontal_bias="0.579"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.673" />
 
     <Button
         android:id="@+id/hRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="252dp"
+        android:layout_width="229dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="140dp"
         android:text="Register as Hospital"
+        android:textColor="#19E3BB"
+        android:textSize="16sp"
+        app:backgroundTint="#951010"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uRegister"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

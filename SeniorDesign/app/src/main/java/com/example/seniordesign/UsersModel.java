@@ -2,7 +2,7 @@ package com.example.seniordesign;
 
 public class UsersModel {
 
-    private String EmailAddress, FullName, MaximumBP, MinimumBP, BloodType, Age, Weight;
+    String EmailAddress, FullName, MaximumBP, MinimumBP, BloodType, Age, Weight;
 
     private UsersModel(){}
 

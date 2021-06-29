@@ -8,44 +8,47 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
-import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import java.util.ArrayList;
 
-public class FirestoreAdapter extends FirestoreRecyclerAdapter<UsersModel,FirestoreAdapter.UsersViewHolder> {
+public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.UsersViewHolder> {
 
-private OnListItemClick onListItemClick;
+    ArrayList<UsersModel> usersList;
 
-    public FirestoreAdapter(@NonNull  FirestoreRecyclerOptions<UsersModel> options, OnListItemClick onListItemClick) {
-
-        super(options);
-        this.onListItemClick = onListItemClick;
+    public FirestoreAdapter(ArrayList<UsersModel> usersList) {
+        this.usersList = usersList;
     }
 
-    @Override
-    protected void onBindViewHolder(@NonNull UsersViewHolder holder, int position, @NonNull UsersModel model) {
-        holder.listname.setText(model.getFullName());
-        holder.listemail.setText(model.getEmailAddress());
-        holder.listhighbp.setText(model.getMaximumBP());
-        holder.listlowbp.setText(model.getMinimumBP());
-        holder.listbloodtype.setText(model.getBloodType());
-        holder.listage.setText(model.getAge());
-        holder.listweight.setText(model.getWeight());
-    }
 
     @NonNull
     @Override
-    public UsersViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public FirestoreAdapter.UsersViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_sing_users, parent, false);
-        return new UsersViewHolder(view);
+        return new FirestoreAdapter.UsersViewHolder(view);
     }
 
-    public class UsersViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    @Override
+    public void onBindViewHolder(@NonNull FirestoreAdapter.UsersViewHolder holder, int position) {
+        holder.listname.setText(usersList.get(position).getFullName());
+        holder.listemail.setText(usersList.get(position).getEmailAddress());
+        holder.listhighbp.setText(usersList.get(position).getMaximumBP());
+        holder.listlowbp.setText(usersList.get(position).getMinimumBP());
+        holder.listbloodtype.setText(usersList.get(position).getBloodType());
+        holder.listage.setText(usersList.get(position).getAge());
+        holder.listweight.setText(usersList.get(position).getWeight());
 
-        private TextView listname, listemail, listlowbp, listhighbp, listbloodtype, listage, listweight;
+    }
+
+    @Override
+    public int getItemCount() {
+        return usersList.size();
+    }
+
+    class UsersViewHolder extends RecyclerView.ViewHolder {
+
+        TextView listname, listemail, listlowbp, listhighbp, listbloodtype, listage, listweight;
 
         public UsersViewHolder(@NonNull View itemView) {
             super(itemView);
-
             listname = itemView.findViewById(R.id.listname);
             listemail = itemView.findViewById(R.id.listemail);
             listhighbp = itemView.findViewById(R.id.listhighbp);
@@ -54,16 +57,10 @@ private OnListItemClick onListItemClick;
             listage = itemView.findViewById(R.id.listage);
             listweight = itemView.findViewById(R.id.listweight);
 
-            itemView.setOnClickListener(this);
-
-        }
-
-        @Override
-        public void onClick(View v) {
-         onListItemClick.onItemClick();
         }
     }
-    public interface OnListItemClick{
-        void onItemClick();
-    }
+
 }
+
+
+

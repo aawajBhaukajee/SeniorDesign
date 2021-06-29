@@ -1,25 +1,29 @@
-package com.example.seniordesign;
+ package com.example.seniordesign;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
+ import android.os.Bundle;
+ import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.drawerlayout.widget.DrawerLayout;
+ import androidx.recyclerview.widget.LinearLayoutManager;
+ import androidx.recyclerview.widget.RecyclerView;
 
-import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
+ import com.google.android.gms.tasks.OnSuccessListener;
+ import com.google.firebase.firestore.DocumentSnapshot;
+ import com.google.firebase.firestore.FirebaseFirestore;
+ import com.google.firebase.firestore.QuerySnapshot;
 
-public class AllHospitals extends AppCompatActivity implements FirestoreAdapterHospital.OnListItemClick {
+ import java.util.ArrayList;
+ import java.util.List;
+
+ public class AllHospitals extends AppCompatActivity{
 
     DrawerLayout drawerLayout;
 
-    private RecyclerView FStoreListHospital;
-    private FirebaseFirestore firebaseFirestoreH;
-    private FirestoreAdapterHospital adapterH;
+    RecyclerView FStoreListHospital;
+    ArrayList<HospitalsModel> hospitalList;
+    FirebaseFirestore firebaseFirestoreH;
+    FirestoreAdapterHospital adapterH;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,37 +33,29 @@ public class AllHospitals extends AppCompatActivity implements FirestoreAdapterH
         drawerLayout=findViewById(R.id.drawerLayout);
 
         FStoreListHospital = findViewById(R.id.firestore_listHospital);
-        firebaseFirestoreH = FirebaseFirestore.getInstance();
-
-        Query query = firebaseFirestoreH.collection("hospitals");
-
-        FirestoreRecyclerOptions<HospitalsModel> optionsH = new FirestoreRecyclerOptions.Builder<HospitalsModel>()
-                .setQuery(query, HospitalsModel.class).build();
-
-        adapterH  = new FirestoreAdapterHospital(optionsH,this);
-
-        FStoreListHospital.setHasFixedSize(true);
         FStoreListHospital.setLayoutManager(new LinearLayoutManager(this));
+        hospitalList = new ArrayList<>();
+        firebaseFirestoreH = FirebaseFirestore.getInstance();
+        adapterH  = new FirestoreAdapterHospital(hospitalList);
         FStoreListHospital.setAdapter(adapterH);
+
+        firebaseFirestoreH.collection("hospitals").orderBy("HospitalName").get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                List<DocumentSnapshot> listH = queryDocumentSnapshots.getDocuments();
+                for(DocumentSnapshot d:listH)
+                {
+
+                    HospitalsModel Hobj = d.toObject(HospitalsModel.class);
+                    hospitalList.add(Hobj);
+                }
+                adapterH.notifyDataSetChanged();
+            }
+        });
+
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        adapterH.stopListening();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        adapterH.startListening();
-    }
-
-    @Override
-    public void onItemClick() {
-       // Log.d("ITEM CLICK", "Clicked an item");
-        startActivity(new Intent(getApplicationContext(),schedule.class));
-    }
 
     public void ClickMenu(View view){
         navigation.openDrawer(drawerLayout);
@@ -92,7 +88,6 @@ public class AllHospitals extends AppCompatActivity implements FirestoreAdapterH
         super.onPause();
         navigation.closeDrawer(drawerLayout);
     }
-
 
 
 }

@@ -25,10 +25,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.SeniorDesign" >
+        <activity android:name="com.example.seniordesign.timeSchedule" />
         <activity
-            android:name="com.example.seniordesign.EditProfile"
-            android:label="@string/title_activity_edit_profile"
+            android:name="com.example.seniordesign.navigationHospital"
+            android:label="@string/title_activity_navigation_hospital"
             android:theme="@style/Theme.SeniorDesign.NoActionBar" />
+        <activity android:name="com.example.seniordesign.EditProfile" />
         <activity android:name="com.example.seniordesign.schedule" />
         <activity android:name="com.example.seniordesign.AllHospitals" />
         <activity android:name="com.example.seniordesign.hospitalProfile" />
@@ -38,7 +40,6 @@
         <activity android:name="com.example.seniordesign.register" />
         <activity android:name="com.example.seniordesign.AllUsers" />
         <activity android:name="com.example.seniordesign.Login" />
-        <activity android:name="com.example.seniordesign.Hospital" />
         <activity android:name="com.example.seniordesign.navigation" />
         <activity android:name="com.example.seniordesign.firstPage" >
             <intent-filter>

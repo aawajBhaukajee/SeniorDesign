@@ -1,5 +1,5 @@
-com/example/seniordesign/AllUsers.java
- com.example.seniordesign.AllUsers
+com/example/seniordesign/databinding/NavDrawer1Binding.java
+ com.example.seniordesign.databinding.NavDrawer1Binding
 com/example/seniordesign/databinding/ActivityHospitalProfileBinding.java
  com.example.seniordesign.databinding.ActivityHospitalProfileBinding
 com/example/seniordesign/databinding/ActivityNavigationBinding.java
@@ -14,10 +14,15 @@ com/example/seniordesign/databinding/NavDrawerBinding.java
  com.example.seniordesign.databinding.NavDrawerBinding
 com/example/seniordesign/BuildConfig.java
  com.example.seniordesign.BuildConfig
-com/example/seniordesign/hospitalProfile.java
- com.example.seniordesign.hospitalProfile
- com.example.seniordesign.hospitalProfile$1
- com.example.seniordesign.hospitalProfile$2
+com/example/seniordesign/regHospital.java
+ com.example.seniordesign.regHospital
+ com.example.seniordesign.regHospital$1
+ com.example.seniordesign.regHospital$1$1
+ com.example.seniordesign.regHospital$1$1$1
+ com.example.seniordesign.regHospital$1$1$2
+ com.example.seniordesign.regHospital$1$1$3
+ com.example.seniordesign.regHospital$1$1$4
+ com.example.seniordesign.regHospital$2
 com/example/seniordesign/databinding/ActivityAllHospitalsBinding.java
  com.example.seniordesign.databinding.ActivityAllHospitalsBinding
 com/example/seniordesign/Login.java
@@ -35,8 +40,10 @@ com/example/seniordesign/databinding/ActivityFirstPageBinding.java
  com.example.seniordesign.databinding.ActivityFirstPageBinding
 com/example/seniordesign/databinding/MainToolbarBinding.java
  com.example.seniordesign.databinding.MainToolbarBinding
-com/example/seniordesign/AllHospitals.java
- com.example.seniordesign.AllHospitals
+com/example/seniordesign/databinding/ActivityTimeScheduleBinding.java
+ com.example.seniordesign.databinding.ActivityTimeScheduleBinding
+com/example/seniordesign/databinding/ActivityScheduleBinding.java
+ com.example.seniordesign.databinding.ActivityScheduleBinding
 com/example/seniordesign/firstPage.java
  com.example.seniordesign.firstPage
  com.example.seniordesign.firstPage$1
@@ -49,14 +56,16 @@ com/example/seniordesign/databinding/ActivityAllUsersBinding.java
  com.example.seniordesign.databinding.ActivityAllUsersBinding
 com/example/seniordesign/databinding/ActivityHospitalBinding.java
  com.example.seniordesign.databinding.ActivityHospitalBinding
-com/example/seniordesign/UsersModel.java
- com.example.seniordesign.UsersModel
+com/example/seniordesign/schedule.java
+ com.example.seniordesign.schedule
 com/example/seniordesign/EditProfile.java
  com.example.seniordesign.EditProfile
  com.example.seniordesign.EditProfile$1
  com.example.seniordesign.EditProfile$1$1
  com.example.seniordesign.EditProfile$1$2
  com.example.seniordesign.EditProfile$1$2$1
+com/example/seniordesign/databinding/MainToolbar1Binding.java
+ com.example.seniordesign.databinding.MainToolbar1Binding
 com/example/seniordesign/databinding/ListSingHospitalsBinding.java
  com.example.seniordesign.databinding.ListSingHospitalsBinding
 com/example/seniordesign/register.java
@@ -72,19 +81,12 @@ com/example/seniordesign/databinding/ActivityLogHospitalBinding.java
  com.example.seniordesign.databinding.ActivityLogHospitalBinding
 com/example/seniordesign/databinding/ActivityRegHospitalBinding.java
  com.example.seniordesign.databinding.ActivityRegHospitalBinding
-com/example/seniordesign/FirestoreAdapter.java
- com.example.seniordesign.FirestoreAdapter
- com.example.seniordesign.FirestoreAdapter$OnListItemClick
- com.example.seniordesign.FirestoreAdapter$UsersViewHolder
+com/example/seniordesign/databinding/ListSingUsersBinding.java
+ com.example.seniordesign.databinding.ListSingUsersBinding
 com/example/seniordesign/navigation.java
  com.example.seniordesign.navigation
 com/example/seniordesign/databinding/ActivityEditProfileBinding.java
  com.example.seniordesign.databinding.ActivityEditProfileBinding
-com/example/seniordesign/Hospital.java
- com.example.seniordesign.Hospital
- com.example.seniordesign.Hospital$1
- com.example.seniordesign.Hospital$2
- com.example.seniordesign.Hospital$3
 com/example/seniordesign/logHospital.java
  com.example.seniordesign.logHospital
  com.example.seniordesign.logHospital$1
@@ -96,24 +98,29 @@ com/example/seniordesign/logHospital.java
  com.example.seniordesign.logHospital$3$1$1
  com.example.seniordesign.logHospital$3$1$2
  com.example.seniordesign.logHospital$3$2
-com/example/seniordesign/FirestoreAdapterHospital.java
- com.example.seniordesign.FirestoreAdapterHospital
- com.example.seniordesign.FirestoreAdapterHospital$HospitalsViewHolder
- com.example.seniordesign.FirestoreAdapterHospital$OnListItemClick
-com/example/seniordesign/databinding/ActivityScheduleBinding.java
- com.example.seniordesign.databinding.ActivityScheduleBinding
-com/example/seniordesign/regHospital.java
- com.example.seniordesign.regHospital
- com.example.seniordesign.regHospital$1
- com.example.seniordesign.regHospital$1$1
- com.example.seniordesign.regHospital$1$1$1
- com.example.seniordesign.regHospital$1$1$2
- com.example.seniordesign.regHospital$1$1$3
- com.example.seniordesign.regHospital$1$1$4
- com.example.seniordesign.regHospital$2
-com/example/seniordesign/schedule.java
- com.example.seniordesign.schedule
 com/example/seniordesign/databinding/ActivityLoginBinding.java
  com.example.seniordesign.databinding.ActivityLoginBinding
-com/example/seniordesign/databinding/ListSingUsersBinding.java
- com.example.seniordesign.databinding.ListSingUsersBinding
+com/example/seniordesign/databinding/ActivityNavigationHospitalBinding.java
+ com.example.seniordesign.databinding.ActivityNavigationHospitalBinding
+com/example/seniordesign/timeSchedule.java
+ com.example.seniordesign.timeSchedule
+com/example/seniordesign/AllUsers.java
+ com.example.seniordesign.AllUsers
+ com.example.seniordesign.AllUsers$1
+com/example/seniordesign/FirestoreAdapter.java
+ com.example.seniordesign.FirestoreAdapter
+ com.example.seniordesign.FirestoreAdapter$UsersViewHolder
+com/example/seniordesign/navigationHospital.java
+ com.example.seniordesign.navigationHospital
+com/example/seniordesign/UsersModel.java
+ com.example.seniordesign.UsersModel
+com/example/seniordesign/FirestoreAdapterHospital.java
+ com.example.seniordesign.FirestoreAdapterHospital
+ com.example.seniordesign.FirestoreAdapterHospital$1
+ com.example.seniordesign.FirestoreAdapterHospital$HospitalsViewHolder
+com/example/seniordesign/hospitalProfile.java
+ com.example.seniordesign.hospitalProfile
+ com.example.seniordesign.hospitalProfile$1
+com/example/seniordesign/AllHospitals.java
+ com.example.seniordesign.AllHospitals
+ com.example.seniordesign.AllHospitals$1

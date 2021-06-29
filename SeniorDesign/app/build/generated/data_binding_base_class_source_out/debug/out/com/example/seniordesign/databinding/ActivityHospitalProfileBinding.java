@@ -4,7 +4,6 @@ package com.example.seniordesign.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,9 +17,6 @@ import java.lang.String;
 public final class ActivityHospitalProfileBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final Button backButton;
 
   @NonNull
   public final TextView mainEmailH;
@@ -44,11 +40,10 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
   public final TextView textView14;
 
   private ActivityHospitalProfileBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button backButton, @NonNull TextView mainEmailH, @NonNull TextView mainLocationH,
-      @NonNull TextView mainNameH, @NonNull TextView profileH, @NonNull TextView textView12,
-      @NonNull TextView textView13, @NonNull TextView textView14) {
+      @NonNull TextView mainEmailH, @NonNull TextView mainLocationH, @NonNull TextView mainNameH,
+      @NonNull TextView profileH, @NonNull TextView textView12, @NonNull TextView textView13,
+      @NonNull TextView textView14) {
     this.rootView = rootView;
-    this.backButton = backButton;
     this.mainEmailH = mainEmailH;
     this.mainLocationH = mainLocationH;
     this.mainNameH = mainNameH;
@@ -85,12 +80,6 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.backButton;
-      Button backButton = rootView.findViewById(id);
-      if (backButton == null) {
-        break missingId;
-      }
-
       id = R.id.mainEmailH;
       TextView mainEmailH = rootView.findViewById(id);
       if (mainEmailH == null) {
@@ -133,7 +122,7 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityHospitalProfileBinding((ConstraintLayout) rootView, backButton, mainEmailH,
+      return new ActivityHospitalProfileBinding((ConstraintLayout) rootView, mainEmailH,
           mainLocationH, mainNameH, profileH, textView12, textView13, textView14);
     }
     String missingId = rootView.getResources().getResourceName(id);
