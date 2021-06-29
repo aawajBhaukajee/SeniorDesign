@@ -31,7 +31,6 @@
             android:label="@string/title_activity_navigation_hospital"
             android:theme="@style/Theme.SeniorDesign.NoActionBar" />
         <activity android:name="com.example.seniordesign.EditProfile" />
-        <activity android:name="com.example.seniordesign.schedule" />
         <activity android:name="com.example.seniordesign.AllHospitals" />
         <activity android:name="com.example.seniordesign.hospitalProfile" />
         <activity android:name="com.example.seniordesign.logHospital" />

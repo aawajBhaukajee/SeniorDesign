@@ -16,13 +16,12 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllUsers extends AppCompatActivity
-{
+public class AllUsers extends AppCompatActivity {
 
     DrawerLayout drawerLayout1;
 
     FirebaseFirestore firebaseFirestore;
-    RecyclerView mFirestoreList ;
+    RecyclerView mFirestoreList;
     FirestoreAdapter adapter;
     ArrayList<UsersModel> usersList;
 
@@ -31,7 +30,7 @@ public class AllUsers extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_users);
 
-        drawerLayout1=findViewById(R.id.drawerLayout1);
+        drawerLayout1 = findViewById(R.id.drawerLayout1);
 
         mFirestoreList = findViewById(R.id.firestore_list);
         mFirestoreList.setLayoutManager(new LinearLayoutManager(this));
@@ -45,8 +44,7 @@ public class AllUsers extends AppCompatActivity
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
-                        for(DocumentSnapshot d:list)
-                        {
+                        for (DocumentSnapshot d : list) {
                             UsersModel obj = d.toObject(UsersModel.class);
                             usersList.add(obj);
                         }
@@ -55,29 +53,29 @@ public class AllUsers extends AppCompatActivity
                 });
     }
 
-    public void ClickMenu1(View view){
+    public void ClickMenu1(View view) {
         navigationHospital.openDrawer(drawerLayout1);
     }
 
-    public void ClickLogo1(View view){
+    public void ClickLogo1(View view) {
         navigationHospital.closeDrawer(drawerLayout1);
     }
 
-    public void ClickHome1(View view){
-        navigationHospital.redirectActivity(this,navigationHospital.class);
+    public void ClickHome1(View view) {
+        navigationHospital.redirectActivity(this, navigationHospital.class);
     }
 
-    public void ClickProfile1(View view){
-        navigationHospital.redirectActivity(this,hospitalProfile.class);
+    public void ClickProfile1(View view) {
+        navigationHospital.redirectActivity(this, hospitalProfile.class);
     }
 
-    public void ClickListUsers(View view){
+    public void ClickListUsers(View view) {
 
         recreate();
 
     }
 
-    public void ClickLogout1(View view){
+    public void ClickLogout1(View view) {
         navigation.redirectActivity(this, firstPage.class);
     }
 

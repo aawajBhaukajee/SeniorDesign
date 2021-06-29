@@ -1897,6 +1897,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id buttonListHospital
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -2216,7 +2217,6 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
-id schedule
 id screen
 id scroll
 id scrollIndicatorDown
@@ -2434,7 +2434,6 @@ layout activity_navigation
 layout activity_navigation_hospital
 layout activity_reg_hospital
 layout activity_register
-layout activity_schedule
 layout activity_time_schedule
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

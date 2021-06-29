@@ -25,8 +25,8 @@ public class navigationHospital extends AppCompatActivity {
         openDrawer(drawerLayout1);
     }
 
-    public static void openDrawer(DrawerLayout drawerLayout1) {
-        drawerLayout1.openDrawer(GravityCompat.START);
+    public static void openDrawer(DrawerLayout drawerLayout) {
+        drawerLayout.openDrawer(GravityCompat.START);
 
     }
 
