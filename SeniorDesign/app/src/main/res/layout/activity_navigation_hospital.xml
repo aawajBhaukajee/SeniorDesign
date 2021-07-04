@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
         <include
-            layout = "@layout/main_toolbar"/>
+            layout = "@layout/main_toolbar1"/>
 
         <TextView
             android:id="@+id/id_welcome"
