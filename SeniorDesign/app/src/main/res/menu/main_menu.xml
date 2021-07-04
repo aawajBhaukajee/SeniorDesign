@@ -3,10 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_search"
-        android:title="Search"
-        android:icon="@drawable/ic_baseline_search_24"
-        app:showAsAction="always|collapseActionView"
-        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+        android:id="@+id/menu_ascbloodtype"
+        android:title="Ascending Blood Type" />
+    <item
+        android:id="@+id/menu_ascHBP"
+        android:title="Ascending High Blood Pressure" />
+    <item
+        android:id="@+id/menu_ascLBP"
+        android:title="Ascending Low Blood Pressure" />
+    <item
+        android:id="@+id/menu_ascAge"
+        android:title="Ascending Age" />
+    <item
+        android:id="@+id/menu_ascName"
+        android:title="Ascending Name" />
 
 </menu>

@@ -1860,7 +1860,6 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_search
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1898,6 +1897,7 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id buttonListHospital
+id buttonListUser
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -2096,6 +2096,11 @@ id material_timepicker_view
 id material_value_index
 id maxbpressure
 id media_actions
+id menu_ascAge
+id menu_ascHBP
+id menu_ascLBP
+id menu_ascName
+id menu_ascbloodtype
 id message
 id middle
 id minbpressure
@@ -2205,6 +2210,7 @@ id regTitle
 id regTitleH
 id registerButton
 id registerButtonH
+id requestButton
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2305,6 +2311,7 @@ id textView12
 id textView13
 id textView14
 id textView17
+id textView18
 id textView2
 id textView3
 id textView4
@@ -2435,6 +2442,7 @@ layout activity_navigation_hospital
 layout activity_reg_hospital
 layout activity_register
 layout activity_time_schedule
+layout activity_user_schedule
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog

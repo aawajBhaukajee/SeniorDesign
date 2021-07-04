@@ -2,8 +2,6 @@ com/example/seniordesign/HospitalsModel.java
  com.example.seniordesign.HospitalsModel
 com/example/seniordesign/BuildConfig.java
  com.example.seniordesign.BuildConfig
-com/example/seniordesign/UsersModel.java
- com.example.seniordesign.UsersModel
 com/example/seniordesign/AllUsers.java
  com.example.seniordesign.AllUsers
  com.example.seniordesign.AllUsers$1
@@ -54,12 +52,22 @@ com/example/seniordesign/databinding/ActivityAllUsersBinding.java
  com.example.seniordesign.databinding.ActivityAllUsersBinding
 com/example/seniordesign/databinding/ActivityHospitalBinding.java
  com.example.seniordesign.databinding.ActivityHospitalBinding
+com/example/seniordesign/UsersModel.java
+ com.example.seniordesign.UsersModel
+ com.example.seniordesign.UsersModel$1
+ com.example.seniordesign.UsersModel$2
+ com.example.seniordesign.UsersModel$3
+ com.example.seniordesign.UsersModel$4
+ com.example.seniordesign.UsersModel$5
 com/example/seniordesign/EditProfile.java
  com.example.seniordesign.EditProfile
  com.example.seniordesign.EditProfile$1
  com.example.seniordesign.EditProfile$1$1
  com.example.seniordesign.EditProfile$1$2
  com.example.seniordesign.EditProfile$1$2$1
+com/example/seniordesign/userSchedule.java
+ com.example.seniordesign.userSchedule
+ com.example.seniordesign.userSchedule$1
 com/example/seniordesign/databinding/MainToolbar1Binding.java
  com.example.seniordesign.databinding.MainToolbar1Binding
 com/example/seniordesign/databinding/ListSingHospitalsBinding.java
@@ -79,6 +87,7 @@ com/example/seniordesign/databinding/ActivityRegHospitalBinding.java
  com.example.seniordesign.databinding.ActivityRegHospitalBinding
 com/example/seniordesign/FirestoreAdapter.java
  com.example.seniordesign.FirestoreAdapter
+ com.example.seniordesign.FirestoreAdapter$1
  com.example.seniordesign.FirestoreAdapter$UsersViewHolder
 com/example/seniordesign/navigation.java
  com.example.seniordesign.navigation
@@ -101,6 +110,8 @@ com/example/seniordesign/FirestoreAdapterHospital.java
  com.example.seniordesign.FirestoreAdapterHospital$HospitalsViewHolder
 com/example/seniordesign/databinding/ActivityNavigationHospitalBinding.java
  com.example.seniordesign.databinding.ActivityNavigationHospitalBinding
+com/example/seniordesign/databinding/ActivityUserScheduleBinding.java
+ com.example.seniordesign.databinding.ActivityUserScheduleBinding
 com/example/seniordesign/timeSchedule.java
  com.example.seniordesign.timeSchedule
  com.example.seniordesign.timeSchedule$1

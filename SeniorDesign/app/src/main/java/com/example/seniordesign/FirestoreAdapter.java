@@ -1,5 +1,6 @@
 package com.example.seniordesign;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,17 @@ public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.User
         holder.listbloodtype.setText(usersList.get(position).getBloodType());
         holder.listage.setText(usersList.get(position).getAge());
         holder.listweight.setText(usersList.get(position).getWeight());
+
+        holder.listname.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.listname.getContext(),userSchedule.class);
+                intent.putExtra("uname",usersList.get(position).getFullName());
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                holder.listname.getContext().startActivity(intent);
+            }
+        });
 
     }
 

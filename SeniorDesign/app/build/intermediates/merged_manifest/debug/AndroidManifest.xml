@@ -25,6 +25,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.SeniorDesign" >
+        <activity android:name="com.example.seniordesign.userSchedule" />
         <activity android:name="com.example.seniordesign.timeSchedule" />
         <activity
             android:name="com.example.seniordesign.navigationHospital"

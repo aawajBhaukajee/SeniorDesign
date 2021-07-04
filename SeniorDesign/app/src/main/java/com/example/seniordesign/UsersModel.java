@@ -1,5 +1,7 @@
 package com.example.seniordesign;
 
+import java.util.Comparator;
+
 public class UsersModel {
 
     String EmailAddress, FullName, MaximumBP, MinimumBP, BloodType, Age, Weight;
@@ -17,6 +19,40 @@ public class UsersModel {
         this.Weight=Weight;
 
     }
+    public static Comparator<UsersModel>ageSort = new Comparator<UsersModel>() {
+        @Override
+        public int compare(UsersModel o1, UsersModel o2) {
+            return o1.getAge().compareTo(o2.getAge());
+        }
+    };
+
+    public static Comparator<UsersModel>sortName = new Comparator<UsersModel>() {
+        @Override
+        public int compare(UsersModel o1, UsersModel o2) {
+            return o1.getFullName().compareTo(o2.getFullName());
+        }
+    };
+
+    public static Comparator<UsersModel>sortLBP = new Comparator<UsersModel>() {
+        @Override
+        public int compare(UsersModel o1, UsersModel o2) {
+            return o1.getMinimumBP().compareTo(o2.getMinimumBP());
+        }
+    };
+
+    public static Comparator<UsersModel>sortHBP = new Comparator<UsersModel>() {
+        @Override
+        public int compare(UsersModel o1, UsersModel o2) {
+            return o1.getMaximumBP().compareTo(o2.getMaximumBP());
+        }
+    };
+
+    public static Comparator<UsersModel>sortBloodType = new Comparator<UsersModel>() {
+        @Override
+        public int compare(UsersModel o1, UsersModel o2) {
+            return o1.getBloodType().compareTo(o2.getBloodType());
+        }
+    };
 
     public String getEmailAddress()
     {

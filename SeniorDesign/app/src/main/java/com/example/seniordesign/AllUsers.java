@@ -1,8 +1,13 @@
 package com.example.seniordesign;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,10 +19,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class AllUsers extends AppCompatActivity {
 
+    Menu menu;
     DrawerLayout drawerLayout1;
 
     FirebaseFirestore firebaseFirestore;
@@ -85,28 +92,51 @@ public class AllUsers extends AppCompatActivity {
         navigation.closeDrawer(drawerLayout1);
     }
 
-    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        MenuItem item = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) item.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
-        return super.onCreateOptionsMenu(menu);
-
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        return true;
     }
 
-     */
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.menu_ascAge:
+                Collections.sort(usersList,UsersModel.ageSort);
+                Toast.makeText(AllUsers.this, "Sort by Age", Toast.LENGTH_SHORT).show();
+                adapter.notifyDataSetChanged();
+                return true;
+
+            case R.id.menu_ascName:
+                Collections.sort(usersList,UsersModel.sortName);
+                Toast.makeText(AllUsers.this, "Sort by Name", Toast.LENGTH_SHORT).show();
+                adapter.notifyDataSetChanged();
+                return true;
+
+            case R.id.menu_ascLBP:
+                Collections.sort(usersList,UsersModel.sortLBP);
+                Toast.makeText(AllUsers.this, "Sort by low blood pressure", Toast.LENGTH_SHORT).show();
+                adapter.notifyDataSetChanged();
+                return true;
+
+            case R.id.menu_ascHBP:
+                Collections.sort(usersList,UsersModel.sortHBP);
+                Toast.makeText(AllUsers.this, "Sort by high blood pressure", Toast.LENGTH_SHORT).show();
+                adapter.notifyDataSetChanged();
+                return true;
+
+            case R.id.menu_ascbloodtype:
+                Collections.sort(usersList,UsersModel.sortBloodType);
+                Toast.makeText(AllUsers.this, "Sort by Blood Type", Toast.LENGTH_SHORT).show();
+                adapter.notifyDataSetChanged();
+                return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
 }
 
