@@ -4,6 +4,7 @@ package com.example.seniordesign.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -24,11 +25,16 @@ public final class ActivityAllUsersBinding implements ViewBinding {
   @NonNull
   public final RecyclerView firestoreList;
 
+  @NonNull
+  public final EditText searchBar;
+
   private ActivityAllUsersBinding(@NonNull DrawerLayout rootView,
-      @NonNull DrawerLayout drawerLayout1, @NonNull RecyclerView firestoreList) {
+      @NonNull DrawerLayout drawerLayout1, @NonNull RecyclerView firestoreList,
+      @NonNull EditText searchBar) {
     this.rootView = rootView;
     this.drawerLayout1 = drawerLayout1;
     this.firestoreList = firestoreList;
+    this.searchBar = searchBar;
   }
 
   @Override
@@ -66,7 +72,14 @@ public final class ActivityAllUsersBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAllUsersBinding((DrawerLayout) rootView, drawerLayout1, firestoreList);
+      id = R.id.search_bar;
+      EditText searchBar = rootView.findViewById(id);
+      if (searchBar == null) {
+        break missingId;
+      }
+
+      return new ActivityAllUsersBinding((DrawerLayout) rootView, drawerLayout1, firestoreList,
+          searchBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

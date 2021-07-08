@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
@@ -47,6 +48,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView mainbloodType;
 
   @NonNull
+  public final ConstraintLayout map;
+
+  @NonNull
   public final TextView profile;
 
   @NonNull
@@ -76,10 +80,10 @@ public final class ActivityMainBinding implements ViewBinding {
   private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawerLayout,
       @NonNull MainToolbarBinding include, @NonNull TextView mainAge, @NonNull TextView mainEmail,
       @NonNull TextView mainHBP, @NonNull TextView mainLBP, @NonNull TextView mainName,
-      @NonNull TextView mainWeight, @NonNull TextView mainbloodType, @NonNull TextView profile,
-      @NonNull Button profileEdit, @NonNull TextView textView, @NonNull TextView textView2,
-      @NonNull TextView textView3, @NonNull TextView textView4, @NonNull TextView textView5,
-      @NonNull TextView textView6, @NonNull TextView textView7) {
+      @NonNull TextView mainWeight, @NonNull TextView mainbloodType, @NonNull ConstraintLayout map,
+      @NonNull TextView profile, @NonNull Button profileEdit, @NonNull TextView textView,
+      @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4,
+      @NonNull TextView textView5, @NonNull TextView textView6, @NonNull TextView textView7) {
     this.rootView = rootView;
     this.drawerLayout = drawerLayout;
     this.include = include;
@@ -90,6 +94,7 @@ public final class ActivityMainBinding implements ViewBinding {
     this.mainName = mainName;
     this.mainWeight = mainWeight;
     this.mainbloodType = mainbloodType;
+    this.map = map;
     this.profile = profile;
     this.profileEdit = profileEdit;
     this.textView = textView;
@@ -179,6 +184,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.map;
+      ConstraintLayout map = rootView.findViewById(id);
+      if (map == null) {
+        break missingId;
+      }
+
       id = R.id.profile;
       TextView profile = rootView.findViewById(id);
       if (profile == null) {
@@ -234,7 +245,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((DrawerLayout) rootView, drawerLayout, binding_include,
-          mainAge, mainEmail, mainHBP, mainLBP, mainName, mainWeight, mainbloodType, profile,
+          mainAge, mainEmail, mainHBP, mainLBP, mainName, mainWeight, mainbloodType, map, profile,
           profileEdit, textView, textView2, textView3, textView4, textView5, textView6, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);

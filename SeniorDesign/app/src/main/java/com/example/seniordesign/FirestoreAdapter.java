@@ -72,6 +72,10 @@ public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.User
         }
     }
 
+    public void filteredList(ArrayList<UsersModel> filteredList){
+        usersList = filteredList;
+        notifyDataSetChanged();
+    }
 }
 
 

@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class logHospital extends AppCompatActivity {
-
+    public static final String TAG = "TAG";
     TextView ApplicationTitleH, newUserH, ForgetPasswordH;
     EditText EmailAddressH, Password2H;
     Button LoginButtonH;
@@ -80,7 +81,7 @@ public class logHospital extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e)
                     {
-
+                        Log.d(TAG, "Login Failed: Email or Password is incorrect.");
                     }
                 });
             }

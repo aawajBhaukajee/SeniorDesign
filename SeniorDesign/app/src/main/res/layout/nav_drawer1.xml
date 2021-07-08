@@ -70,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
-            android:src="@mipmap/baseline_person_black_24dp"/>
+            android:src="@drawable/ic_profile"/>
 
     </LinearLayout>
 
@@ -94,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
-            android:src="@mipmap/baseline_list_black_24dp"/>
+            android:src="@drawable/ic_list"/>
 
     </LinearLayout>
 

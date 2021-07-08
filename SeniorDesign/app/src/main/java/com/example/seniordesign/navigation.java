@@ -54,9 +54,12 @@ public class navigation extends AppCompatActivity {
         redirectActivity(this, AllHospitals.class);
     }
 
+    public void ClickMap(View view) { redirectActivity(this, MapsActivity.class);}
+
     public void ClickLogout(View view) {
         redirectActivity(this, firstPage.class);
     }
+
 
     public static void redirectActivity(Activity activity, Class nav) {
 

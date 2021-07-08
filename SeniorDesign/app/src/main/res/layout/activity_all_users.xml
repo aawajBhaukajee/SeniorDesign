@@ -16,6 +16,16 @@
 
         <include layout="@layout/main_toolbar1" />
 
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Search by Blood Type"
+            android:inputType="text"/>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/firestore_list"
             android:layout_width="match_parent"

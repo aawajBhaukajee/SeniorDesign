@@ -104,11 +104,11 @@ public class register extends AppCompatActivity
                     return;
                 }
 
-                if (intValue > 120 && intValue < 100) {
+                if (intValue > 120 || intValue < 100) {
                     MaximumBP.setError("Maximum blood pressure should be less than 120 and more than 100.");
                     return;
                 }
-                if (intValue1 < 80 && intValue1>100) {
+                if (intValue1 < 80 || intValue1>100) {
                     MinimumBP.setError("Minimum blood pressure should be more than 80 and less than 80");
                     return;
                 }
@@ -173,7 +173,7 @@ public class register extends AppCompatActivity
                                     Log.d(TAG, "onFailure: " + e.toString());
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), navigation.class));
                             finish();
 
                         }
