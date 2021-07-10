@@ -1,3 +1,6 @@
+com/example/seniordesign/HospitalsModel.java
+ com.example.seniordesign.HospitalsModel
+ com.example.seniordesign.HospitalsModel$1
 com/example/seniordesign/BuildConfig.java
  com.example.seniordesign.BuildConfig
 com/example/seniordesign/UsersModel.java
@@ -15,9 +18,6 @@ com/example/seniordesign/databinding/ActivityHospitalProfileBinding.java
  com.example.seniordesign.databinding.ActivityHospitalProfileBinding
 com/example/seniordesign/databinding/ActivityNavigationBinding.java
  com.example.seniordesign.databinding.ActivityNavigationBinding
-com/example/seniordesign/HospitalsModel.java
- com.example.seniordesign.HospitalsModel
- com.example.seniordesign.HospitalsModel$1
 com/example/seniordesign/MainActivity.java
  com.example.seniordesign.MainActivity
  com.example.seniordesign.MainActivity$1
@@ -101,6 +101,9 @@ com/example/seniordesign/FirestoreAdapter.java
  com.example.seniordesign.FirestoreAdapter$UsersViewHolder
 com/example/seniordesign/navigation.java
  com.example.seniordesign.navigation
+ com.example.seniordesign.navigation$1
+ com.example.seniordesign.navigation$2
+ com.example.seniordesign.navigation$3
 com/example/seniordesign/databinding/ActivityEditProfileBinding.java
  com.example.seniordesign.databinding.ActivityEditProfileBinding
 com/example/seniordesign/logHospital.java

@@ -2102,9 +2102,12 @@ id mainEmail
 id mainEmailH
 id mainHBP
 id mainLBP
+id mainList
 id mainLocationH
+id mainMap
 id mainName
 id mainNameH
+id mainProfile
 id mainWeight
 id mainbloodType
 id map
@@ -2194,6 +2197,8 @@ id nav_graph23
 id nav_graph24
 id nav_graph25
 id nav_graph26
+id nav_graph27
+id nav_graph28
 id nav_graph3
 id nav_graph4
 id nav_graph5
@@ -2393,6 +2398,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userName
 id view_offset_helper
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -2614,6 +2620,8 @@ navigation nav_graph23
 navigation nav_graph24
 navigation nav_graph25
 navigation nav_graph26
+navigation nav_graph27
+navigation nav_graph28
 navigation nav_graph3
 navigation nav_graph4
 navigation nav_graph5
@@ -2780,6 +2788,7 @@ string title_activity_register
 string title_activity_register1
 string title_activity_register_hospital
 string title_activity_schedule
+string title_activity_schedule2
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

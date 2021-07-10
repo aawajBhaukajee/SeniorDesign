@@ -20,13 +20,61 @@
         <TextView
             android:id="@+id/id_welcome"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="WELCOME TO MAIN PAGE"
             android:textSize="50sp" />
 
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:gravity="center"
+            android:text="NAME" />
+
+
     </LinearLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/mainMap"
+            android:layout_width="116dp"
+            android:layout_height="73dp"
+            android:layout_marginTop="500dp"
+            android:background="#7493A1"
+            android:text="Map"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/mainList"
+            android:layout_width="124dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="500dp"
+            android:background="#7493A1"
+            android:text="Hospitals"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/mainProfile"
+            android:layout_width="118dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="500dp"
+            android:background="#7493A1"
+            android:text="Profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
@@ -37,5 +85,7 @@
             layout = "@layout/nav_drawer"/>
 
     </RelativeLayout>
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

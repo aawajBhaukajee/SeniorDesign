@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
 import java.lang.NullPointerException;
@@ -16,7 +16,7 @@ import java.lang.String;
 
 public final class ListSingUsersBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CardView rootView;
 
   @NonNull
   public final TextView five;
@@ -25,7 +25,7 @@ public final class ListSingUsersBinding implements ViewBinding {
   public final TextView four;
 
   @NonNull
-  public final ConstraintLayout listSingUsers;
+  public final CardView listSingUsers;
 
   @NonNull
   public final TextView listage;
@@ -63,8 +63,8 @@ public final class ListSingUsersBinding implements ViewBinding {
   @NonNull
   public final TextView two;
 
-  private ListSingUsersBinding(@NonNull ConstraintLayout rootView, @NonNull TextView five,
-      @NonNull TextView four, @NonNull ConstraintLayout listSingUsers, @NonNull TextView listage,
+  private ListSingUsersBinding(@NonNull CardView rootView, @NonNull TextView five,
+      @NonNull TextView four, @NonNull CardView listSingUsers, @NonNull TextView listage,
       @NonNull TextView listbloodtype, @NonNull TextView listemail, @NonNull TextView listhighbp,
       @NonNull TextView listlowbp, @NonNull TextView listname, @NonNull TextView listweight,
       @NonNull TextView one, @NonNull TextView seven, @NonNull TextView textView8,
@@ -89,7 +89,7 @@ public final class ListSingUsersBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CardView getRoot() {
     return rootView;
   }
 
@@ -126,7 +126,7 @@ public final class ListSingUsersBinding implements ViewBinding {
         break missingId;
       }
 
-      ConstraintLayout listSingUsers = (ConstraintLayout) rootView;
+      CardView listSingUsers = (CardView) rootView;
 
       id = R.id.listage;
       TextView listage = rootView.findViewById(id);
@@ -200,9 +200,9 @@ public final class ListSingUsersBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ListSingUsersBinding((ConstraintLayout) rootView, five, four, listSingUsers,
-          listage, listbloodtype, listemail, listhighbp, listlowbp, listname, listweight, one,
-          seven, textView8, three, two);
+      return new ListSingUsersBinding((CardView) rootView, five, four, listSingUsers, listage,
+          listbloodtype, listemail, listhighbp, listlowbp, listname, listweight, one, seven,
+          textView8, three, two);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

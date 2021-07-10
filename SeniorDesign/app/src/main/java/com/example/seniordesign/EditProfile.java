@@ -109,7 +109,7 @@ public class EditProfile extends AppCompatActivity {
                             }
                         });
 
-                        Toast.makeText(EditProfile.this, "Email Changed",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditProfile.this, "Change Successful",Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
