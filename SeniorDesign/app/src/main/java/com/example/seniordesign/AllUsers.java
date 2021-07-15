@@ -1,10 +1,13 @@
 package com.example.seniordesign;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,10 +35,30 @@ public class AllUsers extends AppCompatActivity {
     FirestoreAdapter adapter;
     ArrayList<UsersModel> usersList;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_users);
+
+        EditText editText = findViewById(R.id.search_bar);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+
+            }
+        });
 
         drawerLayout1 = findViewById(R.id.drawerLayout1);
 
@@ -59,6 +82,21 @@ public class AllUsers extends AppCompatActivity {
                     }
                 });
     }
+
+    private void filter(String text){
+        ArrayList<UsersModel> filteredList = new ArrayList<>();
+
+        for (UsersModel item: usersList)
+        {
+            if(item.getBloodType().toLowerCase().contains(text.toLowerCase())){
+                filteredList.add(item);
+            }
+        }
+
+        adapter.filteredList(filteredList);
+
+    }
+
 
     public void ClickMenu1(View view) {
         navigationHospital.openDrawer(drawerLayout1);

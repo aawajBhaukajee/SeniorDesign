@@ -1,147 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list_sing_users"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    app:cardBackgroundColor="#E6DFA3"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
 
 
-    <TextView
-        android:id="@+id/listname"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="name"
-        android:textColor="#2894C5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#E6DFA3"
+        android:clickable="true"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/listemail"
-        android:layout_width="61dp"
-        android:layout_height="16dp"
-        android:text="email"
-        android:textColor="#2894C5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listname" />
+        <TextView
+            android:id="@+id/listname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="180dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="16dp"
+            android:text="name"
+            android:textColor="#2894C5" />
 
-    <TextView
-        android:id="@+id/listhighbp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="highbp"
-        android:textColor="#2894C5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listemail" />
+        <TextView
+            android:id="@+id/listemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="32dp"
+            android:text="email"
+            android:textColor="#2894C5" />
 
-    <TextView
-        android:id="@+id/listlowbp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="lowbp"
-        android:textColor="#2894C5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listhighbp" />
+        <TextView
+            android:id="@+id/listhighbp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="48dp"
+            android:text="highbp"
+            android:textColor="#2894C5" />
 
-    <TextView
-        android:id="@+id/listage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="age"
-        android:textColor="#2894C5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listlowbp" />
+        <TextView
+            android:id="@+id/listlowbp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="64dp"
+            android:text="lowbp"
+            android:textColor="#2894C5" />
 
-    <TextView
-        android:id="@+id/listweight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="weight"
-        android:textColor="#2894C5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listage" />
+        <TextView
+            android:id="@+id/listage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="80dp"
+            android:text="age"
+            android:textColor="#2894C5" />
 
-    <TextView
-        android:id="@+id/listbloodtype"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="bloodtype"
-        android:textColor="#2894C5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listweight" />
+        <TextView
+            android:id="@+id/listweight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="96dp"
+            android:text="weight"
+            android:textColor="#2894C5" />
 
-    <TextView
-        android:id="@+id/one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name: "
-        android:textColor="#880E0E"
-        android:textColorHighlight="#C13232"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/listbloodtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="112dp"
+            android:text="bloodtype"
+            android:textColor="#2894C5" />
 
-    <TextView
-        android:id="@+id/two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email Address:"
-        android:textColor="#880E0E"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/one" />
+        <TextView
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Name: "
+            android:textColor="#880E0E"
+            android:textColorHighlight="#C13232"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="High Blood Pressure: "
-        android:textColor="#880E0E"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/two" />
+        <TextView
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Email Address:"
+            android:textColor="#880E0E" />
 
-    <TextView
-        android:id="@+id/four"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Low Blood Pressure: "
-        android:textColor="#880E0E"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/three" />
+        <TextView
+            android:id="@+id/three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="48dp"
+            android:text="High Blood Pressure: "
+            android:textColor="#880E0E" />
 
-    <TextView
-        android:id="@+id/five"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Age:"
-        android:textColor="#880E0E"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/four" />
+        <TextView
+            android:id="@+id/four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="64dp"
+            android:text="Low Blood Pressure: "
+            android:textColor="#880E0E" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Weight:"
-        android:textColor="#880E0E"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/five" />
+        <TextView
+            android:id="@+id/five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="80dp"
+            android:text="Age:"
+            android:textColor="#880E0E" />
 
-    <TextView
-        android:id="@+id/seven"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Blood Type: "
-        android:textColor="#880E0E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="96dp"
+            android:text="Weight:"
+            android:textColor="#880E0E" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/seven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="112dp"
+            android:text="Blood Type: "
+            android:textColor="#880E0E"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

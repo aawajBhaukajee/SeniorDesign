@@ -1,5 +1,7 @@
 package com.example.seniordesign;
 
+import java.util.Comparator;
+
 public class HospitalsModel {
 
      String HospitalEmail;
@@ -14,6 +16,14 @@ public class HospitalsModel {
         this.HospitalLocation=HospitalLocation;
 
     }
+
+    public static Comparator<HospitalsModel> hospitalSort = new Comparator<HospitalsModel>() {
+        @Override
+        public int compare(HospitalsModel o1, HospitalsModel o2) {
+            return o1.getHospitalName().compareTo(o2.getHospitalName());
+        }
+    };
+
 
     public String getHospitalEmail() {
         return HospitalEmail;

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdapterHospital.HospitalsViewHolder>{
+public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdapterHospital.HospitalsViewHolder> {
 
     ArrayList<HospitalsModel> hospitalList;
 
@@ -35,8 +35,8 @@ public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdap
         holderH.listnameH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holderH.listnameH.getContext(),timeSchedule.class);
-                intent.putExtra("uname",hospitalList.get(position).getHospitalName());
+                Intent intent = new Intent(holderH.listnameH.getContext(), timeSchedule.class);
+                intent.putExtra("uname", hospitalList.get(position).getHospitalName());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 holderH.listnameH.getContext().startActivity(intent);
@@ -60,6 +60,11 @@ public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdap
             listlocationH = itemView.findViewById(R.id.listlocationH);
 
         }
+    }
+
+    public void filteredList(ArrayList<HospitalsModel> filteredList) {
+        hospitalList = filteredList;
+        notifyDataSetChanged();
     }
 
 }

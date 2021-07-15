@@ -16,6 +16,14 @@
 
     <include layout="@layout/main_toolbar" />
 
+        <EditText
+            android:id="@+id/search_barH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Search by location"
+            android:inputType="text"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/firestore_listHospital"
         android:layout_width="match_parent"

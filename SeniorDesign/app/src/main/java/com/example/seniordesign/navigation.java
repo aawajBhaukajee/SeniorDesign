@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -11,14 +13,48 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 public class navigation extends AppCompatActivity {
     DrawerLayout drawerLayout;
+    TextView name;
+    Button MainProfile, MainList, MainMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+        name=findViewById(R.id.userName);
+        name.setText(getIntent().getStringExtra("uname".toString()));
 
         drawerLayout = findViewById(R.id.drawerLayout);
+        MainProfile = findViewById(R.id.mainProfile);
+        MainList = findViewById(R.id.mainList);
+        MainMap = findViewById(R.id.mainMap);
+
+        MainProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            }
+        });
+
+        MainList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(getApplicationContext(),AllHospitals.class));
+            }
+        });
+
+        MainMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(getApplicationContext(),MapsActivity.class));
+            }
+        });
     }
+
+
+
 
     public void ClickMenu(View view) {
 
@@ -54,9 +90,12 @@ public class navigation extends AppCompatActivity {
         redirectActivity(this, AllHospitals.class);
     }
 
+    public void ClickMap(View view) { redirectActivity(this, MapsActivity.class);}
+
     public void ClickLogout(View view) {
         redirectActivity(this, firstPage.class);
     }
+
 
     public static void redirectActivity(Activity activity, Class nav) {
 

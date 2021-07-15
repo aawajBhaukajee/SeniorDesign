@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btype = findViewById(R.id.mainbloodType);
         mainage = findViewById(R.id.mainAge);
         mainweight = findViewById(R.id.mainWeight);
-       // hosList = findViewById(R.id.hospList);
+        // hosList = findViewById(R.id.hospList);
         //Welcome = findViewById(R.id.welcome);
         //LogoutButton = findViewById(R.id.logoutButton);
         fAuth = FirebaseAuth.getInstance();
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
-               fullname.setText(documentSnapshot.getString( "FullName"));
-               email.setText(documentSnapshot.getString( "EmailAddress"));
+                fullname.setText(documentSnapshot.getString( "FullName"));
+                email.setText(documentSnapshot.getString( "EmailAddress"));
                 hbp.setText(documentSnapshot.getString( "MaximumBP"));
                 lbp.setText(documentSnapshot.getString( "MinimumBP"));
                 btype.setText(documentSnapshot.getString( "BloodType"));
@@ -102,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
         navigation.redirectActivity(this,AllHospitals.class);
     }
 
+    public void ClickMaps(View view){
+        navigation.redirectActivity(this,MapsActivity.class);
+    }
     public void ClickLogout(View view){
         navigation.redirectActivity(this, firstPage.class);
     }

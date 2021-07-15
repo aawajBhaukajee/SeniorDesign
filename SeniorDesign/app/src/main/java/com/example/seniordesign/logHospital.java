@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class logHospital extends AppCompatActivity {
-
+    public static final String TAG = "TAG";
     TextView ApplicationTitleH, newUserH, ForgetPasswordH;
     EditText EmailAddressH, Password2H;
     Button LoginButtonH;
@@ -80,7 +80,7 @@ public class logHospital extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e)
                     {
-
+                        Toast.makeText(logHospital.this, "Email or password is incorrect", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

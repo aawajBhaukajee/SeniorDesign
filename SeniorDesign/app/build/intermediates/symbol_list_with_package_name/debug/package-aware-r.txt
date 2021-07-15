@@ -111,6 +111,7 @@ attr allowStacking
 attr alpha
 attr alphabeticModifiers
 attr altSrc
+attr ambientEnabled
 attr animate_relativeTo
 attr animationMode
 attr appBarLayoutStyle
@@ -188,6 +189,13 @@ attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
 attr buttonTintMode
+attr cameraBearing
+attr cameraMaxZoomPreference
+attr cameraMinZoomPreference
+attr cameraTargetLat
+attr cameraTargetLng
+attr cameraTilt
+attr cameraZoom
 attr cardBackgroundColor
 attr cardCornerRadius
 attr cardElevation
@@ -528,6 +536,10 @@ attr labelBehavior
 attr labelStyle
 attr labelVisibilityMode
 attr lastBaselineToBottomHeight
+attr latLngBoundsNorthEastLatitude
+attr latLngBoundsNorthEastLongitude
+attr latLngBoundsSouthWestLatitude
+attr latLngBoundsSouthWestLongitude
 attr launchSingleTop
 attr layout
 attr layoutDescription
@@ -615,8 +627,10 @@ attr listPreferredItemPaddingEnd
 attr listPreferredItemPaddingLeft
 attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
+attr liteMode
 attr logo
 attr logoDescription
+attr mapType
 attr materialAlertDialogBodyTextStyle
 attr materialAlertDialogTheme
 attr materialAlertDialogTitleIconStyle
@@ -950,9 +964,18 @@ attr triggerId
 attr triggerReceiver
 attr triggerSlack
 attr ttcIndex
+attr uiCompass
+attr uiMapToolbar
+attr uiRotateGestures
+attr uiScrollGestures
+attr uiScrollGesturesDuringRotateOrZoom
+attr uiTiltGestures
+attr uiZoomControls
+attr uiZoomGestures
 attr uri
 attr useCompatPadding
 attr useMaterialThemeColors
+attr useViewLifecycle
 attr values
 attr verticalOffset
 attr viewInflaterClass
@@ -977,6 +1000,7 @@ attr windowNoTitle
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
+attr zOrderOnTop
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
@@ -1689,6 +1713,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable amu_bubble_mask
+drawable amu_bubble_shadow
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -1727,6 +1753,7 @@ drawable design_snackbar_background
 drawable donors
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_pin_drop_24
 drawable ic_baseline_search_24
 drawable ic_clock_black_24dp
 drawable ic_edirprofile
@@ -1734,12 +1761,16 @@ drawable ic_home
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_list
+drawable ic_location
+drawable ic_map
 drawable ic_menu
 drawable ic_more
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_profile
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1871,6 +1902,7 @@ id alertTitle
 id aligned
 id all
 id always
+id amu_text
 id animateToEnd
 id animateToStart
 id appName
@@ -1936,6 +1968,8 @@ id dark
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
+id declineButton
+id declineButtonH
 id decor_content_parent
 id default_activity_button
 id deltaRelative
@@ -2021,6 +2055,7 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
+id hybrid
 id icon
 id icon_group
 id icon_only
@@ -2040,6 +2075,7 @@ id jumpToStart
 id labelGroup
 id labeled
 id largeLabel
+id latLongTV
 id layout
 id left
 id leftToRight
@@ -2069,11 +2105,16 @@ id mainEmail
 id mainEmailH
 id mainHBP
 id mainLBP
+id mainList
 id mainLocationH
+id mainMap
 id mainName
 id mainNameH
+id mainProfile
 id mainWeight
 id mainbloodType
+id map
+id map_container
 id masked
 id material_clock_display
 id material_clock_face
@@ -2098,6 +2139,7 @@ id maxbpressure
 id media_actions
 id menu_ascAge
 id menu_ascHBP
+id menu_ascHospitalName
 id menu_ascLBP
 id menu_ascName
 id menu_ascbloodtype
@@ -2157,6 +2199,9 @@ id nav_graph22
 id nav_graph23
 id nav_graph24
 id nav_graph25
+id nav_graph26
+id nav_graph27
+id nav_graph28
 id nav_graph3
 id nav_graph4
 id nav_graph5
@@ -2211,6 +2256,7 @@ id regTitleH
 id registerButton
 id registerButtonH
 id requestButton
+id requestButtonH
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2218,6 +2264,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id satellite
 id save_button
 id save_non_transition_alpha
 id save_overlay_view
@@ -2231,6 +2278,7 @@ id scrollView
 id scrollable
 id search_badge
 id search_bar
+id search_barH
 id search_button
 id search_close_btn
 id search_edit_frame
@@ -2293,6 +2341,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id terrain
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2353,14 +2402,17 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userName
 id view_offset_helper
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id webview
 id weight
 id wide
+id window
 id withText
 id withinBounds
 id wrap
@@ -2437,12 +2489,16 @@ layout activity_hospital_profile
 layout activity_log_hospital
 layout activity_login
 layout activity_main
+layout activity_maps
 layout activity_navigation
 layout activity_navigation_hospital
 layout activity_reg_hospital
 layout activity_register
 layout activity_time_schedule
 layout activity_user_schedule
+layout amu_info_window
+layout amu_text_bubble
+layout amu_webview
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -2543,6 +2599,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu main_menu
+menu main_menuhospital
 mipmap baseline_list_black_24dp
 mipmap baseline_logout_black_24dp
 mipmap baseline_person_black_24dp
@@ -2566,6 +2623,9 @@ navigation nav_graph22
 navigation nav_graph23
 navigation nav_graph24
 navigation nav_graph25
+navigation nav_graph26
+navigation nav_graph27
+navigation nav_graph28
 navigation nav_graph3
 navigation nav_graph4
 navigation nav_graph5
@@ -2640,6 +2700,7 @@ string gcm_defaultSenderId
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
+string google_maps_key
 string google_storage_bucket
 string hello_blank_fragment
 string hello_first_fragment
@@ -2722,6 +2783,8 @@ string title_activity_log_hospital
 string title_activity_login
 string title_activity_login_hospital
 string title_activity_main
+string title_activity_map
+string title_activity_maps
 string title_activity_navigation
 string title_activity_navigation_hospital
 string title_activity_reg_hospital
@@ -2729,6 +2792,7 @@ string title_activity_register
 string title_activity_register1
 string title_activity_register_hospital
 string title_activity_schedule
+string title_activity_schedule2
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -3453,6 +3517,9 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style amu_Bubble_TextAppearance_Dark
+style amu_Bubble_TextAppearance_Light
+style amu_ClusterIcon_TextAppearance
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -3527,6 +3594,7 @@ styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width 
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
+styleable MapAttrs ambientEnabled cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialAutoCompleteTextView android_inputType

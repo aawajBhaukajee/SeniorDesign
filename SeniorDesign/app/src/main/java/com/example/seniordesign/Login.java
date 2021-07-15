@@ -22,6 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Login extends AppCompatActivity
 {
+    public static final String TAG = "TAG";
     TextView ApplicationTitle, newUser, ForgetPassword;
     EditText EmailAddress, Password2;
     Button LoginButton;
@@ -82,7 +83,7 @@ public class Login extends AppCompatActivity
                     @Override
                     public void onFailure(@NonNull Exception e)
                     {
-
+                        Toast.makeText(Login.this, "Email or password is incorrect", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
 import java.lang.NullPointerException;
@@ -16,7 +16,7 @@ import java.lang.String;
 
 public final class ListSingHospitalsBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CardView rootView;
 
   @NonNull
   public final TextView listemailH;
@@ -36,7 +36,7 @@ public final class ListSingHospitalsBinding implements ViewBinding {
   @NonNull
   public final TextView textView9;
 
-  private ListSingHospitalsBinding(@NonNull ConstraintLayout rootView, @NonNull TextView listemailH,
+  private ListSingHospitalsBinding(@NonNull CardView rootView, @NonNull TextView listemailH,
       @NonNull TextView listlocationH, @NonNull TextView listnameH, @NonNull TextView textView10,
       @NonNull TextView textView11, @NonNull TextView textView9) {
     this.rootView = rootView;
@@ -50,7 +50,7 @@ public final class ListSingHospitalsBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CardView getRoot() {
     return rootView;
   }
 
@@ -111,8 +111,8 @@ public final class ListSingHospitalsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ListSingHospitalsBinding((ConstraintLayout) rootView, listemailH, listlocationH,
-          listnameH, textView10, textView11, textView9);
+      return new ListSingHospitalsBinding((CardView) rootView, listemailH, listlocationH, listnameH,
+          textView10, textView11, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
