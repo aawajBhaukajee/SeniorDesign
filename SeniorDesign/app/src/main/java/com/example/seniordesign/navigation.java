@@ -21,7 +21,7 @@ public class navigation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
         name=findViewById(R.id.userName);
-       name.setText(getIntent().getStringExtra("uname".toString()));
+        name.setText(getIntent().getStringExtra("uname".toString()));
 
         drawerLayout = findViewById(R.id.drawerLayout);
         MainProfile = findViewById(R.id.mainProfile);

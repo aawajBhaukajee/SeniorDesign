@@ -1753,6 +1753,7 @@ drawable design_snackbar_background
 drawable donors
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_pin_drop_24
 drawable ic_baseline_search_24
 drawable ic_clock_black_24dp
 drawable ic_edirprofile
@@ -1967,6 +1968,8 @@ id dark
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
+id declineButton
+id declineButtonH
 id decor_content_parent
 id default_activity_button
 id deltaRelative
@@ -2253,6 +2256,7 @@ id regTitleH
 id registerButton
 id registerButtonH
 id requestButton
+id requestButtonH
 id reverseSawtooth
 id right
 id rightToLeft
