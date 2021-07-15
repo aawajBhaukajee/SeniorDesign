@@ -12,12 +12,12 @@
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_menu.png.flat",
-        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_menu.png"
-    },
-    {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph18.xml.flat",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\navigation\\nav_graph18.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_menu.png.flat",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_menu.png"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph11.xml.flat",
@@ -80,12 +80,12 @@
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_navigation.xml"
     },
     {
-        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home.png.flat",
-        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_home.png"
-    },
-    {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph4.xml.flat",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\navigation\\nav_graph4.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home.png.flat",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_home.png"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
