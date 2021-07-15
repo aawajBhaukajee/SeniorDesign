@@ -9,72 +9,59 @@
     tools:context=".navigation"
     android:id="@+id/drawerLayout">
 
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
 
         <include
-            layout = "@layout/main_toolbar"/>
+            android:id="@+id/include2"
+            layout="@layout/main_toolbar"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="2dp" />
 
         <TextView
             android:id="@+id/id_welcome"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="WELCOME TO MAIN PAGE"
-            android:textSize="50sp" />
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2" />
 
         <TextView
             android:id="@+id/userName"
-            android:layout_width="match_parent"
-            android:layout_height="74dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:gravity="center"
-            android:text="NAME" />
-
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/mainMap"
-            android:layout_width="116dp"
-            android:layout_height="73dp"
-            android:layout_marginTop="500dp"
-            android:background="#7493A1"
-            android:text="Map"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="NAME"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/id_welcome" />
 
-
-        <Button
-            android:id="@+id/mainList"
-            android:layout_width="124dp"
-            android:layout_height="71dp"
-            android:layout_marginTop="500dp"
-            android:background="#7493A1"
-            android:text="Hospitals"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemBackground="@color/blue"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/mainProfile"
-            android:layout_width="118dp"
-            android:layout_height="67dp"
-            android:layout_marginTop="500dp"
-            android:background="#7493A1"
-            android:text="Profile"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_welcome"
+            app:layout_constraintVertical_bias="0.995"
+            app:menu="@menu/menu_navigation" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
@@ -83,9 +70,7 @@
 
         <include
             layout = "@layout/nav_drawer"/>
-
     </RelativeLayout>
-
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

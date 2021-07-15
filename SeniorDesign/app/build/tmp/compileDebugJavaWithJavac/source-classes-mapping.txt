@@ -13,6 +13,7 @@ com/example/seniordesign/MainActivity.java
  com.example.seniordesign.MainActivity
  com.example.seniordesign.MainActivity$1
  com.example.seniordesign.MainActivity$2
+ com.example.seniordesign.MainActivity$3
 com/example/seniordesign/databinding/NavDrawerBinding.java
  com.example.seniordesign.databinding.NavDrawerBinding
 com/example/seniordesign/BuildConfig.java
@@ -47,7 +48,7 @@ com/example/seniordesign/MapsActivity.java
  com.example.seniordesign.MapsActivity
  com.example.seniordesign.MapsActivity$1
  com.example.seniordesign.MapsActivity$2
- com.example.seniordesign.MapsActivity$GeocoderHandler
+ com.example.seniordesign.MapsActivity$3
 com/example/seniordesign/firstPage.java
  com.example.seniordesign.firstPage
  com.example.seniordesign.firstPage$1
@@ -112,8 +113,6 @@ com/example/seniordesign/FirestoreAdapter.java
 com/example/seniordesign/navigation.java
  com.example.seniordesign.navigation
  com.example.seniordesign.navigation$1
- com.example.seniordesign.navigation$2
- com.example.seniordesign.navigation$3
 com/example/seniordesign/databinding/ActivityEditProfileBinding.java
  com.example.seniordesign.databinding.ActivityEditProfileBinding
 com/example/seniordesign/logHospital.java

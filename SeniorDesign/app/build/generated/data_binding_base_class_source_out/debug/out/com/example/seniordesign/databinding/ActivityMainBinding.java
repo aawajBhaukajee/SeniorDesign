@@ -12,6 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -19,6 +20,9 @@ import java.lang.String;
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   private final DrawerLayout rootView;
+
+  @NonNull
+  public final BottomNavigationView bottomNavigation;
 
   @NonNull
   public final DrawerLayout drawerLayout;
@@ -77,7 +81,8 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView textView7;
 
-  private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawerLayout,
+  private ActivityMainBinding(@NonNull DrawerLayout rootView,
+      @NonNull BottomNavigationView bottomNavigation, @NonNull DrawerLayout drawerLayout,
       @NonNull MainToolbarBinding include, @NonNull TextView mainAge, @NonNull TextView mainEmail,
       @NonNull TextView mainHBP, @NonNull TextView mainLBP, @NonNull TextView mainName,
       @NonNull TextView mainWeight, @NonNull TextView mainbloodType, @NonNull ConstraintLayout map,
@@ -85,6 +90,7 @@ public final class ActivityMainBinding implements ViewBinding {
       @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4,
       @NonNull TextView textView5, @NonNull TextView textView6, @NonNull TextView textView7) {
     this.rootView = rootView;
+    this.bottomNavigation = bottomNavigation;
     this.drawerLayout = drawerLayout;
     this.include = include;
     this.mainAge = mainAge;
@@ -133,6 +139,12 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_navigation;
+      BottomNavigationView bottomNavigation = rootView.findViewById(id);
+      if (bottomNavigation == null) {
+        break missingId;
+      }
+
       DrawerLayout drawerLayout = (DrawerLayout) rootView;
 
       id = R.id.include;
@@ -244,9 +256,10 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((DrawerLayout) rootView, drawerLayout, binding_include,
-          mainAge, mainEmail, mainHBP, mainLBP, mainName, mainWeight, mainbloodType, map, profile,
-          profileEdit, textView, textView2, textView3, textView4, textView5, textView6, textView7);
+      return new ActivityMainBinding((DrawerLayout) rootView, bottomNavigation, drawerLayout,
+          binding_include, mainAge, mainEmail, mainHBP, mainLBP, mainName, mainWeight,
+          mainbloodType, map, profile, profileEdit, textView, textView2, textView3, textView4,
+          textView5, textView6, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
