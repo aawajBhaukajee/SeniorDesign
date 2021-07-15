@@ -2,6 +2,7 @@ package com.example.seniordesign;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +33,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -61,17 +64,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     ArrayList<HospitalsModel> datalist = new ArrayList<HospitalsModel>();
     TextView latLongTV;
 
-    //private FirebaseFirestore firebaseFirestoreH;
-    //private FirestoreRecyclerAdapter adapterH;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        drawerLayout=findViewById(R.id.drawerLayout);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.map);
 
-        latLongTV = findViewById(R.id.latLongTV);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext()
+                                ,MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext()
+                                ,navigation.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.map:
+                        return true;
+                }
+                return false;
+            }
+        });
+
         getLocationPermission();
         FirebaseFirestore.getInstance().collection("hospitals").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
@@ -100,42 +122,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    /*public void ClickMenu(View view){
-        navigation.openDrawer(drawerLayout);
-    }
 
-    public void ClickLogo(View view){
-        navigation.closeDrawer(drawerLayout);
-    }
-
-    public void ClickHome(View view){
-        navigation.redirectActivity(this,navigation.class);
-    }
-
-    public void ClickProfile(View view){
-        navigation.redirectActivity(this,MainActivity.class);
-    }
-
-    public void ClickListHospital(View view){ navigation.redirectActivity(this,AllHospitals.class); }
-
-    public void ClickMap(View view){
-       recreate();
-    }
-
-    public void ClickLogout(View view){
-        navigation.redirectActivity(this, firstPage.class);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        navigation.closeDrawer(drawerLayout);
-    }
-*/
 
     public void onMapReady(GoogleMap googleMap) {
 
-        //Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "onMapReady: map is ready");
         mMap = googleMap;
 
@@ -152,7 +142,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return;
             }
             mMap.setMyLocationEnabled(true);
-            mMap.getUiSettings().setCompassEnabled(true);
+            //mMap.getUiSettings().setCompassEnabled(true);
         }
 
 
@@ -183,7 +173,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // return newLatLng;
     }
 
 
@@ -278,20 +267,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private class GeocoderHandler extends Handler {
-        @Override
-        public void handleMessage(Message message) {
-            String locationAddress;
-            switch (message.what) {
-                case 1:
-                    Bundle bundle = message.getData();
-                    locationAddress = bundle.getString("address");
-                    break;
-                default:
-                    locationAddress = null;
-            }
-            latLongTV.setText(locationAddress);
-        }
-    }
+
 }
 
