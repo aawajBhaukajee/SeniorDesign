@@ -138,13 +138,15 @@
             android:layout_weight="1"
             android:text="LOGOUT"
             android:padding="12dp"
-            android:layout_marginStart="16dp"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
-            android:src="@mipmap/baseline_logout_black_24dp"/>
+            android:src="@mipmap/baseline_logout_black_24dp"
+            android:layout_marginRight="48dp" />
 
 
     </LinearLayout>
