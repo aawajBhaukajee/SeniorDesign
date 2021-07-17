@@ -283,6 +283,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     @Override
+    //Getting the distance form the marker
     public boolean onMarkerClick(Marker marker) {
         MarkerOptions markerOptions = new MarkerOptions();
         end_Lat = marker.getPosition().latitude;
