@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SeniorDesign">
-        <activity android:name=".userSchedule"></activity>
+        <activity android:name=".activity_calendar_time"></activity>
+        <activity android:name=".userSchedule" />
         <activity android:name=".timeSchedule" />
         <activity
             android:name=".navigationHospital"

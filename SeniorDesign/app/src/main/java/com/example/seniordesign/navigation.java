@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -11,13 +12,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 public class navigation extends AppCompatActivity {
     DrawerLayout drawerLayout;
-
+ Button b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
         drawerLayout = findViewById(R.id.drawerLayout);
+        b1 = findViewById(R.id.button2);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),calendar_schedule.class));
+            }
+        });
     }
 
     public void ClickMenu(View view) {
