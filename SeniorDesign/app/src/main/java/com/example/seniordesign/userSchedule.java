@@ -56,20 +56,8 @@ public class userSchedule extends AppCompatActivity {
                                 userId = document.getId();
                             }
                         }
-                        else
-                        {
-                            FirebaseFirestore.getInstance().collection("hospitals").whereEqualTo("HospitalName",userId).get().
-                                    addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                                        @Override
-                                        public void onComplete( Task<QuerySnapshot> task) {
-                                            if(task.isSuccessful()){
-                                                for (QueryDocumentSnapshot document : task.getResult()) {
-                                                    userId = document.getId();
-                                                }
-                                            }
-                                        }
-                                    });
-                        }
+
+
                     }
                 });
 
