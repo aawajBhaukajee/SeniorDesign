@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.firestore.DocumentSnapshot;
+
 import java.util.ArrayList;
 
 public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.UsersViewHolder> {
@@ -41,6 +43,7 @@ public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.User
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.listname.getContext(),userSchedule.class);
+
                 intent.putExtra("uname",usersList.get(position).getFullName());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

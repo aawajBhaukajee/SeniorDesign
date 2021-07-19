@@ -19,33 +19,52 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 
 public class timeSchedule extends AppCompatActivity {
-
+/*
     DatabaseReference dref, requestRef, acceptRef;
     FirebaseAuth dAuth;
     FirebaseUser dUser;
-
+    DocumentReference docref;
+    FirebaseFirestore db;
     TextView name;
     Button back, request, decline;
     String current = "No Action";
+    String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_schedule);
 
-        String userId = getIntent().getStringExtra("uname");
+        userId = getIntent().getStringExtra("uname");
+        FirebaseFirestore.getInstance().collection("hospitals").whereEqualTo("HospitalName",userId).get().
+                addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete( Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                userId = document.getId();
+                            }
+                        }
+                    }
+                });
 
-        dref = FirebaseDatabase.getInstance().getReference().child("hospitals").child(userId);
+
+        dref = FirebaseDatabase.getInstance().getReference().child("users").child(String.valueOf(userId));
         requestRef = FirebaseDatabase.getInstance().getReference().child("Requests");
         acceptRef = FirebaseDatabase.getInstance().getReference().child("Accepted");
         dAuth = FirebaseAuth.getInstance();
         dUser = dAuth.getCurrentUser();
 
-        name=(TextView)findViewById(R.id.textView17);
+
+        name = findViewById(R.id.textView17);
         back = findViewById(R.id.buttonListHospital);
         request = findViewById(R.id.requestButtonH);
         decline = findViewById(R.id.declineButtonH);
@@ -55,17 +74,14 @@ public class timeSchedule extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),AllHospitals.class));
+                startActivity(new Intent(getApplicationContext(), AllHospitals.class));
             }
         });
 
-        request.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PerformAction(userId);
-            }
-        });
         CheckUserExistence(userId);
+                PerformAction(userId);
+
+
     }
 
     private void CheckUserExistence(String userId) {
@@ -110,8 +126,9 @@ public class timeSchedule extends AppCompatActivity {
                     if(snapshot.child("status").getValue().toString().equals("pending"))
                     {
                         current = "sent_Pending";
-                        request.setText("CANCEL REQUEST");
-                        decline.setVisibility(View.GONE);
+                        request.setText("ACCEPT REQUEST");
+                        decline.setText("DECLINE REQUEST");
+                        decline.setVisibility(View.VISIBLE);
                     }
 
                     if(snapshot.child("status").getValue().toString().equals("decline"))
@@ -233,4 +250,6 @@ public class timeSchedule extends AppCompatActivity {
 
         }
     }
+
+    */
 }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,12 +23,16 @@ public final class ActivityFirstPageBinding implements ViewBinding {
   public final Button hRegister;
 
   @NonNull
+  public final ImageView imageView;
+
+  @NonNull
   public final Button uRegister;
 
   private ActivityFirstPageBinding(@NonNull ConstraintLayout rootView, @NonNull Button hRegister,
-      @NonNull Button uRegister) {
+      @NonNull ImageView imageView, @NonNull Button uRegister) {
     this.rootView = rootView;
     this.hRegister = hRegister;
+    this.imageView = imageView;
     this.uRegister = uRegister;
   }
 
@@ -64,13 +69,20 @@ public final class ActivityFirstPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageView;
+      ImageView imageView = rootView.findViewById(id);
+      if (imageView == null) {
+        break missingId;
+      }
+
       id = R.id.uRegister;
       Button uRegister = rootView.findViewById(id);
       if (uRegister == null) {
         break missingId;
       }
 
-      return new ActivityFirstPageBinding((ConstraintLayout) rootView, hRegister, uRegister);
+      return new ActivityFirstPageBinding((ConstraintLayout) rootView, hRegister, imageView,
+          uRegister);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

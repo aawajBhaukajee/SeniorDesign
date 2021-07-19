@@ -4,12 +4,12 @@
         "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_all_users.xml"
     },
     {
-        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph3.xml.flat",
         "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\navigation\\nav_graph3.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\menu_main_menu.xml.flat",
@@ -24,12 +24,12 @@
         "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_hospital.xml"
     },
     {
-        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_logout_black_24dp.png.flat",
         "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\mipmap-hdpi\\baseline_logout_black_24dp.png"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph24.xml.flat",
