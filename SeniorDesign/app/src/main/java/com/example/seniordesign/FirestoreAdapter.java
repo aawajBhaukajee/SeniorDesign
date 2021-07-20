@@ -37,7 +37,7 @@ public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.User
         holder.listage.setText(usersList.get(position).getAge());
         holder.listweight.setText(usersList.get(position).getWeight());
 
-        holder.listname.setOnClickListener(new View.OnClickListener() {
+       holder.listname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.listname.getContext(),userSchedule.class);
@@ -50,7 +50,7 @@ public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.User
 
     }
 
-    @Override
+      @Override
     public int getItemCount() {
         return usersList.size();
     }

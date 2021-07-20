@@ -69,7 +69,7 @@ public class userSchedule extends AppCompatActivity {
         CheckUserExistence(userId);
     }
 
-   private void CheckUserExistence(String userId) {
+    private void CheckUserExistence(String userId) {
         acceptRef.child(dUser.getUid()).child(userId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
