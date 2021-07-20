@@ -1,53 +1,78 @@
+
 package com.example.seniordesign;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.HashMap;
 
 public class timeSchedule extends AppCompatActivity {
 /*
     DatabaseReference dref, requestRef, acceptRef;
     FirebaseAuth dAuth;
     FirebaseUser dUser;
-
+    DocumentReference docref;
+    FirebaseFirestore db;
     TextView name;
     Button back, request, decline;
-    public String current = "No Action";
-
+    String current = "No Action";
+    String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_schedule);
-
-        String userId = getIntent().getStringExtra("uname");
-
-        dref = FirebaseDatabase.getInstance().getReference().child("hospitals").child(userId);
+        userId = getIntent().getStringExtra("uname");
+        FirebaseFirestore.getInstance().collection("hospitals").whereEqualTo("HospitalName",userId).get().
+                addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete( Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                userId = document.getId();
+                            }
+                        }
+                    }
+                });
+        dref = FirebaseDatabase.getInstance().getReference().child("users").child(String.valueOf(userId));
         requestRef = FirebaseDatabase.getInstance().getReference().child("Requests");
         acceptRef = FirebaseDatabase.getInstance().getReference().child("Accepted");
         dAuth = FirebaseAuth.getInstance();
         dUser = dAuth.getCurrentUser();
-
-        name=(TextView)findViewById(R.id.textView17);
+        name = findViewById(R.id.textView17);
         back = findViewById(R.id.buttonListHospital);
         request = findViewById(R.id.requestButtonH);
         decline = findViewById(R.id.declineButtonH);
-
         name.setText(getIntent().getStringExtra("uname".toString()));
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),AllHospitals.class));
-            }
-        });
-
-        request.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PerformAction(userId);
+                startActivity(new Intent(getApplicationContext(), AllHospitals.class));
             }
         });
         CheckUserExistence(userId);
+                PerformAction(userId);
     }
-
     private void CheckUserExistence(String userId) {
         acceptRef.child(dUser.getUid()).child(userId).addValueEventListener(new ValueEventListener() {
             @Override
@@ -60,16 +85,13 @@ public class timeSchedule extends AppCompatActivity {
                     decline.setVisibility(View.VISIBLE);
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
         acceptRef.child(userId).child(dUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                 if(snapshot.exists()){
                     current = "accept";
                     request.setText("Thank You");
@@ -81,7 +103,6 @@ public class timeSchedule extends AppCompatActivity {
             public void onCancelled(@NonNull  DatabaseError error) {
             }
         });
-
         requestRef.child(dUser.getUid()).child(userId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -90,10 +111,10 @@ public class timeSchedule extends AppCompatActivity {
                     if(snapshot.child("status").getValue().toString().equals("pending"))
                     {
                         current = "sent_Pending";
-                        request.setText("CANCEL REQUEST");
-                        decline.setVisibility(View.GONE);
+                        request.setText("ACCEPT REQUEST");
+                        decline.setText("DECLINE REQUEST");
+                        decline.setVisibility(View.VISIBLE);
                     }
-
                     if(snapshot.child("status").getValue().toString().equals("decline"))
                     {
                         current = "sent_decline";
@@ -102,13 +123,10 @@ public class timeSchedule extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-
         requestRef.child(userId).child(dUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -123,13 +141,10 @@ public class timeSchedule extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-
         if(current.equals("No Action"))
         {
             current = "No Action";
@@ -137,7 +152,6 @@ public class timeSchedule extends AppCompatActivity {
             decline.setVisibility(View.GONE);
         }
     }
-
     private void PerformAction(String userId) {
         if (current.equals("No Action")) {
             HashMap hashMap = new HashMap();
@@ -153,7 +167,6 @@ public class timeSchedule extends AppCompatActivity {
                     } else {
                         Toast.makeText(timeSchedule.this, "" + task.getException().toString(), Toast.LENGTH_SHORT).show();
                     }
-
                 }
             });
         }
@@ -161,20 +174,17 @@ public class timeSchedule extends AppCompatActivity {
             requestRef.child(dUser.getUid()).child(userId).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-
                     if (task.isSuccessful()) {
                         Toast.makeText(timeSchedule.this, "You have cancelled the request", Toast.LENGTH_SHORT).show();
                         current = "No Action";
                         request.setText("SEND REQUEST");
                         decline.setVisibility(View.GONE);
-
                     } else {
                         Toast.makeText(timeSchedule.this, "" + task.getException().toString(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
-
         if (current.equals("sent_pending")) {
             requestRef.child(userId).child(dUser.getUid()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
@@ -183,7 +193,6 @@ public class timeSchedule extends AppCompatActivity {
                         HashMap hashMap = new HashMap();
                         hashMap.put("status", "Accepted");
                         hashMap.put("name", name);
-
                         acceptRef.child(dUser.getUid()).child(userId).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                             @Override
                             public void onComplete(@NonNull Task task) {
@@ -199,18 +208,15 @@ public class timeSchedule extends AppCompatActivity {
                                         }
                                     });
                                 }
-
                             }
                         });
-
                     }
-
                 }
             });
         }
         if (current.equals("accept"))
         {
-
         }
-    }*/
+    }
+    */
 }

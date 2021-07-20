@@ -36,7 +36,7 @@ public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdap
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holderH.listnameH.getContext(), userSchedule.class);
-                intent.putExtra("unameH", hospitalList.get(position).getHospitalName());
+                intent.putExtra("uname", hospitalList.get(position).getHospitalName());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 holderH.listnameH.getContext().startActivity(intent);
@@ -68,5 +68,3 @@ public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdap
     }
 
 }
-
-
