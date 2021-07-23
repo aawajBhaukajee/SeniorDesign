@@ -16,17 +16,19 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class navigation extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    TextView name;
+    TextView sdate, stime, i;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
-        name=findViewById(R.id.userName);
-        name.setText(getIntent().getStringExtra("uname".toString()));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
+        sdate = findViewById(R.id.showdate);
+        stime = findViewById(R.id.showtime);
+        i = findViewById(R.id.i);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -50,6 +52,9 @@ public class navigation extends AppCompatActivity {
         });
         drawerLayout = findViewById(R.id.drawerLayout);
 
+
+        sdate.setText(calendar.getD());
+        stime.setText(calendar2.getT());
     }
 
 

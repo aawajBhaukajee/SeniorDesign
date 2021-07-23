@@ -146,6 +146,7 @@ public class register extends AppCompatActivity
                             });
 
                             Toast.makeText(register.this, "New User is Created. ", Toast.LENGTH_SHORT).show();
+
                             userID = fAuth.getCurrentUser().getUid();
                             DocumentReference documentReference = fStore.collection("users").document(userID);
                             Map<String,Object> user = new HashMap<>();

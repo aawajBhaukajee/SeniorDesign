@@ -1,6 +1,5 @@
 package com.example.seniordesign;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,7 +19,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -105,7 +103,7 @@ public class userSchedule extends AppCompatActivity {
 
 
     private void CheckUserExistence(String userId) {
-        /*acceptRef.child(dUser.getUid()).child(userId).addValueEventListener(new ValueEventListener() {
+        acceptRef.child(dUser.getUid()).child(userId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
@@ -133,7 +131,7 @@ public class userSchedule extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
-*/
+
         //it means we have already sent request
         requestRef.child(dUser.getUid()).child(userId).addValueEventListener(new ValueEventListener() {
             @Override

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
@@ -20,21 +21,30 @@ public final class ActivityNavigationHospitalBinding implements ViewBinding {
   private final DrawerLayout rootView;
 
   @NonNull
-  public final BottomNavigationView bottomNavigation;
+  public final BottomNavigationView bottomNavigation1;
 
   @NonNull
   public final DrawerLayout drawerLayout1;
 
   @NonNull
-  public final TextView idWelcome;
+  public final TextView idWelcome1;
+
+  @NonNull
+  public final MainToolbar1Binding include1;
+
+  @NonNull
+  public final ConstraintLayout linearLayout;
 
   private ActivityNavigationHospitalBinding(@NonNull DrawerLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull DrawerLayout drawerLayout1,
-      @NonNull TextView idWelcome) {
+      @NonNull BottomNavigationView bottomNavigation1, @NonNull DrawerLayout drawerLayout1,
+      @NonNull TextView idWelcome1, @NonNull MainToolbar1Binding include1,
+      @NonNull ConstraintLayout linearLayout) {
     this.rootView = rootView;
-    this.bottomNavigation = bottomNavigation;
+    this.bottomNavigation1 = bottomNavigation1;
     this.drawerLayout1 = drawerLayout1;
-    this.idWelcome = idWelcome;
+    this.idWelcome1 = idWelcome1;
+    this.include1 = include1;
+    this.linearLayout = linearLayout;
   }
 
   @Override
@@ -64,22 +74,35 @@ public final class ActivityNavigationHospitalBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_navigation;
-      BottomNavigationView bottomNavigation = rootView.findViewById(id);
-      if (bottomNavigation == null) {
+      id = R.id.bottom_navigation1;
+      BottomNavigationView bottomNavigation1 = rootView.findViewById(id);
+      if (bottomNavigation1 == null) {
         break missingId;
       }
 
       DrawerLayout drawerLayout1 = (DrawerLayout) rootView;
 
-      id = R.id.id_welcome;
-      TextView idWelcome = rootView.findViewById(id);
-      if (idWelcome == null) {
+      id = R.id.id_welcome1;
+      TextView idWelcome1 = rootView.findViewById(id);
+      if (idWelcome1 == null) {
         break missingId;
       }
 
-      return new ActivityNavigationHospitalBinding((DrawerLayout) rootView, bottomNavigation,
-          drawerLayout1, idWelcome);
+      id = R.id.include1;
+      View include1 = rootView.findViewById(id);
+      if (include1 == null) {
+        break missingId;
+      }
+      MainToolbar1Binding binding_include1 = MainToolbar1Binding.bind(include1);
+
+      id = R.id.linearLayout;
+      ConstraintLayout linearLayout = rootView.findViewById(id);
+      if (linearLayout == null) {
+        break missingId;
+      }
+
+      return new ActivityNavigationHospitalBinding((DrawerLayout) rootView, bottomNavigation1,
+          drawerLayout1, idWelcome1, binding_include1, linearLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

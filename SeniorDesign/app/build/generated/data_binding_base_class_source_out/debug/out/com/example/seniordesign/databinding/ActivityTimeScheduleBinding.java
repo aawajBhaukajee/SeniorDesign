@@ -23,20 +23,16 @@ public final class ActivityTimeScheduleBinding implements ViewBinding {
   public final Button buttonListHospital;
 
   @NonNull
-  public final Button declineButtonH;
-
-  @NonNull
   public final Button requestButtonH;
 
   @NonNull
   public final TextView textView17;
 
   private ActivityTimeScheduleBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button buttonListHospital, @NonNull Button declineButtonH,
-      @NonNull Button requestButtonH, @NonNull TextView textView17) {
+      @NonNull Button buttonListHospital, @NonNull Button requestButtonH,
+      @NonNull TextView textView17) {
     this.rootView = rootView;
     this.buttonListHospital = buttonListHospital;
-    this.declineButtonH = declineButtonH;
     this.requestButtonH = requestButtonH;
     this.textView17 = textView17;
   }
@@ -74,12 +70,6 @@ public final class ActivityTimeScheduleBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.declineButtonH;
-      Button declineButtonH = rootView.findViewById(id);
-      if (declineButtonH == null) {
-        break missingId;
-      }
-
       id = R.id.requestButtonH;
       Button requestButtonH = rootView.findViewById(id);
       if (requestButtonH == null) {
@@ -93,7 +83,7 @@ public final class ActivityTimeScheduleBinding implements ViewBinding {
       }
 
       return new ActivityTimeScheduleBinding((ConstraintLayout) rootView, buttonListHospital,
-          declineButtonH, requestButtonH, textView17);
+          requestButtonH, textView17);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -27,6 +27,9 @@ public final class ActivityNavigationBinding implements ViewBinding {
   public final DrawerLayout drawerLayout;
 
   @NonNull
+  public final TextView i;
+
+  @NonNull
   public final TextView idWelcome;
 
   @NonNull
@@ -36,19 +39,25 @@ public final class ActivityNavigationBinding implements ViewBinding {
   public final ConstraintLayout linearLayout;
 
   @NonNull
-  public final TextView userName;
+  public final TextView showdate;
+
+  @NonNull
+  public final TextView showtime;
 
   private ActivityNavigationBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigation, @NonNull DrawerLayout drawerLayout,
-      @NonNull TextView idWelcome, @NonNull MainToolbarBinding include2,
-      @NonNull ConstraintLayout linearLayout, @NonNull TextView userName) {
+      @NonNull TextView i, @NonNull TextView idWelcome, @NonNull MainToolbarBinding include2,
+      @NonNull ConstraintLayout linearLayout, @NonNull TextView showdate,
+      @NonNull TextView showtime) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
     this.drawerLayout = drawerLayout;
+    this.i = i;
     this.idWelcome = idWelcome;
     this.include2 = include2;
     this.linearLayout = linearLayout;
-    this.userName = userName;
+    this.showdate = showdate;
+    this.showtime = showtime;
   }
 
   @Override
@@ -86,6 +95,12 @@ public final class ActivityNavigationBinding implements ViewBinding {
 
       DrawerLayout drawerLayout = (DrawerLayout) rootView;
 
+      id = R.id.i;
+      TextView i = rootView.findViewById(id);
+      if (i == null) {
+        break missingId;
+      }
+
       id = R.id.id_welcome;
       TextView idWelcome = rootView.findViewById(id);
       if (idWelcome == null) {
@@ -105,14 +120,20 @@ public final class ActivityNavigationBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.userName;
-      TextView userName = rootView.findViewById(id);
-      if (userName == null) {
+      id = R.id.showdate;
+      TextView showdate = rootView.findViewById(id);
+      if (showdate == null) {
+        break missingId;
+      }
+
+      id = R.id.showtime;
+      TextView showtime = rootView.findViewById(id);
+      if (showtime == null) {
         break missingId;
       }
 
       return new ActivityNavigationBinding((DrawerLayout) rootView, bottomNavigation, drawerLayout,
-          idWelcome, binding_include2, linearLayout, userName);
+          i, idWelcome, binding_include2, linearLayout, showdate, showtime);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

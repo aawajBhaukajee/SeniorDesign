@@ -22,7 +22,7 @@ public class navigationHospital extends AppCompatActivity {
         setContentView(R.layout.activity_navigation_hospital);
 
         drawerLayout1 = findViewById(R.id.drawerLayout1);
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation1);
         bottomNavigationView.setSelectedItemId(R.id.home);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

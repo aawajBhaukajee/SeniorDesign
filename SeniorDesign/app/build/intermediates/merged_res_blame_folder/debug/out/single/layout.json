@@ -28,10 +28,6 @@
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_user_schedule.xml"
     },
     {
-        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_toolbar.xml",
-        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\main_toolbar.xml"
-    },
-    {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_drawer1.xml",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\nav_drawer1.xml"
     },
@@ -44,20 +40,16 @@
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_calendar2.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_calendar2.xml"
+    },
+    {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_drawer.xml",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\nav_drawer.xml"
-    },
-    {
-        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_time_schedule.xml",
-        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_time_schedule.xml"
-    },
-    {
-        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_reg_hospital.xml",
-        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_reg_hospital.xml"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_sing_hospitals.xml",
@@ -78,6 +70,26 @@
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_log_hospital.xml",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_log_hospital.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_info.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_info.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_toolbar.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\main_toolbar.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_calendar.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_calendar.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_time_schedule.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_time_schedule.xml"
+    },
+    {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_reg_hospital.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_reg_hospital.xml"
     },
     {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_edit_profile.xml",
