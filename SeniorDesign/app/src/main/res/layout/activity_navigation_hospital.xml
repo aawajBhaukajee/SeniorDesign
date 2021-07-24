@@ -9,23 +9,46 @@
     tools:context=".navigationHospital"
     android:id="@+id/drawerLayout1">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <include
-            layout = "@layout/main_toolbar1"/>
+    <include
+        android:id="@+id/include1"
+        layout="@layout/main_toolbar1"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="2dp" />
+
 
         <TextView
-            android:id="@+id/id_welcome"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/id_welcome1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="WELCOME TO MAIN PAGE"
-            android:textSize="50sp" />
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include1" />
 
-    </LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemBackground="@color/blue"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_welcome"
+            app:layout_constraintVertical_bias="0.995"
+            app:menu="@menu/menu_navigation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:layout_width="300dp"

@@ -1,15 +1,15 @@
 package com.example.seniordesign;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -29,6 +29,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -40,12 +41,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.google.android.gms.maps.CameraUpdateFactory.newLatLngZoom;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     DrawerLayout drawerLayout;
     private static final String TAG = "Maps";
@@ -60,6 +62,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private UiSettings uiSettings;
     private DocumentReference docRef;
+
+    Double curr_Lat;
+    Double curr_Lng;
+    Double end_Lat;
+    Double end_Lng;
 
     ArrayList<HospitalsModel> datalist = new ArrayList<HospitalsModel>();
     TextView latLongTV;
@@ -143,6 +150,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
             mMap.setMyLocationEnabled(true);
             //mMap.getUiSettings().setCompassEnabled(true);
+            mMap.setOnMarkerClickListener(this);
         }
 
 
@@ -189,7 +197,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         if(task.isSuccessful()){
                             Log.d(TAG,"onComplete: found location");
                             Location currentLocation = (Location)task.getResult();
+                            curr_Lat = currentLocation.getLatitude();
+                            curr_Lng = currentLocation.getLongitude();
 
+                            Log.d("CURR_LATI_LONG", String.valueOf(curr_Lat));
 //                            moveCamera(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude()),default_zoom);
                         }
                         else{
@@ -268,5 +279,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
+    @Override
+    //Getting the distance form the marker
+    public boolean onMarkerClick(Marker marker) {
+        MarkerOptions markerOptions = new MarkerOptions();
+        end_Lat = marker.getPosition().latitude;
+        end_Lng = marker.getPosition().longitude;
+        float results[]= new float[10];
+        Location.distanceBetween(curr_Lat,curr_Lng,end_Lat,end_Lng,results);
+        NumberFormat nf= NumberFormat.getInstance();
+        nf.setMaximumFractionDigits(2);
+        String distance_location = String.valueOf(nf.format(results[0]*0.000621371))+ " miles";
+        AlertDialog dialog = new AlertDialog.Builder(MapsActivity.this).setTitle("Distance from current location to chosen marker")
+                .setMessage(distance_location).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                }).create();
+        dialog.show();
+        return false;
+    }
 }
-

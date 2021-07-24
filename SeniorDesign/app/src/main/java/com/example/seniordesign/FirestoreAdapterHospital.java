@@ -68,5 +68,3 @@ public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdap
     }
 
 }
-
-

@@ -41,6 +41,7 @@ public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.User
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.listname.getContext(),userSchedule.class);
+
                 intent.putExtra("uname",usersList.get(position).getFullName());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -77,6 +78,3 @@ public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.User
         notifyDataSetChanged();
     }
 }
-
-
-
