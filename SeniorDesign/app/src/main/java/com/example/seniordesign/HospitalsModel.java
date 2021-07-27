@@ -7,13 +7,15 @@ public class HospitalsModel {
      String HospitalEmail;
      String HospitalName;
     String HospitalLocation;
+    String userId;
 
     public HospitalsModel(){}
 
-    public HospitalsModel(String HospitalEmail, String HospitalName, String HospitalLocation){
+    public HospitalsModel(String HospitalEmail, String HospitalName, String HospitalLocation,String userId){
         this.HospitalEmail=HospitalEmail;
         this.HospitalName=HospitalName;
         this.HospitalLocation=HospitalLocation;
+        this.userId = userId;
 
     }
 
@@ -47,6 +49,13 @@ public class HospitalsModel {
 
     public void setHospitalLocation(String hospitalLocation) {
         this.HospitalLocation = hospitalLocation;
+    }
+    public String getuserId() {
+        return userId;
+    }
+    public void setuserId(String userId) {
+        this.userId = userId;
+
     }
 }
 
