@@ -20,6 +20,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -36,6 +38,7 @@ public class register extends AppCompatActivity
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
+    private DatabaseReference UserRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,6 +151,12 @@ public class register extends AppCompatActivity
                             Toast.makeText(register.this, "New User is Created. ", Toast.LENGTH_SHORT).show();
 
                             userID = fAuth.getCurrentUser().getUid();
+
+                            UserRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
+                            HashMap userMap = new HashMap();
+                            userMap.put("username",fullname);
+                            UserRef.updateChildren(userMap);
+
                             DocumentReference documentReference = fStore.collection("users").document(userID);
                             Map<String,Object> user = new HashMap<>();
 
@@ -158,6 +167,7 @@ public class register extends AppCompatActivity
                             user.put("BloodType", btype);
                             user.put("Age", donorage);
                             user.put("Weight", donorweight);
+                            user.put("userId",userID);
                            // user.put("isUser","1");
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {

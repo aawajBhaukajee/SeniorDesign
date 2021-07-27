@@ -40,9 +40,9 @@ public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.User
         holder.listname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holder.listname.getContext(),userSchedule.class);
 
-                intent.putExtra("uname",usersList.get(position).getFullName());
+                Intent intent = new Intent(holder.listname.getContext(),userSchedule.class);
+                intent.putExtra("uname",usersList.get(position).getuserId());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 holder.listname.getContext().startActivity(intent);

@@ -64,8 +64,6 @@ public class calendar2 extends AppCompatActivity {
                 startActivity(intent);
 
             }
-
-
         });
 
 

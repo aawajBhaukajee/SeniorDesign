@@ -35,8 +35,8 @@ public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdap
         holderH.listnameH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holderH.listnameH.getContext(), timeSchedule.class);
-                intent.putExtra("uname", hospitalList.get(position).getHospitalName());
+                Intent intent = new Intent(holderH.listnameH.getContext(), userSchedule.class);
+                intent.putExtra("uname", hospitalList.get(position).getuserId());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 holderH.listnameH.getContext().startActivity(intent);

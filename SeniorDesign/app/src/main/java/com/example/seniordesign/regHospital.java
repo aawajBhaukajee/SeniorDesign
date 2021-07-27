@@ -20,6 +20,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -36,6 +38,7 @@ public class regHospital extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String hospitalID;
+    private DatabaseReference UserRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,11 +116,18 @@ public class regHospital extends AppCompatActivity {
 
                             Toast.makeText(regHospital.this, "New Hospital Account is Created. ", Toast.LENGTH_SHORT).show();
                             hospitalID = fAuth.getCurrentUser().getUid();
+
+                            UserRef = FirebaseDatabase.getInstance().getReference().child("Users").child(hospitalID);
+                            HashMap userMap = new HashMap();
+                            userMap.put("username",fullname);
+                            UserRef.updateChildren(userMap);
+
                             DocumentReference documentReference = fStore.collection("hospitals").document(hospitalID);
                             Map<String,Object> hospital = new HashMap<>();
                             hospital.put("HospitalName",fullname);
                             hospital.put("HospitalEmail",email);
                             hospital.put("HospitalLocation",location);
+                            hospital.put("userId",hospitalID);
 
                            // user.put("isUser","1");
 

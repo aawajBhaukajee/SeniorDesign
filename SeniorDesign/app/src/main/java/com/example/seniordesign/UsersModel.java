@@ -4,11 +4,11 @@ import java.util.Comparator;
 
 public class UsersModel {
 
-    String EmailAddress, FullName, MaximumBP, MinimumBP, BloodType, Age, Weight;
+    String EmailAddress, FullName, MaximumBP, MinimumBP, BloodType, Age, Weight, userId;
 
     private UsersModel(){}
 
-    private UsersModel(String EmailAddress, String FullName, String MaximumBP, String MinimumBP, String BloodType, String Age, String Weight){
+    private UsersModel(String EmailAddress, String FullName, String MaximumBP, String MinimumBP, String BloodType, String Age, String Weight,String userId){
 
         this.EmailAddress=EmailAddress;
         this.FullName=FullName;
@@ -17,6 +17,7 @@ public class UsersModel {
         this.BloodType=BloodType;
         this.Age=Age;
         this.Weight=Weight;
+        this.userId = userId;
 
     }
     public static Comparator<UsersModel>ageSort = new Comparator<UsersModel>() {
@@ -110,6 +111,15 @@ public class UsersModel {
 
     public void setWeight(String Weight) {
         this.Weight = Weight;
+    }
+
+    public String getuserId()
+    {
+        return userId;
+    }
+
+    public void setuserId(String userId) {
+        this.userId = userId;
     }
     }
 
