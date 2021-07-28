@@ -135,7 +135,7 @@ public class regHospital extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Void unused)
                                 {
-                                    Log.d(TAG, "onSuccess: Hospital profile is created for"+hospitalID);
+                                    Log.d(TAG, "onSuccess: Hospital profile is created for "+hospitalID);
                                 }
                             }).addOnFailureListener(new OnFailureListener()
                             {

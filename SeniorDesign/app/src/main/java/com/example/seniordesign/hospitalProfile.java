@@ -1,13 +1,17 @@
 package com.example.seniordesign;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -39,6 +43,11 @@ public class hospitalProfile extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         hospitalId = fAuth.getCurrentUser().getUid();
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation1);
+        bottomNavigationView.setSelectedItemId(R.id.hprofile);
+
+
+
         DocumentReference documentReference = fStore.collection("hospitals").document(hospitalId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
@@ -48,6 +57,29 @@ public class hospitalProfile extends AppCompatActivity {
                 hosLocation.setText(documentSnapshot.getString("HospitalLocation"));
             }
         });
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.hprofile:
+                        return true;
+                    case R.id.hhome:
+                        startActivity(new Intent(getApplicationContext()
+                                ,navigationHospital.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.hdonors:
+                        startActivity(new Intent(getApplicationContext()
+                                ,AllUsers.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
+
+
 
     }
 
