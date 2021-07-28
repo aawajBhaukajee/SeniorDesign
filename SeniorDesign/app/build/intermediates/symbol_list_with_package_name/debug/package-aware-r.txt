@@ -1969,6 +1969,8 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id bDone
+id bNotdone
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1988,7 +1990,6 @@ id button
 id buttonListHospital
 id buttonListUser
 id buttonPanel
-id button_schedule
 id button_time
 id cache_measures
 id calender
@@ -2020,6 +2021,7 @@ id contentPanel
 id contiguous
 id coordinator
 id cos
+id count
 id counterclockwise
 id custom
 id customPanel
@@ -2109,12 +2111,15 @@ id guideline
 id hRegister
 id hasAccount
 id hasAccountH
+id hdonors
 id header_title
 id hello
+id hhome
 id hideable
 id home
 id homeAsUp
 id honorRequest
+id hprofile
 id hybrid
 id i
 id icon
@@ -2131,6 +2136,7 @@ id imageView2
 id include
 id include1
 id include2
+id include3
 id info
 id invisible
 id inward
@@ -2285,6 +2291,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id num
 id off
 id on
 id one
@@ -2363,6 +2370,7 @@ id showCustom
 id showHome
 id showTitle
 id showdate
+id showname
 id showtime
 id sin
 id skipCollapsed
@@ -2678,6 +2686,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu main_menu
 menu main_menuhospital
+menu menu_hospital_navigation
 menu menu_navigation
 mipmap baseline_list_black_24dp
 mipmap baseline_logout_black_24dp

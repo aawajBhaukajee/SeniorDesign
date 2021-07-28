@@ -4,6 +4,7 @@ package com.example.seniordesign.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +22,16 @@ public final class ActivityNavigationBinding implements ViewBinding {
   private final DrawerLayout rootView;
 
   @NonNull
+  public final Button bDone;
+
+  @NonNull
+  public final Button bNotdone;
+
+  @NonNull
   public final BottomNavigationView bottomNavigation;
+
+  @NonNull
+  public final TextView count;
 
   @NonNull
   public final DrawerLayout drawerLayout;
@@ -39,24 +49,36 @@ public final class ActivityNavigationBinding implements ViewBinding {
   public final ConstraintLayout linearLayout;
 
   @NonNull
+  public final TextView num;
+
+  @NonNull
   public final TextView showdate;
+
+  @NonNull
+  public final TextView showname;
 
   @NonNull
   public final TextView showtime;
 
-  private ActivityNavigationBinding(@NonNull DrawerLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull DrawerLayout drawerLayout,
-      @NonNull TextView i, @NonNull TextView idWelcome, @NonNull MainToolbarBinding include2,
-      @NonNull ConstraintLayout linearLayout, @NonNull TextView showdate,
-      @NonNull TextView showtime) {
+  private ActivityNavigationBinding(@NonNull DrawerLayout rootView, @NonNull Button bDone,
+      @NonNull Button bNotdone, @NonNull BottomNavigationView bottomNavigation,
+      @NonNull TextView count, @NonNull DrawerLayout drawerLayout, @NonNull TextView i,
+      @NonNull TextView idWelcome, @NonNull MainToolbarBinding include2,
+      @NonNull ConstraintLayout linearLayout, @NonNull TextView num, @NonNull TextView showdate,
+      @NonNull TextView showname, @NonNull TextView showtime) {
     this.rootView = rootView;
+    this.bDone = bDone;
+    this.bNotdone = bNotdone;
     this.bottomNavigation = bottomNavigation;
+    this.count = count;
     this.drawerLayout = drawerLayout;
     this.i = i;
     this.idWelcome = idWelcome;
     this.include2 = include2;
     this.linearLayout = linearLayout;
+    this.num = num;
     this.showdate = showdate;
+    this.showname = showname;
     this.showtime = showtime;
   }
 
@@ -87,9 +109,27 @@ public final class ActivityNavigationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bDone;
+      Button bDone = rootView.findViewById(id);
+      if (bDone == null) {
+        break missingId;
+      }
+
+      id = R.id.bNotdone;
+      Button bNotdone = rootView.findViewById(id);
+      if (bNotdone == null) {
+        break missingId;
+      }
+
       id = R.id.bottom_navigation;
       BottomNavigationView bottomNavigation = rootView.findViewById(id);
       if (bottomNavigation == null) {
+        break missingId;
+      }
+
+      id = R.id.count;
+      TextView count = rootView.findViewById(id);
+      if (count == null) {
         break missingId;
       }
 
@@ -120,9 +160,21 @@ public final class ActivityNavigationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.num;
+      TextView num = rootView.findViewById(id);
+      if (num == null) {
+        break missingId;
+      }
+
       id = R.id.showdate;
       TextView showdate = rootView.findViewById(id);
       if (showdate == null) {
+        break missingId;
+      }
+
+      id = R.id.showname;
+      TextView showname = rootView.findViewById(id);
+      if (showname == null) {
         break missingId;
       }
 
@@ -132,8 +184,9 @@ public final class ActivityNavigationBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityNavigationBinding((DrawerLayout) rootView, bottomNavigation, drawerLayout,
-          i, idWelcome, binding_include2, linearLayout, showdate, showtime);
+      return new ActivityNavigationBinding((DrawerLayout) rootView, bDone, bNotdone,
+          bottomNavigation, count, drawerLayout, i, idWelcome, binding_include2, linearLayout, num,
+          showdate, showname, showtime);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -14,6 +14,11 @@ import java.util.ArrayList;
 public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdapterHospital.HospitalsViewHolder> {
 
     ArrayList<HospitalsModel> hospitalList;
+    private static String Hname;
+
+    public static String getHname() {
+        return Hname;
+    }
 
     public FirestoreAdapterHospital(ArrayList<HospitalsModel> hospitalList) {
         this.hospitalList = hospitalList;
@@ -35,8 +40,9 @@ public class FirestoreAdapterHospital extends RecyclerView.Adapter<FirestoreAdap
         holderH.listnameH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holderH.listnameH.getContext(), userSchedule.class);
+                Intent intent = new Intent(holderH.listnameH.getContext(), calendar.class);
                 intent.putExtra("uname", hospitalList.get(position).getuserId());
+                Hname = hospitalList.get(position).getHospitalName();
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 holderH.listnameH.getContext().startActivity(intent);

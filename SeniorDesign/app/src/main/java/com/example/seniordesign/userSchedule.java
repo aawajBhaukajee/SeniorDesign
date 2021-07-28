@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,30 +21,41 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Map;
 
+
+//When hospital profile views users and goes to request donation or accept schedule request this activity is loaded
 public class userSchedule extends AppCompatActivity {
 
     DatabaseReference  requestRef, friendsRef,userRef;
     FirebaseAuth dAuth;
-    FirebaseFirestore db;
+    FirebaseFirestore fStore;
 
     TextView name;
     Button backBtn, requestBtn, declineBtn;
     String currentState;
-    String senderUserId,receivingUserId,saveCurrentDate;
+    String senderUserId,saveCurrentDate;
+    private static String receivingUserId;
+    String Hname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_schedule);
-
+        name =  findViewById(R.id.textView18);
+        name.setText(getIntent().getStringExtra("username"));
         receivingUserId = getIntent().getStringExtra("uname");
 
 
@@ -52,31 +64,35 @@ public class userSchedule extends AppCompatActivity {
         friendsRef = FirebaseDatabase.getInstance().getReference().child("Friends");
         dAuth = FirebaseAuth.getInstance();
         senderUserId = dAuth.getCurrentUser().getUid();
+        fStore = FirebaseFirestore.getInstance();
 
 
 
-        name = findViewById(R.id.textView18);
-        backBtn = findViewById(R.id.buttonListUser);
         requestBtn = findViewById(R.id.requestButton);
         declineBtn = findViewById(R.id.declineButton);
         currentState = "not_friends";
 
-        name.setText(getIntent().getStringExtra("uname".toString()));
-
-
         declineBtn.setVisibility(View.INVISIBLE);
         declineBtn.setEnabled(false);
 
-        userRef.child(senderUserId);
-        userRef.child(receivingUserId);
 
+        //Getting the name of the hospital from the firebase firestore
+        DocumentReference docReference = fStore.collection("hospitals").document(senderUserId);
+        ListenerRegistration listenerRegistration = docReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+
+                Hname = documentSnapshot.getString("HospitalName");
+
+
+            }
+        });
 
         userRef.child(receivingUserId).addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull  DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists())
                 {
-                    Log.d("Inside Maintainenance","MOMO");
                     maintenanceOfButton();
                 }
             }
@@ -132,7 +148,7 @@ public class userSchedule extends AppCompatActivity {
                                             if(task.isSuccessful()){
                                                 requestBtn.setEnabled(true);
                                                 currentState = "not_friends";
-                                                requestBtn.setText("SEND REQUEST");
+                                                requestBtn.setText("SEND DONATION REQUEST");
                                                 declineBtn.setVisibility(View.INVISIBLE);
                                                 declineBtn.setEnabled(false);
                                             }
@@ -146,10 +162,6 @@ public class userSchedule extends AppCompatActivity {
 
     private void acceptFriendRequest()
     {
-        Calendar calForDate = Calendar.getInstance();
-        SimpleDateFormat currentDate = new SimpleDateFormat("dd-MMMM-yyyy");
-        saveCurrentDate = currentDate.format(calForDate.getTime());
-
         friendsRef.child(senderUserId).child(receivingUserId).child("date").setValue(saveCurrentDate)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -177,10 +189,20 @@ public class userSchedule extends AppCompatActivity {
                                                                                      if(task.isSuccessful()){
                                                                                          requestBtn.setEnabled(true);
                                                                                          currentState = "friends";
-                                                                                         requestBtn.setText("Unfriend this Person");
+                                                                                         requestBtn.setText("REMOVE SCHEDULE");
 
                                                                                          declineBtn.setVisibility(View.INVISIBLE);
                                                                                          declineBtn.setEnabled(false);
+
+
+                                                                     //Storing the date, time and hospital name in user's id when hospital accepts user's schedule request
+                                                                                         DocumentReference documentReference = fStore.collection("users").document(receivingUserId);
+                                                                                         Map<String, Object> update = new HashMap<>();
+                                                                                         update.put("Date", calendar.getD());
+                                                                                         update.put("Time",calendar2.getT());
+                                                                                         update.put("Schedule Request at:", Hname);
+                                                                                         fStore.collection("users").document(receivingUserId).set(update, SetOptions.merge());
+
                                                                                      }
                                                                                  }
                                                                              });
@@ -213,7 +235,7 @@ public class userSchedule extends AppCompatActivity {
                                             if(task.isSuccessful()){
                                                 requestBtn.setEnabled(true);
                                                 currentState = "not_friends";
-                                                requestBtn.setText("SEND REQUEST");
+                                                requestBtn.setText("SEND DONATION REQUEST");
                                                 declineBtn.setVisibility(View.INVISIBLE);
                                                 declineBtn.setEnabled(false);
                                             }
@@ -243,7 +265,7 @@ public class userSchedule extends AppCompatActivity {
 
                         Log.d("reqyesttype is","sent");
                         currentState = "request_sent";
-                        requestBtn.setText("Cancel Request");
+                        requestBtn.setText("CANCEL REQUEST");
                         declineBtn.setVisibility(View.INVISIBLE);
                         declineBtn.setEnabled(false);
                     }
@@ -252,7 +274,7 @@ public class userSchedule extends AppCompatActivity {
                     {
                         Log.d("accepttype is","received");
                         currentState = "request_received";
-                        requestBtn.setText("Accept_Friend_Request");
+                        requestBtn.setText("ACCEPT SCHEDULE REQUEST");
                         declineBtn.setVisibility(View.VISIBLE);
                         declineBtn.setEnabled(true);
 
@@ -274,7 +296,7 @@ public class userSchedule extends AppCompatActivity {
                                     if( snapshot.hasChild(receivingUserId))
                                     {
                                         currentState = "friends";
-                                        requestBtn.setText("Unfriend this person");
+                                        requestBtn.setText("REMOVE SCHEDULE");
 
                                         declineBtn.setVisibility(View.INVISIBLE);
                                         declineBtn.setEnabled(false);
@@ -321,9 +343,11 @@ public class userSchedule extends AppCompatActivity {
                                                 Log.d("THERE","THERE");
                                                 requestBtn.setEnabled(true);
                                                 currentState = "request_sent";
-                                                requestBtn.setText("Cancel Request");
+                                                requestBtn.setText("CANCEL REQUEST");
                                                 declineBtn.setVisibility(View.INVISIBLE);
                                                 declineBtn.setEnabled(false);
+
+
                                             }
                                         }
                                     });

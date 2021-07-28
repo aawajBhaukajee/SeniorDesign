@@ -112,7 +112,7 @@ public class register extends AppCompatActivity
                     return;
                 }
                 if (intValue1 < 80 || intValue1>100) {
-                    MinimumBP.setError("Minimum blood pressure should be more than 80 and less than 80");
+                    MinimumBP.setError("Minimum blood pressure should be more than 80 and less than 100");
                     return;
                 }
 
