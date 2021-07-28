@@ -23,22 +23,22 @@ public class navigationHospital extends AppCompatActivity {
 
         drawerLayout1 = findViewById(R.id.drawerLayout1);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation1);
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.hhome);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
-                    case R.id.profile:
+                    case R.id.hprofile:
                         startActivity(new Intent(getApplicationContext()
-                                ,MainActivity.class));
+                                ,hospitalProfile.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.home:
+                    case R.id.hhome:
                         return true;
-                    case R.id.map:
+                    case R.id.hdonors:
                         startActivity(new Intent(getApplicationContext()
-                                ,MapsActivity.class));
+                                ,AllUsers.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

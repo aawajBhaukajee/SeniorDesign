@@ -12,12 +12,17 @@ import androidx.appcompat.app.AppCompatActivity;
 public class calendar extends AppCompatActivity {
 
     private static String d;
+    private static String receivingUserId;
     public static String getD(){
         return d;
+    }
+    public static String getuserId(){
+        return receivingUserId;
     }
 
     CalendarView cal;
     TextView viewDate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,8 @@ public class calendar extends AppCompatActivity {
                 findViewById(R.id.calender);
         viewDate = (TextView)
                 findViewById(R.id.date_view);
+
+        receivingUserId = getIntent().getStringExtra("uname");
 
         cal.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -52,4 +59,4 @@ public class calendar extends AppCompatActivity {
 
 
     }
-    }
+}

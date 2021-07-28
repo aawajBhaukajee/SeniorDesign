@@ -29,7 +29,7 @@ import java.util.Map;
 
 public class navigation extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    TextView sdate, stime, i, c, totalCount;
+    TextView sdate, stime,sname, i, c, totalCount;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -46,8 +46,9 @@ public class navigation extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.home);
         sdate = findViewById(R.id.showdate);
         stime = findViewById(R.id.showtime);
+        sname = findViewById(R.id.showname);
         i = findViewById(R.id.i);
-       c = findViewById(R.id.num);
+        c = findViewById(R.id.num);
         totalCount = findViewById(R.id.count);
         d = findViewById(R.id.bDone);
         d1 = findViewById(R.id.bNotdone);
@@ -62,6 +63,7 @@ public class navigation extends AppCompatActivity {
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
                 sdate.setText(documentSnapshot.getString( "Date"));
                 stime.setText(documentSnapshot.getString( "Time"));
+                sname.setText(documentSnapshot.getString("Schedule Request at:"));
                 totalCount.setText(documentSnapshot.getString("TotalDonation"));
 
             }
@@ -91,8 +93,8 @@ public class navigation extends AppCompatActivity {
         });
         drawerLayout = findViewById(R.id.drawerLayout);
 
-     //   sdate.setText(calendar.getD());
-     //   stime.setText(calendar2.getT());
+        //   sdate.setText(calendar.getD());
+        //   stime.setText(calendar2.getT());
 
         d.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +105,7 @@ public class navigation extends AppCompatActivity {
                 totalCount.setText(""+ a);
                 final String counter = totalCount.getText().toString().trim();
 
-               // final String counter = totalCount.getText().toString().trim();
+                // final String counter = totalCount.getText().toString().trim();
                 //a++;
                 //totalCount.setText(""+ a);
 
@@ -118,6 +120,7 @@ public class navigation extends AppCompatActivity {
                 Map<String, Object> delete = new HashMap<>();
                 delete.put("Date", FieldValue.delete());
                 delete.put("Time", FieldValue.delete());
+                delete.put("Schedule Request at:",FieldValue.delete());
                 fStore.collection("users").document(userID).update(delete);
 
                 d.setVisibility(View.GONE);
@@ -136,6 +139,7 @@ public class navigation extends AppCompatActivity {
                 Map<String, Object> delete = new HashMap<>();
                 delete.put("Date", FieldValue.delete());
                 delete.put("Time", FieldValue.delete());
+                delete.put("Schedule Request at:",FieldValue.delete());
                 fStore.collection("users").document(userID).update(delete);
 
                 d1.setVisibility(View.GONE);

@@ -51,32 +51,49 @@
             app:layout_constraintVertical_bias="0.995"
             app:menu="@menu/menu_navigation" />
 
+
+        <TextView
+            android:id="@+id/showname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/i" />
+
         <TextView
             android:id="@+id/showdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:text="DATE"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/id_welcome"
-            app:layout_constraintVertical_bias="0.25" />
+            app:layout_constraintTop_toBottomOf="@+id/showtime" />
 
         <TextView
             android:id="@+id/showtime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:text="TIME"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/showdate" />
+            app:layout_constraintTop_toBottomOf="@+id/showname" />
 
         <TextView
             android:id="@+id/i"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="32dp"
             android:text="You are Scheduled for"
+            android:textColor="@color/blue"
+            android:textSize="32dp"
+            android:textStyle="bold"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -86,11 +103,12 @@
             android:id="@+id/num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="384dp"
+            android:layout_marginTop="32dp"
             android:text="Total Donations:"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/include2" />
+            app:layout_constraintTop_toBottomOf="@+id/showdate" />
 
         <TextView
             android:id="@+id/count"
@@ -105,19 +123,19 @@
             android:id="@+id/bDone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:text="I Donated"
-            app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/include2"
-            app:layout_constraintVertical_bias="0.704" />
+            app:layout_constraintTop_toBottomOf="@+id/count" />
 
         <Button
             android:id="@+id/bNotdone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="I DID NOT DONATE"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bDone" />
