@@ -36,4 +36,6 @@
     <string name="title_activity_maps">Map</string>
     <string name="google_maps_key" />
     <string name="title_activity_schedule2">schedule2</string>
+    <string name="title_activity_trying">trying</string>
+    <string name="title_activity_example">example</string>
 </resources>

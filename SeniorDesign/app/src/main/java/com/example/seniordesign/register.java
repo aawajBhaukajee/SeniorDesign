@@ -158,7 +158,10 @@ public class register extends AppCompatActivity
                             user.put("BloodType", btype);
                             user.put("Age", donorage);
                             user.put("Weight", donorweight);
-                           // user.put("isUser","1");
+
+                         //    user.put("Date",calendar.getD());
+                           //  user.put("Time",calendar2.getT());
+                            // user.put("isUser","1");
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override

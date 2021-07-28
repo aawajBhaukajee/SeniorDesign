@@ -10,17 +10,31 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class calendar2 extends AppCompatActivity {
 
 
+    public static final String TAG = "TAG";
     private static String t;
-    public static String getT(){
+
+    public static String getT() {
         return t;
     }
 
     TimePicker Pick_time;
-    Button getTime_btn,sch_btn;
+    Button getTime_btn, sch_btn;
     TextView view_time;
+
+    FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +47,9 @@ public class calendar2 extends AppCompatActivity {
 
         getTime_btn = (Button) findViewById(R.id.button_time);
         sch_btn = findViewById(R.id.button_schedule);
+
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
 
 
         getTime_btn.setOnClickListener(new View.OnClickListener() {
@@ -54,20 +71,46 @@ public class calendar2 extends AppCompatActivity {
             }
         });
 
+
         sch_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                Intent intent = new Intent(getApplicationContext(), navigation.class);
-                t = view_time.getText().toString().trim();
-                Toast.makeText(calendar2.this, "Date and Time Scheduled. ", Toast.LENGTH_SHORT).show();
-                startActivity(intent);
+            public void onClick(View v) {
 
+                Toast.makeText(calendar2.this, "Scheduled ", Toast.LENGTH_SHORT).show();
+               Intent intent = new Intent(getApplicationContext(), navigation.class);
+                final String Time = view_time.getText().toString().trim();
+
+                //Toast.makeText(calendar2.this, "Date and Time Scheduled. ", Toast.LENGTH_SHORT).show();
+
+                userID = fAuth.getCurrentUser().getUid();
+                DocumentReference documentReference = fStore.collection("users").document(userID);
+                Map<String, Object> update = new HashMap<>();
+                update.put("Date", calendar.getD());
+                update.put("Time",Time);
+
+                fStore.collection("users").document(userID).set(update, SetOptions.merge());
+
+
+             /*   documentReference.set(update).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused)
+                    {
+                        Log.d(TAG, "onSuccess: Saved"+userID);
+                    }
+                }).addOnFailureListener(new OnFailureListener()
+                {
+                    @Override
+                    public void onFailure(@NonNull Exception e)
+                    {
+                        Log.d(TAG, "onFailure: " + e.toString());
+                    }
+                });
+*/
+               startActivity(intent);
             }
 
 
         });
-
 
     }
 

@@ -20,7 +20,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
 
