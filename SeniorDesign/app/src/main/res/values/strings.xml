@@ -38,4 +38,5 @@
     <string name="title_activity_schedule2">schedule2</string>
     <string name="title_activity_trying">trying</string>
     <string name="title_activity_example">example</string>
+    <string name="title_activity_edit_hospital_profile">editHospitalProfile</string>
 </resources>

@@ -29,7 +29,7 @@ public class EditProfile extends AppCompatActivity {
     DrawerLayout drawerLayout;
     TextView ApplicationName;
     EditText EditName, EditEmail,EditMinimumBP, EditMaximumBP, EditAge, EditWeight, EditBloodType;
-    Button SaveButton;
+    Button SaveButton,back;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
     FirebaseUser user;
@@ -50,6 +50,7 @@ public class EditProfile extends AppCompatActivity {
         EditWeight = findViewById(R.id.editWeight);
         EditBloodType = findViewById(R.id.editBloodType);
         SaveButton = findViewById(R.id.save_button);
+        back = findViewById(R.id.backtoprofile);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         user = firebaseAuth.getCurrentUser();
@@ -120,9 +121,17 @@ public class EditProfile extends AppCompatActivity {
                 }
         });
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            }
+        });
+
     }
 
-    public void ClickMenu(View view){
+    /*public void ClickMenu(View view){
         navigation.openDrawer(drawerLayout);
     }
 
@@ -155,4 +164,6 @@ public class EditProfile extends AppCompatActivity {
         super.onPause();
         navigation.closeDrawer(drawerLayout);
     }
+
+     */
 }
