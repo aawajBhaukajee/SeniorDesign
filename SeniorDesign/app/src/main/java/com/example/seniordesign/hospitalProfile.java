@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,6 +27,7 @@ public class hospitalProfile extends AppCompatActivity {
     FirebaseFirestore fStore;
     String hospitalId;
     DrawerLayout drawerLayout1;
+    Button EditProfileH;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class hospitalProfile extends AppCompatActivity {
         hosName = findViewById(R.id.mainNameH);
         hosEmail = findViewById(R.id.mainEmailH);
         hosLocation = findViewById(R.id.mainLocationH);
+        EditProfileH = findViewById(R.id.profileEditH);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -55,6 +58,18 @@ public class hospitalProfile extends AppCompatActivity {
                 hosName.setText(documentSnapshot.getString("HospitalName"));
                 hosEmail.setText(documentSnapshot.getString("HospitalEmail"));
                 hosLocation.setText(documentSnapshot.getString("HospitalLocation"));
+            }
+        });
+
+        EditProfileH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent start = new Intent(v.getContext(), editHospitalProfile.class);
+                start.putExtra("HospitalName",hosName.getText().toString());
+                start.putExtra("HospitalEmail",hosEmail.getText().toString());
+                start.putExtra("HospitalLocation",hosLocation.getText().toString());
+                startActivity(start);
+
             }
         });
 

@@ -16,8 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SeniorDesign">
-        <activity android:name=".calendar2" />
-        <activity android:name=".calendar" />
+        <activity
+            android:name=".editHospitalProfile"
+            android:label="@string/title_activity_edit_hospital_profile"
+            android:theme="@style/Theme.SeniorDesign.NoActionBar"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,6 +35,8 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
+        <activity android:name=".calendar2" />
+        <activity android:name=".calendar" />
         <activity android:name=".userSchedule" />
         <activity android:name=".timeSchedule" />
         <activity android:name=".navigationHospital" />

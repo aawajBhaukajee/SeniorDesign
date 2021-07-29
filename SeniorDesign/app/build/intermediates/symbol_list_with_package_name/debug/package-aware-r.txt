@@ -1971,6 +1971,7 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id bDone
 id bNotdone
+id backtoprofile
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1986,6 +1987,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btoprofile
 id button
 id buttonListHospital
 id buttonListUser
@@ -2065,10 +2067,14 @@ id easeOut
 id editAge
 id editBloodType
 id editEmail
+id editEmailH
 id editHBP
 id editLBP
+id editLocation
 id editName
+id editNameH
 id editProfile
+id editProfileH
 id editWeight
 id edit_query
 id elastic
@@ -2269,7 +2275,10 @@ id nav_graph25
 id nav_graph26
 id nav_graph27
 id nav_graph28
+id nav_graph29
 id nav_graph3
+id nav_graph30
+id nav_graph31
 id nav_graph4
 id nav_graph5
 id nav_graph6
@@ -2317,6 +2326,7 @@ id position
 id postLayout
 id profile
 id profileEdit
+id profileEditH
 id profileH
 id progress_circular
 id progress_horizontal
@@ -2338,6 +2348,7 @@ id rounded
 id row_index_key
 id satellite
 id save_button
+id save_buttonH
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2566,6 +2577,7 @@ layout activity_all_hospitals
 layout activity_all_users
 layout activity_calendar
 layout activity_calendar2
+layout activity_edit_hospital_profile
 layout activity_edit_profile
 layout activity_first_page
 layout activity_hospital
@@ -2714,7 +2726,10 @@ navigation nav_graph25
 navigation nav_graph26
 navigation nav_graph27
 navigation nav_graph28
+navigation nav_graph29
 navigation nav_graph3
+navigation nav_graph30
+navigation nav_graph31
 navigation nav_graph4
 navigation nav_graph5
 navigation nav_graph6
@@ -2868,7 +2883,9 @@ string status_bar_notification_info_overflow
 string title_activity_all_hospitals
 string title_activity_all_users
 string title_activity_donation_center
+string title_activity_edit_hospital_profile
 string title_activity_edit_profile
+string title_activity_example
 string title_activity_first_page
 string title_activity_hospital
 string title_activity_hospital_profile
@@ -2886,6 +2903,7 @@ string title_activity_register1
 string title_activity_register_hospital
 string title_activity_schedule
 string title_activity_schedule2
+string title_activity_trying
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
