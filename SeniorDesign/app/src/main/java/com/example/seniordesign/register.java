@@ -168,7 +168,7 @@ public class register extends AppCompatActivity
                             user.put("Age", donorage);
                             user.put("Weight", donorweight);
                             user.put("userId",userID);
-                           // user.put("isUser","1");
+                            // user.put("isUser","1");
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override

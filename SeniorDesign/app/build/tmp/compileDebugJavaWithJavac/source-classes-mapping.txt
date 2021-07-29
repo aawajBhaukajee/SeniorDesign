@@ -27,6 +27,10 @@ com/example/seniordesign/hospitalProfile.java
  com.example.seniordesign.hospitalProfile
  com.example.seniordesign.hospitalProfile$1
  com.example.seniordesign.hospitalProfile$2
+<<<<<<< HEAD
+=======
+ com.example.seniordesign.hospitalProfile$3
+>>>>>>> origin/master
 com/example/seniordesign/databinding/ActivityAllHospitalsBinding.java
  com.example.seniordesign.databinding.ActivityAllHospitalsBinding
 com/example/seniordesign/Login.java
@@ -83,6 +87,10 @@ com/example/seniordesign/EditProfile.java
  com.example.seniordesign.EditProfile$1$1
  com.example.seniordesign.EditProfile$1$2
  com.example.seniordesign.EditProfile$1$2$1
+<<<<<<< HEAD
+=======
+ com.example.seniordesign.EditProfile$2
+>>>>>>> origin/master
 com/example/seniordesign/userSchedule.java
  com.example.seniordesign.userSchedule
  com.example.seniordesign.userSchedule$1
@@ -140,6 +148,11 @@ com/example/seniordesign/FirestoreAdapter.java
  com.example.seniordesign.FirestoreAdapter
  com.example.seniordesign.FirestoreAdapter$1
  com.example.seniordesign.FirestoreAdapter$UsersViewHolder
+<<<<<<< HEAD
+=======
+com/example/seniordesign/databinding/ActivityEditHospitalProfileBinding.java
+ com.example.seniordesign.databinding.ActivityEditHospitalProfileBinding
+>>>>>>> origin/master
 com/example/seniordesign/navigation.java
  com.example.seniordesign.navigation
  com.example.seniordesign.navigation$1
@@ -173,6 +186,13 @@ com/example/seniordesign/timeSchedule.java
  com.example.seniordesign.timeSchedule
  com.example.seniordesign.timeSchedule$1
  com.example.seniordesign.timeSchedule$2
+com/example/seniordesign/editHospitalProfile.java
+ com.example.seniordesign.editHospitalProfile
+ com.example.seniordesign.editHospitalProfile$1
+ com.example.seniordesign.editHospitalProfile$1$1
+ com.example.seniordesign.editHospitalProfile$1$2
+ com.example.seniordesign.editHospitalProfile$1$2$1
+ com.example.seniordesign.editHospitalProfile$2
 com/example/seniordesign/regHospital.java
  com.example.seniordesign.regHospital
  com.example.seniordesign.regHospital$1
