@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -17,6 +18,9 @@ import java.lang.String;
 public final class ActivityHospitalProfileBinding implements ViewBinding {
   @NonNull
   private final DrawerLayout rootView;
+
+  @NonNull
+  public final BottomNavigationView bottomNavigation1;
 
   @NonNull
   public final MainToolbar1Binding include;
@@ -43,10 +47,12 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
   public final TextView textView14;
 
   private ActivityHospitalProfileBinding(@NonNull DrawerLayout rootView,
-      @NonNull MainToolbar1Binding include, @NonNull TextView mainEmailH,
-      @NonNull TextView mainLocationH, @NonNull TextView mainNameH, @NonNull TextView profileH,
-      @NonNull TextView textView12, @NonNull TextView textView13, @NonNull TextView textView14) {
+      @NonNull BottomNavigationView bottomNavigation1, @NonNull MainToolbar1Binding include,
+      @NonNull TextView mainEmailH, @NonNull TextView mainLocationH, @NonNull TextView mainNameH,
+      @NonNull TextView profileH, @NonNull TextView textView12, @NonNull TextView textView13,
+      @NonNull TextView textView14) {
     this.rootView = rootView;
+    this.bottomNavigation1 = bottomNavigation1;
     this.include = include;
     this.mainEmailH = mainEmailH;
     this.mainLocationH = mainLocationH;
@@ -84,6 +90,12 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_navigation1;
+      BottomNavigationView bottomNavigation1 = rootView.findViewById(id);
+      if (bottomNavigation1 == null) {
+        break missingId;
+      }
+
       id = R.id.include;
       View include = rootView.findViewById(id);
       if (include == null) {
@@ -133,8 +145,9 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityHospitalProfileBinding((DrawerLayout) rootView, binding_include,
-          mainEmailH, mainLocationH, mainNameH, profileH, textView12, textView13, textView14);
+      return new ActivityHospitalProfileBinding((DrawerLayout) rootView, bottomNavigation1,
+          binding_include, mainEmailH, mainLocationH, mainNameH, profileH, textView12, textView13,
+          textView14);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

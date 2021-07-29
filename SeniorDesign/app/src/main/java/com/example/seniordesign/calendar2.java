@@ -199,7 +199,9 @@ public class calendar2 extends AppCompatActivity {
 
     private void acceptFriendRequest()
     {
-
+        Calendar calForDate = Calendar.getInstance();
+        SimpleDateFormat currentDate = new SimpleDateFormat("dd-MMMM-yyyy");
+        saveCurrentDate = currentDate.format(calForDate.getTime());
         friendsRef.child(senderUserId).child(receivingUserId).child("date").setValue(saveCurrentDate)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

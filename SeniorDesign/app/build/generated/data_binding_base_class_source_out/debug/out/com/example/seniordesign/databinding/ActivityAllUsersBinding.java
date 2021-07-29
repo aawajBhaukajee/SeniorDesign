@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.example.seniordesign.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,20 +21,29 @@ public final class ActivityAllUsersBinding implements ViewBinding {
   private final DrawerLayout rootView;
 
   @NonNull
+  public final BottomNavigationView bottomNavigation1;
+
+  @NonNull
   public final DrawerLayout drawerLayout1;
 
   @NonNull
   public final RecyclerView firestoreList;
 
   @NonNull
+  public final MainToolbar1Binding include3;
+
+  @NonNull
   public final EditText searchBar;
 
   private ActivityAllUsersBinding(@NonNull DrawerLayout rootView,
-      @NonNull DrawerLayout drawerLayout1, @NonNull RecyclerView firestoreList,
+      @NonNull BottomNavigationView bottomNavigation1, @NonNull DrawerLayout drawerLayout1,
+      @NonNull RecyclerView firestoreList, @NonNull MainToolbar1Binding include3,
       @NonNull EditText searchBar) {
     this.rootView = rootView;
+    this.bottomNavigation1 = bottomNavigation1;
     this.drawerLayout1 = drawerLayout1;
     this.firestoreList = firestoreList;
+    this.include3 = include3;
     this.searchBar = searchBar;
   }
 
@@ -64,6 +74,12 @@ public final class ActivityAllUsersBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_navigation1;
+      BottomNavigationView bottomNavigation1 = rootView.findViewById(id);
+      if (bottomNavigation1 == null) {
+        break missingId;
+      }
+
       DrawerLayout drawerLayout1 = (DrawerLayout) rootView;
 
       id = R.id.firestore_list;
@@ -72,14 +88,21 @@ public final class ActivityAllUsersBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.include3;
+      View include3 = rootView.findViewById(id);
+      if (include3 == null) {
+        break missingId;
+      }
+      MainToolbar1Binding binding_include3 = MainToolbar1Binding.bind(include3);
+
       id = R.id.search_bar;
       EditText searchBar = rootView.findViewById(id);
       if (searchBar == null) {
         break missingId;
       }
 
-      return new ActivityAllUsersBinding((DrawerLayout) rootView, drawerLayout1, firestoreList,
-          searchBar);
+      return new ActivityAllUsersBinding((DrawerLayout) rootView, bottomNavigation1, drawerLayout1,
+          firestoreList, binding_include3, searchBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
