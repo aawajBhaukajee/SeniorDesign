@@ -69,8 +69,6 @@ public class navigation extends AppCompatActivity {
             }
         });
 
-
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull  MenuItem menuItem) {
@@ -124,6 +122,7 @@ public class navigation extends AppCompatActivity {
                 fStore.collection("users").document(userID).update(delete);
 
                 d.setVisibility(View.GONE);
+                d1.setVisibility(View.GONE);
                 sdate.setVisibility(View.GONE);
                 stime.setVisibility(View.GONE);
 
@@ -145,6 +144,7 @@ public class navigation extends AppCompatActivity {
                 d1.setVisibility(View.GONE);
                 sdate.setVisibility(View.GONE);
                 stime.setVisibility(View.GONE);
+                d.setVisibility(View.GONE);
             }
         });
 

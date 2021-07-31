@@ -22,6 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class  MainActivity extends AppCompatActivity {
 
+
     DrawerLayout drawerLayout;
 
     TextView fullname,email,hbp,lbp,btype,mainage,mainweight,Profile;
@@ -52,6 +53,8 @@ public class  MainActivity extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         userId = fAuth.getCurrentUser().getUid();
+
+
 
         DocumentReference documentReference = fStore.collection("users").document(userId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
