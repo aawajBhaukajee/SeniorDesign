@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #Thu Jul 29 12:00:33 CDT 2021
 =======
 #Thu Jul 29 12:01:19 CDT 2021
+>>>>>>> origin/master
+=======
+#Fri Jul 30 19:46:49 CDT 2021
 >>>>>>> origin/master
 path.3=classes2.dex
 path.2=13/classes.dex

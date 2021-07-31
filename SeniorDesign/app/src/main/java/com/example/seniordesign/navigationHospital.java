@@ -5,16 +5,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class navigationHospital extends AppCompatActivity {
     DrawerLayout drawerLayout1;
+    TextView snameH, sdateH, stimeH,iH;
+    FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +36,28 @@ public class navigationHospital extends AppCompatActivity {
         drawerLayout1 = findViewById(R.id.drawerLayout1);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation1);
         bottomNavigationView.setSelectedItemId(R.id.hhome);
+
+        snameH = findViewById(R.id.shownameH);
+        sdateH = findViewById(R.id.showdateH);
+        stimeH = findViewById(R.id.showtimeH);
+        iH = findViewById(R.id.iH);
+
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        userId = fAuth.getCurrentUser().getUid();
+
+
+        DocumentReference documentReference = fStore.collection("hospitals").document(userId);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+
+                snameH.setText(documentSnapshot.getString("Scheduled by:"));
+                sdateH.setText(documentSnapshot.getString("Date Requested:"));
+                stimeH.setText(documentSnapshot.getString("Time Requested:"));
+
+            }
+        });
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

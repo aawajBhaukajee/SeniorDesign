@@ -57,7 +57,7 @@ public class userSchedule extends AppCompatActivity {
 
         userRef = FirebaseDatabase.getInstance().getReference().child("Users");
         requestRef = FirebaseDatabase.getInstance().getReference().child("Requests");
-        friendsRef = FirebaseDatabase.getInstance().getReference().child("Friends");
+        friendsRef = FirebaseDatabase.getInstance().getReference().child("Accepted");
         dAuth = FirebaseAuth.getInstance();
         senderUserId = dAuth.getCurrentUser().getUid();
         fStore = FirebaseFirestore.getInstance();
@@ -70,7 +70,6 @@ public class userSchedule extends AppCompatActivity {
 
         declineBtn.setVisibility(View.INVISIBLE);
         declineBtn.setEnabled(false);
-
 
         //Getting the name of the hospital from the firebase firestore
         DocumentReference docReference = fStore.collection("hospitals").document(senderUserId);
@@ -345,7 +344,6 @@ public class userSchedule extends AppCompatActivity {
                                                 requestBtn.setText("CANCEL REQUEST");
                                                 declineBtn.setVisibility(View.INVISIBLE);
                                                 declineBtn.setEnabled(false);
-
 
                                             }
                                         }

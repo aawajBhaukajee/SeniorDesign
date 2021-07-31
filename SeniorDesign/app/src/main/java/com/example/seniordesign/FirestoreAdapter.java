@@ -13,6 +13,11 @@ import java.util.ArrayList;
 
 public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.UsersViewHolder> {
 
+    private static String Uname;
+    public static String getUname() {
+        return Uname;
+    }
+
     ArrayList<UsersModel> usersList;
 
 
@@ -45,7 +50,10 @@ public class FirestoreAdapter extends RecyclerView.Adapter<FirestoreAdapter.User
                 Intent intent = new Intent(holder.listname.getContext(),userSchedule.class);
                 intent.putExtra("uname",usersList.get(position).getuserId());
                 intent.putExtra("username",usersList.get(position).getFullName());
+                Uname = usersList.get(position).getFullName();
+
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
                 holder.listname.getContext().startActivity(intent);
             }
         });
