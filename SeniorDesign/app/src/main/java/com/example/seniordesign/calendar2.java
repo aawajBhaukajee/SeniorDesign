@@ -9,6 +9,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,7 +21,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.SetOptions;
 
 import java.text.SimpleDateFormat;
@@ -55,6 +60,7 @@ public class calendar2 extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userID;
     String Hname;
+    String Uname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +82,7 @@ public class calendar2 extends AppCompatActivity {
 
         userRef = FirebaseDatabase.getInstance().getReference().child("Users");
         requestRef = FirebaseDatabase.getInstance().getReference().child("Requests");
-        friendsRef = FirebaseDatabase.getInstance().getReference().child("Friends");
+        friendsRef = FirebaseDatabase.getInstance().getReference().child("Accepted");
         dAuth = FirebaseAuth.getInstance();
         senderUserId = dAuth.getCurrentUser().getUid();
 
@@ -89,6 +95,18 @@ public class calendar2 extends AppCompatActivity {
         declineBtn.setEnabled(false);
 
         Hname = FirestoreAdapterHospital.getHname();
+        //Uname = FirestoreAdapter.getUname();
+
+        DocumentReference docReference = fStore.collection("users").document(senderUserId);
+        ListenerRegistration listenerRegistration = docReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+
+                Uname = documentSnapshot.getString("FullName");
+
+
+            }
+        });
 
         userRef.child(receivingUserId).addValueEventListener(new ValueEventListener() {
             @Override
@@ -235,7 +253,7 @@ public class calendar2 extends AppCompatActivity {
 
 
 
-                                                                                        DocumentReference documentReference = fStore.collection("users").document(receivingUserId);
+                                                                                        DocumentReference documentReference = fStore.collection("hospitals").document(receivingUserId);
 
                                                                                         Map<String, Object> update = new HashMap<>();
                                                                                         update.put("Date", calendar.getD());
@@ -387,6 +405,16 @@ public class calendar2 extends AppCompatActivity {
                                                 requestBtn.setText("CANCEL REQUEST");
                                                 declineBtn.setVisibility(View.INVISIBLE);
                                                 declineBtn.setEnabled(false);
+
+                                                final String Time = view_time.getText().toString().trim();
+
+                                                DocumentReference documentReference = fStore.collection("hospitals").document(receivingUserId);
+                                                Map<String, Object> update = new HashMap<>();
+                                                update.put("Date Requested:", calendar.getD());
+                                                update.put("Time Requested:",Time);
+                                                update.put("Scheduled by:", Uname);
+                                                fStore.collection("hospitals").document(receivingUserId).set(update, SetOptions.merge());
+
                                             }
                                         }
                                     });

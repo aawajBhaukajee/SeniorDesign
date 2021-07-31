@@ -27,7 +27,7 @@ public class editHospitalProfile extends AppCompatActivity {
     public static final String TAG = "TAG";
 
     DrawerLayout drawerLayout1;
-    TextView ApplicationNameH;
+    TextView ApplicationNameH,eh1,eh2,eh3;
     EditText EditNameH, EditEmailH,EditLocationH;
     Button SaveButtonH,backButton;
     FirebaseAuth firebaseAuth;
@@ -45,6 +45,10 @@ public class editHospitalProfile extends AppCompatActivity {
         EditNameH = findViewById(R.id.editNameH);
         EditEmailH = findViewById(R.id.editEmailH);
         EditLocationH = findViewById(R.id.editLocation);
+
+        eh1 = findViewById(R.id.textView19);
+        eh2 = findViewById(R.id.textView24);
+        eh3 = findViewById(R.id.textView26);
 
         SaveButtonH = findViewById(R.id.save_buttonH);
         backButton = findViewById(R.id.btoprofile);

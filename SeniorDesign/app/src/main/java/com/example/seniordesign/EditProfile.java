@@ -27,7 +27,7 @@ public class EditProfile extends AppCompatActivity {
     public static final String TAG = "TAG";
 
     DrawerLayout drawerLayout;
-    TextView ApplicationName;
+    TextView ApplicationName,e1,e2,e3,e4,e5,e6,e7;
     EditText EditName, EditEmail,EditMinimumBP, EditMaximumBP, EditAge, EditWeight, EditBloodType;
     Button SaveButton,back;
     FirebaseAuth firebaseAuth;
@@ -55,6 +55,13 @@ public class EditProfile extends AppCompatActivity {
         firebaseFirestore = FirebaseFirestore.getInstance();
         user = firebaseAuth.getCurrentUser();
 
+        e1 = findViewById(R.id.textView15);
+        e2 = findViewById(R.id.textView16);
+        e3 = findViewById(R.id.textView20);
+        e4 = findViewById(R.id.textView21);
+        e5 = findViewById(R.id.textView22);
+        e6 = findViewById(R.id.textView23);
+        e7 = findViewById(R.id.textView25);
 
         Intent data = getIntent();
         String FullName = data.getStringExtra("FullName");
