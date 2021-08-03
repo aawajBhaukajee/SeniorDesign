@@ -115,14 +115,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 for (int i = 0; i < list.size(); i++) {
                     Log.d("England", datalist.get(i).getHospitalLocation());
                     address = datalist.get(i).getHospitalLocation();
-                    //GeocodingLocation locationAddress = new GeocodingLocation();
-                    //LatLng ab= locationAddress.getAddressFromLocation(address,getApplicationContext());
-                    //Log.d("ADDRESS is ", String.valueOf(ab));
-                    getLocationAddress(getApplicationContext(), address);
-                    //Log.d("FOund latlong is ", String.valueOf(ab));
-                    //mMap.addMarker(new MarkerOptions().position(ab));
-                    //mMap.moveCamera(newLatLng(ab));
+                    String hid= datalist.get(i).getuserId();
 
+                    getLocationAddress(getApplicationContext(), address,datalist.get(i).getHospitalName(),hid);
                 }
             }
         });
@@ -156,10 +151,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void getLocationAddress(Context context, String location) {
+    private void getLocationAddress(Context context, String location, String name,String hid) {
 
         Geocoder coder = new Geocoder(context);
-
         List<Address> address;
         LatLng newLatLng = null;
         Double lat, lng;
@@ -176,7 +170,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Log.d("FOund latlong is ", String.valueOf(lat));
             Log.d("FOund latlong is ", String.valueOf(lng));
             newLatLng = new LatLng(lat, lng);
-            mMap.addMarker(new MarkerOptions().position(newLatLng).title(location).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+            Log.d("ARSENAL======",hid);
+            mMap.addMarker(new MarkerOptions().position(newLatLng).title(name).snippet(hid).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -285,18 +280,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions markerOptions = new MarkerOptions();
         end_Lat = marker.getPosition().latitude;
         end_Lng = marker.getPosition().longitude;
+
         float results[]= new float[10];
         Location.distanceBetween(curr_Lat,curr_Lng,end_Lat,end_Lng,results);
         NumberFormat nf= NumberFormat.getInstance();
         nf.setMaximumFractionDigits(2);
         String distance_location = String.valueOf(nf.format(results[0]*0.000621371))+ " miles";
         AlertDialog dialog = new AlertDialog.Builder(MapsActivity.this).setTitle("Distance from current location to chosen marker")
-                .setMessage(distance_location).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setMessage(distance_location+"\nSet Appointment??").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
+                        startActivity(new Intent(getApplicationContext(),calendar.class).putExtra("uname",marker.getSnippet()));
                     }
-                }).create();
+                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+            }
+        }).create();
         dialog.show();
         return false;
     }
