@@ -4,6 +4,7 @@ package com.example.seniordesign.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,6 +36,9 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
   public final TextView mainNameH;
 
   @NonNull
+  public final Button profileEditH;
+
+  @NonNull
   public final TextView profileH;
 
   @NonNull
@@ -49,14 +53,15 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
   private ActivityHospitalProfileBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigation1, @NonNull MainToolbar1Binding include,
       @NonNull TextView mainEmailH, @NonNull TextView mainLocationH, @NonNull TextView mainNameH,
-      @NonNull TextView profileH, @NonNull TextView textView12, @NonNull TextView textView13,
-      @NonNull TextView textView14) {
+      @NonNull Button profileEditH, @NonNull TextView profileH, @NonNull TextView textView12,
+      @NonNull TextView textView13, @NonNull TextView textView14) {
     this.rootView = rootView;
     this.bottomNavigation1 = bottomNavigation1;
     this.include = include;
     this.mainEmailH = mainEmailH;
     this.mainLocationH = mainLocationH;
     this.mainNameH = mainNameH;
+    this.profileEditH = profileEditH;
     this.profileH = profileH;
     this.textView12 = textView12;
     this.textView13 = textView13;
@@ -121,6 +126,12 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.profileEditH;
+      Button profileEditH = rootView.findViewById(id);
+      if (profileEditH == null) {
+        break missingId;
+      }
+
       id = R.id.profileH;
       TextView profileH = rootView.findViewById(id);
       if (profileH == null) {
@@ -146,8 +157,8 @@ public final class ActivityHospitalProfileBinding implements ViewBinding {
       }
 
       return new ActivityHospitalProfileBinding((DrawerLayout) rootView, bottomNavigation1,
-          binding_include, mainEmailH, mainLocationH, mainNameH, profileH, textView12, textView13,
-          textView14);
+          binding_include, mainEmailH, mainLocationH, mainNameH, profileEditH, profileH, textView12,
+          textView13, textView14);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

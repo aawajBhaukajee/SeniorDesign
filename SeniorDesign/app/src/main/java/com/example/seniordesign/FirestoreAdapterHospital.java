@@ -1,4 +1,4 @@
-package com.example.seniordesign;
+ package com.example.seniordesign;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
