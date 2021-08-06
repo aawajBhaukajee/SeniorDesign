@@ -1,12 +1,16 @@
+<<<<<<< HEAD
 #Mon Aug 02 11:21:39 CDT 2021
+=======
+#Mon Aug 02 20:19:28 CDT 2021
+>>>>>>> origin/master
 path.3=classes2.dex
 path.2=13/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.3=D\:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.2=D\:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
-base.1=D\:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=D\:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.3=D\:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.2=D\:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.1=D\:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=D\:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

@@ -2460,9 +2460,12 @@ int id textView23 0x7f080256
 int id textView24 0x7f080257
 int id textView25 0x7f080258
 int id textView26 0x7f080259
+<<<<<<< HEAD
 int id textView27 0x7f080294
 int id textView28 0x7f080295
 int id textView29 0x7f080296
+=======
+>>>>>>> origin/master
 int id textView3 0x7f08025a
 int id textView4 0x7f08025b
 int id textView5 0x7f08025c
@@ -2511,7 +2514,10 @@ int id view_tree_saved_state_registry_owner 0x7f080286
 int id view_tree_view_model_store_owner 0x7f080287
 int id visible 0x7f080288
 int id visible_removing_fragment_view_tag 0x7f080289
+<<<<<<< HEAD
 int id wDonated 0x7f080293
+=======
+>>>>>>> origin/master
 int id webview 0x7f08028a
 int id weight 0x7f08028b
 int id wide 0x7f08028c
