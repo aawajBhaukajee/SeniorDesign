@@ -2461,6 +2461,9 @@ id textView23
 id textView24
 id textView25
 id textView26
+id textView27
+id textView28
+id textView29
 id textView3
 id textView4
 id textView5
@@ -2509,6 +2512,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id wDonated
 id webview
 id weight
 id wide
@@ -2606,6 +2610,7 @@ layout activity_reg_hospital
 layout activity_register
 layout activity_time_schedule
 layout activity_user_schedule
+layout activity_who_donated
 layout amu_info_window
 layout amu_text_bubble
 layout amu_webview

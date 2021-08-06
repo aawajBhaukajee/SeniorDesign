@@ -19,7 +19,7 @@
         <activity
             android:name=".editHospitalProfile"
             android:label="@string/title_activity_edit_hospital_profile"
-            android:theme="@style/Theme.SeniorDesign.NoActionBar"></activity>
+            android:theme="@style/Theme.SeniorDesign.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

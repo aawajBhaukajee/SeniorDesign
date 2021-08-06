@@ -84,6 +84,10 @@
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_edit_hospital_profile.xml"
     },
     {
+        "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_who_donated.xml",
+        "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_who_donated.xml"
+    },
+    {
         "merged": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_time_schedule.xml",
         "source": "D:\\SeniorDesign\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_time_schedule.xml"
     },

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-62:12
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-63:12
 MERGED from [androidx.databinding:viewbinding:4.2.1] C:\Users\Aawaj\.gradle\caches\transforms-2\files-2.1\22982307629ff1610815c90b5a8333f8\viewbinding-4.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Aawaj\.gradle\caches\transforms-2\files-2.1\52bb6f297860ac62335d48cffd346cc0\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Aawaj\.gradle\caches\transforms-2\files-2.1\f37e9a0ab29fd024867aabece4888d66\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -73,20 +73,20 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Aawaj\.gradle\ca
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Aawaj\.gradle\caches\transforms-2\files-2.1\d1b6d67ca4bef95490cecd069dc471fa\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Aawaj\.gradle\caches\transforms-2\files-2.1\74a57255a2815f7692e61cdae3dcb85c\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Aawaj\.gradle\caches\transforms-2\files-2.1\626f1ca1b27148be4510e1a863e73171\grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml
 		INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:2:11-69
@@ -109,7 +109,7 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Aawaj\.gradle\ca
 	android:name
 		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:10:22-64
 application
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:12:5-60:19
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:12:5-61:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Aawaj\.gradle\caches\transforms-2\files-2.1\7f0e2a3b20dccc14cd6b4f6bdeebb0a4\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Aawaj\.gradle\caches\transforms-2\files-2.1\7f0e2a3b20dccc14cd6b4f6bdeebb0a4\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Aawaj\.gradle\caches\transforms-2\files-2.1\3b8298ded0b2d9e0de82d72f7d2d83ac\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -160,100 +160,104 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Aa
 		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
 		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:18:9-50
+activity#com.example.seniordesign.whoDonated
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:19:9-57
+	android:name
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:19:19-45
 activity#com.example.seniordesign.editHospitalProfile
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:19:9-22:78
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:20:9-23:69
 	android:label
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:21:13-73
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:22:13-73
 	android:theme
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:22:13-66
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:20:13-48
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:21:13-48
 meta-data#com.google.android.geo.API_KEY
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:31:9-33:55
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:32:9-34:55
 	android:value
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:33:13-52
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:34:13-52
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:32:13-58
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:33:13-58
 activity#com.example.seniordesign.MapsActivity
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:35:9-37:59
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:36:9-38:59
 	android:label
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:37:13-56
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:38:13-56
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:36:13-41
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:37:13-41
 activity#com.example.seniordesign.calendar2
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:38:9-47
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:39:9-47
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:38:19-44
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:39:19-44
 activity#com.example.seniordesign.calendar
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:39:9-46
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:40:9-46
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:39:19-43
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:40:19-43
 activity#com.example.seniordesign.userSchedule
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:40:9-50
-	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:40:19-47
-activity#com.example.seniordesign.timeSchedule
 ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:41:9-50
 	android:name
 		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:41:19-47
+activity#com.example.seniordesign.timeSchedule
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:42:9-50
+	android:name
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:42:19-47
 activity#com.example.seniordesign.navigationHospital
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:42:9-56
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:43:9-56
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:42:19-53
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:43:19-53
 activity#com.example.seniordesign.EditProfile
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:43:9-49
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:44:9-49
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:43:19-46
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:44:19-46
 activity#com.example.seniordesign.AllHospitals
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:44:9-50
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:45:9-50
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:44:19-47
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:45:19-47
 activity#com.example.seniordesign.hospitalProfile
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:45:9-53
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:46:9-53
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:45:19-50
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:46:19-50
 activity#com.example.seniordesign.logHospital
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:46:9-49
-	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:46:19-46
-activity#com.example.seniordesign.regHospital
 ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:47:9-49
 	android:name
 		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:47:19-46
+activity#com.example.seniordesign.regHospital
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:48:9-49
+	android:name
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:48:19-46
 activity#com.example.seniordesign.MainActivity
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:48:9-50
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:49:9-50
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:48:19-47
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:49:19-47
 activity#com.example.seniordesign.register
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:49:9-46
-	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:49:19-43
-activity#com.example.seniordesign.AllUsers
 ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:50:9-46
 	android:name
 		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:50:19-43
+activity#com.example.seniordesign.AllUsers
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:51:9-46
+	android:name
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:51:19-43
 activity#com.example.seniordesign.Login
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:51:9-43
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:52:9-43
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:51:19-40
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:52:19-40
 activity#com.example.seniordesign.navigation
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:52:9-48
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:53:9-48
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:52:19-45
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:53:19-45
 activity#com.example.seniordesign.firstPage
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:53:9-59:20
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:54:9-60:20
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:53:19-44
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:54:19-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:54:13-58:29
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:55:13-59:29
 action#android.intent.action.MAIN
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:55:17-69
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:56:17-69
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:55:25-66
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:56:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:57:17-77
+ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:58:17-77
 	android:name
-		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:57:27-74
+		ADDED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml:58:27-74
 uses-sdk
 INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\SeniorDesign\SeniorDesign\SeniorDesign\app\src\main\AndroidManifest.xml

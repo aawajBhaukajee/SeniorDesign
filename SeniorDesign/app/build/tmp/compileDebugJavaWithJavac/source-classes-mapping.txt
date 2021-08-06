@@ -1,3 +1,15 @@
+com/example/seniordesign/HospitalsModel.java
+ com.example.seniordesign.HospitalsModel
+ com.example.seniordesign.HospitalsModel$1
+com/example/seniordesign/BuildConfig.java
+ com.example.seniordesign.BuildConfig
+com/example/seniordesign/UsersModel.java
+ com.example.seniordesign.UsersModel
+ com.example.seniordesign.UsersModel$1
+ com.example.seniordesign.UsersModel$2
+ com.example.seniordesign.UsersModel$3
+ com.example.seniordesign.UsersModel$4
+ com.example.seniordesign.UsersModel$5
 com/example/seniordesign/AllUsers.java
  com.example.seniordesign.AllUsers
  com.example.seniordesign.AllUsers$1
@@ -7,9 +19,6 @@ com/example/seniordesign/databinding/ActivityHospitalProfileBinding.java
  com.example.seniordesign.databinding.ActivityHospitalProfileBinding
 com/example/seniordesign/databinding/ActivityNavigationBinding.java
  com.example.seniordesign.databinding.ActivityNavigationBinding
-com/example/seniordesign/HospitalsModel.java
- com.example.seniordesign.HospitalsModel
- com.example.seniordesign.HospitalsModel$1
 com/example/seniordesign/MainActivity.java
  com.example.seniordesign.MainActivity
  com.example.seniordesign.MainActivity$1
@@ -21,8 +30,6 @@ com/example/seniordesign/calendar.java
  com.example.seniordesign.calendar
  com.example.seniordesign.calendar$1
  com.example.seniordesign.calendar$2
-com/example/seniordesign/BuildConfig.java
- com.example.seniordesign.BuildConfig
 com/example/seniordesign/hospitalProfile.java
  com.example.seniordesign.hospitalProfile
  com.example.seniordesign.hospitalProfile$1
@@ -63,21 +70,19 @@ com/example/seniordesign/firstPage.java
  com.example.seniordesign.firstPage$2
 com/example/seniordesign/databinding/ActivityRegisterBinding.java
  com.example.seniordesign.databinding.ActivityRegisterBinding
+com/example/seniordesign/whoDonated.java
+ com.example.seniordesign.whoDonated
+ com.example.seniordesign.whoDonated$1
 com/example/seniordesign/databinding/ActivityMainBinding.java
  com.example.seniordesign.databinding.ActivityMainBinding
+com/example/seniordesign/databinding/ActivityWhoDonatedBinding.java
+ com.example.seniordesign.databinding.ActivityWhoDonatedBinding
 com/example/seniordesign/databinding/ActivityAllUsersBinding.java
  com.example.seniordesign.databinding.ActivityAllUsersBinding
 com/example/seniordesign/databinding/ActivityHospitalBinding.java
  com.example.seniordesign.databinding.ActivityHospitalBinding
 com/example/seniordesign/databinding/ActivityMapsBinding.java
  com.example.seniordesign.databinding.ActivityMapsBinding
-com/example/seniordesign/UsersModel.java
- com.example.seniordesign.UsersModel
- com.example.seniordesign.UsersModel$1
- com.example.seniordesign.UsersModel$2
- com.example.seniordesign.UsersModel$3
- com.example.seniordesign.UsersModel$4
- com.example.seniordesign.UsersModel$5
 com/example/seniordesign/EditProfile.java
  com.example.seniordesign.EditProfile
  com.example.seniordesign.EditProfile$1
@@ -198,6 +203,7 @@ com/example/seniordesign/navigationHospital.java
  com.example.seniordesign.navigationHospital
  com.example.seniordesign.navigationHospital$1
  com.example.seniordesign.navigationHospital$2
+ com.example.seniordesign.navigationHospital$3
 com/example/seniordesign/databinding/ActivityCalendar2Binding.java
  com.example.seniordesign.databinding.ActivityCalendar2Binding
 com/example/seniordesign/databinding/ActivityLoginBinding.java
