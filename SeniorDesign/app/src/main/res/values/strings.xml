@@ -39,4 +39,5 @@
     <string name="title_activity_trying">trying</string>
     <string name="title_activity_example">example</string>
     <string name="title_activity_edit_hospital_profile">editHospitalProfile</string>
+    <string name="title_activity_who_donated">whoDonated</string>
 </resources>
