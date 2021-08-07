@@ -4,6 +4,7 @@ package com.example.seniordesign.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,11 +48,14 @@ public final class ActivityNavigationHospitalBinding implements ViewBinding {
   @NonNull
   public final TextView showtimeH;
 
+  @NonNull
+  public final Button wDonated;
+
   private ActivityNavigationHospitalBinding(@NonNull DrawerLayout rootView,
       @NonNull BottomNavigationView bottomNavigation1, @NonNull DrawerLayout drawerLayout1,
       @NonNull TextView iH, @NonNull TextView idWelcome1, @NonNull MainToolbar1Binding include1,
       @NonNull ConstraintLayout linearLayout, @NonNull TextView showdateH,
-      @NonNull TextView shownameH, @NonNull TextView showtimeH) {
+      @NonNull TextView shownameH, @NonNull TextView showtimeH, @NonNull Button wDonated) {
     this.rootView = rootView;
     this.bottomNavigation1 = bottomNavigation1;
     this.drawerLayout1 = drawerLayout1;
@@ -62,6 +66,7 @@ public final class ActivityNavigationHospitalBinding implements ViewBinding {
     this.showdateH = showdateH;
     this.shownameH = shownameH;
     this.showtimeH = showtimeH;
+    this.wDonated = wDonated;
   }
 
   @Override
@@ -142,9 +147,15 @@ public final class ActivityNavigationHospitalBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.wDonated;
+      Button wDonated = rootView.findViewById(id);
+      if (wDonated == null) {
+        break missingId;
+      }
+
       return new ActivityNavigationHospitalBinding((DrawerLayout) rootView, bottomNavigation1,
           drawerLayout1, iH, idWelcome1, binding_include1, linearLayout, showdateH, shownameH,
-          showtimeH);
+          showtimeH, wDonated);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

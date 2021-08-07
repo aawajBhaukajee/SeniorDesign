@@ -57,6 +57,8 @@ public class navigation extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         userId = fAuth.getCurrentUser().getUid();
 
+
+
         DocumentReference documentReference = fStore.collection("users").document(userId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
@@ -98,7 +100,6 @@ public class navigation extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 a++;
                 totalCount.setText(""+ a);
                 final String counter = totalCount.getText().toString().trim();
@@ -113,7 +114,6 @@ public class navigation extends AppCompatActivity {
                 update.put("TotalDonation", counter);
                 fStore.collection("users").document(userID).set(update, SetOptions.merge());
 
-
                 DocumentReference dref = fStore.collection("users").document(userID);
                 Map<String, Object> delete = new HashMap<>();
                 delete.put("Date", FieldValue.delete());
@@ -121,10 +121,12 @@ public class navigation extends AppCompatActivity {
                 delete.put("Schedule Request at:",FieldValue.delete());
                 fStore.collection("users").document(userID).update(delete);
 
+
                 d.setVisibility(View.GONE);
                 d1.setVisibility(View.GONE);
                 sdate.setVisibility(View.GONE);
                 stime.setVisibility(View.GONE);
+
 
 
             }
