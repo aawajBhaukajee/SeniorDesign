@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_drawer1.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\nav_drawer1.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_first_page.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_first_page.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_toolbar.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\main_toolbar.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_drawer.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\nav_drawer.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_navigation_hospital.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_navigation_hospital.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_maps.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_calendar2.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_calendar2.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_toolbar1.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\main_toolbar1.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_all_hospitals.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_all_hospitals.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_reg_hospital.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_reg_hospital.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_time_schedule.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_time_schedule.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_hospital_profile.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_hospital_profile.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_edit_profile.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_edit_profile.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_user_schedule.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_user_schedule.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_navigation.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_navigation.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_hospital.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_hospital.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_who_donated.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_who_donated.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_sing_hospitals.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\list_sing_hospitals.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_sing_users.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\list_sing_users.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_log_hospital.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_log_hospital.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\splash_screen.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\splash_screen.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_all_users.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_all_users.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_calendar.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_calendar.xml"
+    },
+    {
+        "merged": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_edit_hospital_profile.xml",
+        "source": "D:\\newSenior\\SeniorDesign\\SeniorDesign\\app\\src\\main\\res\\layout\\activity_edit_hospital_profile.xml"
+    }
+]
