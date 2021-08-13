@@ -19,7 +19,7 @@
         <activity
             android:name=".whoDonated"
             android:label="@string/title_activity_who_donated"
-            android:theme="@style/Theme.SeniorDesign.NoActionBar"></activity>
+            android:theme="@style/Theme.SeniorDesign.NoActionBar" />
         <activity
             android:name=".editHospitalProfile"
             android:label="@string/title_activity_edit_hospital_profile"
@@ -54,7 +54,9 @@
         <activity android:name=".AllUsers" />
         <activity android:name=".Login" />
         <activity android:name=".navigation" />
-        <activity android:name=".firstPage">
+
+        <activity android:name=".firstPage" />
+        <activity android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

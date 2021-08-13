@@ -72,7 +72,8 @@
         <activity android:name="com.example.seniordesign.AllUsers" />
         <activity android:name="com.example.seniordesign.Login" />
         <activity android:name="com.example.seniordesign.navigation" />
-        <activity android:name="com.example.seniordesign.firstPage" >
+        <activity android:name="com.example.seniordesign.firstPage" />
+        <activity android:name="com.example.seniordesign.splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
