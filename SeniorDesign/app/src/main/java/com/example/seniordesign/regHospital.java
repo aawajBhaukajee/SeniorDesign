@@ -33,7 +33,7 @@ public class regHospital extends AppCompatActivity {
     public static final String TAG = "TAG";
 
     TextView AppNameH, RegisterTitleH, OldAccountH;
-    EditText FullNameH, EmailH, LocationH,PasswordH;
+    EditText FullNameH, EmailH, LocationH,PasswordH,ConfirmH;
     Button RegisterButtonH;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -52,6 +52,7 @@ public class regHospital extends AppCompatActivity {
         EmailH = findViewById(R.id.emailAddressH);
         LocationH = findViewById(R.id.locationH);
         PasswordH = findViewById(R.id.passwordH);
+        ConfirmH = findViewById(R.id.cpassword);
         RegisterButtonH = findViewById(R.id.registerButtonH);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -70,6 +71,7 @@ public class regHospital extends AppCompatActivity {
                 final String email = EmailH.getText().toString();
                 final String location = LocationH.getText().toString().trim();
                 final String password = PasswordH.getText().toString().trim();
+                final String confirmPass = ConfirmH.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email))
                 {
@@ -81,6 +83,18 @@ public class regHospital extends AppCompatActivity {
                     PasswordH.setError("Password is needed to register.");
                     return;
                 }
+                if (TextUtils.isEmpty(confirmPass))
+                {
+                    ConfirmH.setError("Please enter your password again to confirm.");
+                    return;
+                }
+
+                if (!password.equals(confirmPass))
+                {
+                    ConfirmH.setError("Please enter the same password as above to confirm.");
+                    return;
+                }
+
                 if (password.length() < 8)
                 {
                     PasswordH.setError("Password must be at least 7 characters long");

@@ -24,6 +24,9 @@ public final class ActivityRegHospitalBinding implements ViewBinding {
   public final TextView appNameH;
 
   @NonNull
+  public final EditText cpassword;
+
+  @NonNull
   public final EditText emailAddressH;
 
   @NonNull
@@ -45,11 +48,12 @@ public final class ActivityRegHospitalBinding implements ViewBinding {
   public final Button registerButtonH;
 
   private ActivityRegHospitalBinding(@NonNull ConstraintLayout rootView, @NonNull TextView appNameH,
-      @NonNull EditText emailAddressH, @NonNull TextView hasAccountH, @NonNull EditText locationH,
-      @NonNull EditText nameH, @NonNull EditText passwordH, @NonNull TextView regTitleH,
-      @NonNull Button registerButtonH) {
+      @NonNull EditText cpassword, @NonNull EditText emailAddressH, @NonNull TextView hasAccountH,
+      @NonNull EditText locationH, @NonNull EditText nameH, @NonNull EditText passwordH,
+      @NonNull TextView regTitleH, @NonNull Button registerButtonH) {
     this.rootView = rootView;
     this.appNameH = appNameH;
+    this.cpassword = cpassword;
     this.emailAddressH = emailAddressH;
     this.hasAccountH = hasAccountH;
     this.locationH = locationH;
@@ -89,6 +93,12 @@ public final class ActivityRegHospitalBinding implements ViewBinding {
       id = R.id.appNameH;
       TextView appNameH = rootView.findViewById(id);
       if (appNameH == null) {
+        break missingId;
+      }
+
+      id = R.id.cpassword;
+      EditText cpassword = rootView.findViewById(id);
+      if (cpassword == null) {
         break missingId;
       }
 
@@ -134,8 +144,8 @@ public final class ActivityRegHospitalBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRegHospitalBinding((ConstraintLayout) rootView, appNameH, emailAddressH,
-          hasAccountH, locationH, nameH, passwordH, regTitleH, registerButtonH);
+      return new ActivityRegHospitalBinding((ConstraintLayout) rootView, appNameH, cpassword,
+          emailAddressH, hasAccountH, locationH, nameH, passwordH, regTitleH, registerButtonH);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -48,6 +48,9 @@ public final class ActivityRegisterBinding implements ViewBinding {
   public final EditText password;
 
   @NonNull
+  public final EditText passwordConfirm;
+
+  @NonNull
   public final TextView regTitle;
 
   @NonNull
@@ -59,8 +62,8 @@ public final class ActivityRegisterBinding implements ViewBinding {
   private ActivityRegisterBinding(@NonNull LinearLayout rootView, @NonNull EditText age,
       @NonNull TextView appName, @NonNull EditText bloodtype, @NonNull EditText emailAddress,
       @NonNull TextView hasAccount, @NonNull EditText maxbpressure, @NonNull EditText minbpressure,
-      @NonNull EditText name, @NonNull EditText password, @NonNull TextView regTitle,
-      @NonNull Button registerButton, @NonNull EditText weight) {
+      @NonNull EditText name, @NonNull EditText password, @NonNull EditText passwordConfirm,
+      @NonNull TextView regTitle, @NonNull Button registerButton, @NonNull EditText weight) {
     this.rootView = rootView;
     this.age = age;
     this.appName = appName;
@@ -71,6 +74,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
     this.minbpressure = minbpressure;
     this.name = name;
     this.password = password;
+    this.passwordConfirm = passwordConfirm;
     this.regTitle = regTitle;
     this.registerButton = registerButton;
     this.weight = weight;
@@ -157,6 +161,12 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.passwordConfirm;
+      EditText passwordConfirm = rootView.findViewById(id);
+      if (passwordConfirm == null) {
+        break missingId;
+      }
+
       id = R.id.regTitle;
       TextView regTitle = rootView.findViewById(id);
       if (regTitle == null) {
@@ -176,8 +186,8 @@ public final class ActivityRegisterBinding implements ViewBinding {
       }
 
       return new ActivityRegisterBinding((LinearLayout) rootView, age, appName, bloodtype,
-          emailAddress, hasAccount, maxbpressure, minbpressure, name, password, regTitle,
-          registerButton, weight);
+          emailAddress, hasAccount, maxbpressure, minbpressure, name, password, passwordConfirm,
+          regTitle, registerButton, weight);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

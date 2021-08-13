@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,7 @@ public class navigationHospital extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
+    Button donated;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class navigationHospital extends AppCompatActivity {
         snameH = findViewById(R.id.shownameH);
         sdateH = findViewById(R.id.showdateH);
         stimeH = findViewById(R.id.showtimeH);
+        donated = findViewById(R.id.wDonated);
         iH = findViewById(R.id.iH);
 
         fAuth = FirebaseAuth.getInstance();
@@ -77,6 +80,16 @@ public class navigationHospital extends AppCompatActivity {
                         return true;
                 }
                 return false;
+            }
+        });
+
+
+        donated.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(getApplicationContext(), com.example.seniordesign.whoDonated.class));
             }
         });
     }

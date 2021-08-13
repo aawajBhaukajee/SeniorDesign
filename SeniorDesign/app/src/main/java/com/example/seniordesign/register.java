@@ -33,7 +33,7 @@ public class register extends AppCompatActivity
     public static final String TAG = "TAG";
 
     TextView AppName, RegisterTitle, OldAccount;
-    EditText FullName, Email, Password, MinimumBP, MaximumBP, Age, Weight, BloodType;
+    EditText FullName, Email, Password, ConPassword, MinimumBP, MaximumBP, Age, Weight, BloodType;
     Button RegisterButton;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -51,6 +51,7 @@ public class register extends AppCompatActivity
         FullName = findViewById(R.id.name);
         Email = findViewById(R.id.emailAddress);
         Password = findViewById(R.id.password);
+        ConPassword = findViewById(R.id.passwordConfirm);
         RegisterButton = findViewById(R.id.registerButton);
         Age = findViewById(R.id.age);
         Weight = findViewById(R.id.weight);
@@ -72,6 +73,7 @@ public class register extends AppCompatActivity
                 final String fullname = FullName.getText().toString().trim();
                 final String email = Email.getText().toString();
                 final String password = Password.getText().toString().trim();
+                final String confirmPassword = ConPassword.getText().toString().trim();
                 final String btype = BloodType.getText().toString().trim();
 
                 final String maxbpressure = MaximumBP.getText().toString();
@@ -99,6 +101,17 @@ public class register extends AppCompatActivity
                 if (TextUtils.isEmpty(password))
                 {
                     Password.setError("Password is needed to register.");
+                    return;
+                }
+                if (TextUtils.isEmpty(confirmPassword))
+                {
+                    ConPassword.setError("Please enter your password again to confirm.");
+                    return;
+                }
+
+                if (!password.equals(confirmPassword))
+                {
+                    ConPassword.setError("Please enter the same password as above to confirm.");
                     return;
                 }
                 if (password.length() < 8)
